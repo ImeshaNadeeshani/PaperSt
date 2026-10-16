@@ -1,0 +1,1 @@
+Phase 1 uses React Context and localStorage. Add API adapters here in Phase 2 for catalogue, authentication, checkout, orders, CMS, inventory, and reporting. Keep API requests outside page components. Replace local persistence with server state, enforce role permissions on the server, and never trust client-calculated prices or stock.

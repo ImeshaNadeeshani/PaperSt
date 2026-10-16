@@ -1,0 +1,1657 @@
+/* The editorial homepage follows the supplied manga / paper reference. */
+.home-announcement {
+  display: none;
+}
+.store-header.home-header {
+  height: 62px;
+  padding-inline: 28px;
+  gap: 24px;
+  background: #faf9f6;
+  border-bottom: 1px solid #2223;
+}
+.home-header .logo {
+  font-size: 31px;
+  letter-spacing: -2px;
+}
+.home-header .desktop-nav {
+  gap: 22px;
+  margin-left: 12px;
+}
+.home-header .header-search {
+  border: 1px solid #1e3045;
+  background: transparent;
+  border-radius: 30px;
+  padding: 6px 12px;
+  max-width: 320px;
+}
+.home-header .header-search input {
+  font-size: 10px !important;
+}
+.header-icons .mobile-search {
+  display: none;
+}
+.ink-home {
+  --ink: #171818;
+  --sheet: #f8f6f0;
+  --brush: "DM Sans", Arial, sans-serif;
+  background-color: var(--sheet);
+  background-image: radial-gradient(#23232612 0.45px, transparent 0.6px);
+  background-size: 5px 5px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px 18px;
+  padding: 0 28px 25px;
+  color: var(--ink);
+}
+.home-section {
+  grid-column: 1/-1;
+  min-width: 0;
+}
+.home-section > .container,
+.home-section .container {
+  width: 100%;
+}
+.ink-home h2 {
+  font-family: var(--brush);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+.ink-home .red-dot {
+  color: #d2282e;
+}
+.ink-home .section {
+  padding: 29px 21px;
+  border-top: 1px solid #24262826;
+}
+.ink-home .section-header h2 {
+  font-size: 25px;
+  line-height: 1.25;
+}
+.ink-home .section-header {
+  margin-bottom: 21px;
+}
+.ink-home .section-header .eyebrow {
+  font-family: "DM Sans", sans-serif;
+  color: #787971;
+  letter-spacing: 1.8px;
+  font-size: 8px;
+}
+.ink-home .section-header .text-link {
+  font-size: 10px;
+  font-family: "DM Sans", sans-serif;
+}
+.ink-home .ink-hero {
+  background: none;
+  display: grid;
+  grid-template-columns: 235px minmax(0, 1fr) 76px;
+  min-height: 0;
+  height: 386px;
+  overflow: visible;
+  gap: 14px;
+  position: relative;
+  margin-top: 0;
+}
+.ink-home .hero-copy {
+  width: auto;
+  margin: 0;
+  padding: 19px 12px 19px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+.ink-home .hero-copy h1 {
+  font-family: var(--brush);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -1.4px;
+  transform: rotate(-6deg);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 21px;
+  color: #111;
+  overflow-wrap: normal;
+}
+.ink-dot {
+  color: #d7282b;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 82px;
+  line-height: 0;
+  margin-left: 1px;
+}
+.ink-home .hero-copy p {
+  font-size: 10px;
+  line-height: 1.65;
+  text-transform: uppercase;
+  letter-spacing: 2.3px;
+  font-weight: 550;
+  color: #1e2224;
+  max-width: 165px;
+  margin: 0 0 16px;
+}
+.ink-home .hero-copy .tiny-dot {
+  margin-left: 4px;
+  background: #d7282b;
+  width: 5px;
+  height: 5px;
+}
+.ink-home .hero-copy .button {
+  background: #d82b31;
+  border-color: #d82b31;
+  border-radius: 50px;
+  padding: 11px 24px;
+  min-height: 43px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  gap: 15px;
+  box-shadow: none;
+}
+.ink-home .hero-copy .button:hover {
+  background: #b62027;
+  transform: translateY(-2px);
+}
+.ink-brush {
+  position: absolute;
+  width: 17px;
+  height: 103px;
+  background: #151616;
+  left: -20px;
+  top: 150px;
+  transform: rotate(32deg);
+  clip-path: polygon(
+    5% 0,
+    70% 4%,
+    80% 0,
+    82% 19%,
+    100% 15%,
+    81% 67%,
+    100% 80%,
+    60% 100%,
+    35% 83%,
+    0 99%,
+    12% 38%,
+    0 31%
+  );
+  opacity: 0.8;
+}
+.ink-hero-art {
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  border: 1px solid #1b242533;
+  overflow: hidden;
+  clip-path: polygon(1.8% 0, 98.4% 0, 100% 100%, 0 100%);
+  background: #bbd3d5;
+}
+.ink-home .ink-hero-art .hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 43% center;
+  filter: none;
+}
+.hero-memo {
+  position: absolute;
+  z-index: 1;
+  background: #f3ead7ee;
+  color: #272520;
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.1;
+  box-shadow: 1px 2px 7px #1515152b;
+  letter-spacing: 0.3px;
+  border: 1px solid #988b684a;
+}
+.memo-left {
+  left: 8%;
+  top: 9%;
+  font-size: 22px;
+  padding: 15px 16px 18px;
+  transform: rotate(-5deg);
+  width: 125px;
+}
+.memo-left:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 30px;
+  width: 27px;
+  height: 13px;
+  transform: rotate(10deg);
+  background: #cbbfa99e;
+}
+.memo-right {
+  right: 10%;
+  top: 22%;
+  width: 111px;
+  font-size: 21px;
+  padding: 17px 13px;
+  transform: rotate(-7deg);
+}
+.memo-right:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #d92b30;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
+.art-edition {
+  position: absolute;
+  bottom: 10px;
+  right: 17px;
+  letter-spacing: 1.5px;
+  font-size: 7px;
+  color: #fff;
+  text-shadow: 0 1px 3px #111;
+}
+.hero-margin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding-block: 16px;
+}
+.vertical-note {
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  padding: 14px 10px;
+  border: 1px solid #303232aa;
+  transform: rotate(-3deg);
+  height: 245px;
+  line-height: 1.4;
+}
+.hero-margin > span:last-child {
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.1;
+  font-size: 17px;
+  transform: rotate(-5deg);
+  font-weight: 600;
+}
+.home-category-section {
+  margin-top: 1px;
+}
+.polaroid-section {
+  padding: 0 5px 6px;
+}
+.polaroid-section > h2 {
+  font-size: 20px;
+  margin-block: 10px 17px;
+}
+.polaroid-rail {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr)) 0.7fr;
+  gap: 11px;
+  align-items: center;
+  padding: 6px 0 12px;
+}
+.ink-home .polaroid {
+  padding: 8px 8px 11px;
+  background: #fcfaf3;
+  border: 1px solid #88887e;
+  box-shadow: 1px 2px 0 #1b23240b;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transform: rotate(-2deg);
+  min-width: 0;
+}
+.ink-home .polaroid:nth-child(even) {
+  transform: rotate(2deg);
+}
+.ink-home .polaroid:nth-child(3n) {
+  transform: rotate(-0.7deg);
+}
+.ink-home .polaroid:hover {
+  transform: rotate(0) translateY(-5px);
+  box-shadow: 2px 4px 10px #17181812;
+}
+.ink-home .polaroid .category-photo {
+  width: 100%;
+  aspect-ratio: 1.12;
+  border-radius: 0;
+  background-image: url("/images/paperist-categories.png");
+  background-size: 400% 200%;
+  border: 1px solid #9a9b9226;
+}
+.ink-home .polaroid strong {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 9px;
+  white-space: normal;
+}
+.ink-home .polaroid small {
+  font-size: 8px;
+  line-height: 1.1;
+  display: block;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+.shop-all-card {
+  height: 114px;
+  background: #111;
+  color: #fff;
+  transform: rotate(4deg);
+  padding: 17px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 650;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-size: 15px;
+  gap: 9px;
+  border: 5px solid #faf8f2;
+  box-shadow: 0 0 0 1px #aaa99f;
+  margin-left: 3px;
+}
+.shop-all-card:hover {
+  transform: rotate(0);
+}
+.budget-banner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 0.9fr;
+  height: 226px;
+  margin-top: 4px;
+  border-block: 1px solid #55584a;
+  overflow: hidden;
+  background: #faf9f4;
+}
+.budget-manga {
+  position: relative;
+  background-image: url("/images/paperist-campaigns.png");
+  background-size: 300% auto;
+  background-position: 0% 48%;
+  border-right: 1px solid #6668;
+  min-width: 0;
+  clip-path: polygon(0 0, 97% 0, 100% 100%, 0 100%);
+}
+.speech-bubble {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  border: 1px solid #1a1b1a;
+  border-radius: 50%;
+  background: #faf8f0;
+  padding: 15px 11px;
+  font-family: var(--brush);
+  font-size: 14px;
+  line-height: 1.15;
+  transform: rotate(7deg);
+}
+.budget-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 21px 18px;
+  background-image: radial-gradient(#1b232412 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+  text-align: center;
+}
+.budget-copy h2 {
+  font-size: 39px;
+  line-height: 1.08;
+  transform: rotate(-4deg);
+  margin-bottom: 14px;
+}
+.budget-copy > span {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+}
+.budget-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.budget-links a {
+  font-family: "DM Sans", sans-serif;
+  border: 1px solid #333e45;
+  border-radius: 25px;
+  padding: 7px 16px;
+  font-size: 10px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+.budget-links a:hover {
+  background: var(--navy);
+  color: #fff;
+}
+.budget-links > svg {
+  margin-left: 2px;
+  flex-shrink: 0;
+}
+.budget-collage {
+  position: relative;
+  background-image:
+    linear-gradient(90deg, #f9f6ed70, transparent),
+    url("/images/paperist-campaigns.png");
+  background-size:
+    100% 100%,
+    300% auto;
+  background-position:
+    0 0,
+    50% 14%;
+  overflow: hidden;
+  border-left: 1px solid #6668;
+}
+.pinned-note {
+  position: absolute;
+  top: 39px;
+  left: 24px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1;
+  padding: 21px 24px 22px;
+  background: #f1e5ce;
+  transform: rotate(9deg);
+  border: 1px solid #6557404a;
+  box-shadow: 3px 3px 7px #2222;
+}
+.pinned-note:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 32px;
+  background: #d52931;
+  width: 15px;
+  height: 22px;
+  transform: rotate(-12deg);
+  box-shadow: 1px 2px 2px #0003;
+}
+.collage-mantra {
+  position: absolute;
+  top: 17px;
+  right: 21px;
+  font-family: var(--brush);
+  text-transform: uppercase;
+  line-height: 1.15;
+  font-size: 19px;
+  transform: rotate(-7deg);
+  max-width: 135px;
+  color: #193447;
+  text-shadow: 0 1px 2px #f8f6ed;
+}
+.pencil-decoration {
+  position: absolute;
+  top: 42px;
+  left: 2px;
+  z-index: 2;
+  width: 10px;
+  height: 146px;
+  background: linear-gradient(90deg, #721c22 20%, #d52831 22% 70%, #9c1c25 71%);
+  border: 1px solid #272826;
+  transform: rotate(-13deg);
+  border-radius: 3px 3px 0 0;
+}
+.pencil-decoration:after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: -1px;
+  border-inline: 5px solid transparent;
+  border-top: 17px solid #c7aa7a;
+}
+.home-featured-products {
+  grid-column: span 7;
+  background: #faf9f5;
+}
+.home-promotional-banners {
+  grid-column: span 5;
+  padding-top: 18px;
+}
+.home-featured-products .section {
+  padding: 13px 15px 16px;
+  border: 0;
+}
+.home-featured-products .section-header h2 {
+  font-size: 20px;
+}
+.home-featured-products .section-header .text-link {
+  display: none;
+}
+.home-featured-products .section-header {
+  margin-bottom: 13px;
+}
+.ink-home .product-grid {
+  gap: 17px;
+}
+.ink-home .product-image {
+  aspect-ratio: 1.09;
+  background: #efede7;
+}
+.illustrated-product {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/paperist-categories.png");
+  background-size: 400% 200%;
+  transition: transform 0.3s;
+}
+.product-card:hover .illustrated-product {
+  transform: scale(1.05);
+}
+.ink-home .product-badge {
+  display: none;
+}
+.ink-home .wish-button {
+  background: transparent;
+  right: 4px;
+  top: 4px;
+  color: var(--navy);
+  width: 27px;
+  height: 27px;
+}
+.ink-home .wish-button.saved {
+  color: #d52831;
+}
+.ink-home .product-meta {
+  margin-top: 9px;
+  font-size: 7px;
+}
+.ink-home .product-name {
+  font-size: 10px;
+  line-height: 1.35;
+  min-height: 27px;
+  font-weight: 500;
+  margin: 4px 0;
+}
+.ink-home .price {
+  font-size: 10px;
+}
+.ink-home .price del {
+  font-size: 8px;
+}
+.ink-home .quick-add {
+  font-size: 9px;
+  padding: 7px;
+  gap: 5px;
+  background: #fffef5e8;
+}
+.ink-home .quick-add svg {
+  width: 13px;
+}
+.home-back-to-school,
+.home-gifts,
+.home-corporate-orders {
+  grid-column: span 4;
+}
+.ink-promo {
+  position: relative;
+  min-height: 191px;
+  height: 100%;
+  border: 1px solid #333b3b;
+  overflow: hidden;
+  isolation: isolate;
+  background: #faf7ef;
+}
+.promo-art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-repeat: no-repeat;
+}
+.ink-promo-desk {
+  min-height: 242px;
+}
+.ink-promo-desk .promo-art {
+  background-image: url("/images/paperist-hero.png");
+  background-size: cover;
+  background-position: 48% center;
+}
+.ink-promo:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #faf9f0f2 0,
+    #faf9f0c7 35%,
+    #faf9f01a 65%,
+    transparent
+  );
+  z-index: -1;
+}
+.promo-copy {
+  padding: 20px 19px;
+  max-width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.ink-promo h2 {
+  font-size: 25px;
+  line-height: 1.08;
+  letter-spacing: -0.7px;
+  margin: 0 0 12px;
+  transform: rotate(-4deg);
+  max-width: 250px;
+}
+.ink-promo-desk .promo-copy {
+  max-width: 210px;
+  padding: 20px 21px;
+}
+.ink-promo-desk h2 {
+  font-size: 32px;
+  max-width: 180px;
+  line-height: 1.05;
+}
+.ink-promo p {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 1.65;
+  color: #232628;
+  margin: 0 0 15px;
+}
+.ink-promo .button {
+  background: #141516;
+  border-color: #141516;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  gap: 15px;
+  font-size: 9px;
+  min-height: 35px;
+  padding: 9px 18px;
+  margin-top: auto;
+  font-family: "DM Sans", sans-serif;
+}
+.ink-promo .button:hover {
+  background: #d22b31;
+  border-color: #d22b31;
+}
+.ink-promo-school .promo-art {
+  background-image: url("/images/paperist-campaigns.png");
+  background-size: 300% auto;
+  background-position: 50% 46%;
+}
+.ink-promo-school .promo-copy {
+  max-width: 81%;
+}
+.ink-promo-school:before {
+  background: linear-gradient(
+    90deg,
+    #faf8f0eb 0,
+    #faf8f0a8 38%,
+    transparent 71%
+  );
+}
+.ink-promo-gifts .promo-art {
+  background-image: url("/images/paperist-campaigns.png");
+  background-size: 300% auto;
+  background-position: 100% 54%;
+}
+.ink-promo-gifts .promo-copy {
+  max-width: 69%;
+}
+.ink-promo-gifts:before {
+  background: linear-gradient(
+    90deg,
+    #faf8f0f7 0,
+    #faf8f0ad 37%,
+    transparent 66%
+  );
+}
+.ink-promo-corporate .promo-art {
+  left: 35%;
+  background-image: url("/images/paperist-categories.png");
+  background-size: 400% 200%;
+  background-position: 100% 100%;
+}
+.ink-promo-corporate .promo-copy {
+  max-width: 80%;
+}
+.ink-promo-corporate h2 {
+  font-size: 23px;
+}
+.ink-promo-corporate p {
+  font-size: 8px;
+  max-width: 170px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+.home-new-arrivals,
+.home-best-sellers {
+  grid-column: span 6;
+}
+.ink-trust {
+  grid-column: 1/-1;
+  grid-row: 5;
+  border-block: 1px solid #b6b8aa;
+  min-width: 0;
+}
+.ink-home .trust-bar {
+  background: none;
+  border: 0;
+  padding: 20px 18px;
+  gap: 20px;
+  justify-content: space-around;
+}
+.ink-home .trust-bar span {
+  font-size: 9px;
+}
+.ink-home .trust-bar svg {
+  width: 20px;
+  stroke-width: 1.6;
+}
+.ink-home .paper-grid {
+  gap: 30px;
+}
+.ink-home .paper-section .section-header h2 {
+  font-size: 26px;
+}
+.ink-home .social-grid {
+  gap: 20px;
+}
+.ink-home .social-grid img {
+  border: 7px solid #fcfaf3;
+  outline: 1px solid #7779;
+  transform: rotate(-1deg);
+}
+.ink-home .social-grid > a:nth-child(even) img {
+  transform: rotate(1deg);
+}
+@media (min-width: 1550px) {
+  .ink-home {
+    padding-inline: max(28px, calc((100vw - 1510px) / 2));
+  }
+  .ink-home .ink-hero {
+    grid-template-columns: 255px minmax(0, 1fr) 83px;
+    height: 424px;
+  }
+  .ink-home .hero-copy h1 {
+    font-size: 61px;
+  }
+  .polaroid-rail {
+    gap: 16px;
+  }
+  .ink-home .polaroid strong {
+    font-size: 12px;
+  }
+  .budget-banner {
+    height: 245px;
+  }
+  .home-promotional-banners .ink-promo {
+    min-height: 260px;
+  }
+  .home-featured-products .product-name {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1250px) {
+  .home-header .desktop-nav {
+    gap: 19px;
+    margin-left: 0;
+  }
+  .store-header.home-header {
+    gap: 23px;
+    padding-inline: 27px;
+  }
+  .home-header .header-search {
+    max-width: 250px;
+  }
+  .ink-home {
+    padding-inline: 22px;
+    gap: 14px;
+  }
+  .ink-home .ink-hero {
+    grid-template-columns: 200px minmax(0, 1fr) 62px;
+    height: 357px;
+    gap: 10px;
+  }
+  .ink-home .hero-copy {
+    padding-inline: 10px;
+  }
+  .ink-home .hero-copy h1 {
+    font-size: 50px;
+  }
+  .ink-home .hero-copy p {
+    font-size: 9px;
+  }
+  .ink-home .hero-copy .button {
+    padding: 10px 20px;
+    font-size: 9px;
+    min-height: 39px;
+  }
+  .memo-left {
+    font-size: 18px;
+    width: 103px;
+    padding: 12px;
+    left: 7%;
+  }
+  .memo-right {
+    font-size: 18px;
+    width: 92px;
+    padding: 14px 10px;
+    right: 6%;
+  }
+  .vertical-note {
+    font-size: 8px;
+    padding: 11px 9px;
+    height: 213px;
+  }
+  .hero-margin > span:last-child {
+    font-size: 15px;
+  }
+  .polaroid-rail {
+    gap: 8px;
+  }
+  .ink-home .polaroid {
+    padding: 6px 6px 9px;
+  }
+  .ink-home .polaroid strong {
+    font-size: 9px;
+  }
+  .ink-home .polaroid small {
+    font-size: 7px;
+  }
+  .shop-all-card {
+    font-size: 12px;
+    height: 99px;
+    padding: 10px;
+  }
+  .budget-banner {
+    height: 212px;
+    grid-template-columns: 1fr 1.13fr 0.85fr;
+  }
+  .budget-copy h2 {
+    font-size: 33px;
+  }
+  .budget-links a {
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+  .budget-links {
+    gap: 6px;
+  }
+  .pinned-note {
+    font-size: 22px;
+    padding: 20px 16px;
+    left: 21px;
+    top: 40px;
+  }
+  .collage-mantra {
+    font-size: 16px;
+    right: 14px;
+  }
+  .speech-bubble {
+    font-size: 12px;
+    right: 10px;
+    padding: 13px 10px;
+  }
+  .home-featured-products .product-grid {
+    gap: 11px;
+  }
+  .home-featured-products .section {
+    padding: 11px 9px 13px;
+  }
+  .ink-home .section-header h2 {
+    font-size: 22px;
+  }
+  .home-featured-products .section-header h2 {
+    font-size: 19px;
+  }
+  .ink-home .product-name {
+    font-size: 9px;
+    min-height: 26px;
+  }
+  .ink-home .price {
+    font-size: 9px;
+  }
+  .ink-home .rating {
+    font-size: 8px;
+  }
+  .ink-home .product-meta > span {
+    font-size: 6px;
+  }
+  .home-promotional-banners {
+    padding-top: 12px;
+  }
+  .ink-promo-desk {
+    min-height: 215px;
+  }
+  .ink-promo {
+    min-height: 178px;
+  }
+  .ink-promo h2 {
+    font-size: 22px;
+  }
+  .ink-promo-desk h2 {
+    font-size: 29px;
+  }
+  .promo-copy {
+    padding: 18px 15px;
+    max-width: 90%;
+  }
+  .ink-promo .button {
+    padding: 8px 13px;
+    font-size: 8px;
+    gap: 10px;
+    min-height: 32px;
+  }
+  .ink-promo-corporate h2 {
+    font-size: 20px;
+  }
+  .ink-promo p {
+    font-size: 9px;
+  }
+  .ink-home .trust-bar span {
+    font-size: 8px;
+  }
+  .ink-home .trust-bar {
+    gap: 12px;
+    padding-inline: 10px;
+  }
+  .ink-home .section {
+    padding-inline: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .home-header .desktop-nav {
+    gap: 13px;
+  }
+  .home-header .desktop-nav a {
+    font-size: 9px;
+  }
+  .home-header .header-search {
+    display: none;
+  }
+  .header-icons .mobile-search {
+    display: flex;
+  }
+  .store-header.home-header {
+    height: 60px;
+  }
+  .ink-home {
+    padding-inline: 17px;
+  }
+  .ink-home .ink-hero {
+    grid-template-columns: 176px minmax(0, 1fr) 49px;
+    height: 325px;
+    gap: 6px;
+  }
+  .ink-home .hero-copy {
+    padding-left: 8px;
+    padding-right: 6px;
+  }
+  .ink-home .hero-copy h1 {
+    font-size: 43px;
+    line-height: 0.98;
+  }
+  .ink-home .hero-copy p {
+    font-size: 8px;
+    max-width: 136px;
+    letter-spacing: 1.6px;
+  }
+  .ink-home .hero-copy .button {
+    font-size: 8px;
+    min-height: 35px;
+    padding: 8px 16px;
+    gap: 12px;
+  }
+  .ink-home .hero-copy .button svg {
+    width: 15px;
+  }
+  .hero-margin .vertical-note {
+    font-size: 7px;
+    letter-spacing: 1px;
+    padding: 9px 6px;
+    height: 188px;
+  }
+  .hero-margin > span:last-child {
+    font-size: 13px;
+  }
+  .memo-left {
+    font-size: 16px;
+    width: 84px;
+    padding: 10px;
+    left: 5%;
+    top: 7%;
+  }
+  .memo-right {
+    display: none;
+  }
+  .art-edition {
+    font-size: 6px;
+    letter-spacing: 0.8px;
+    right: 10px;
+  }
+  .ink-home .polaroid strong {
+    font-size: 8px;
+  }
+  .ink-home .polaroid {
+    padding: 5px;
+  }
+  .ink-home .polaroid small {
+    font-size: 6px;
+  }
+  .polaroid-rail {
+    gap: 6px;
+    padding-bottom: 13px;
+  }
+  .shop-all-card {
+    height: 82px;
+    font-size: 11px;
+    border-width: 4px;
+    padding: 5px;
+    gap: 5px;
+  }
+  .shop-all-card svg {
+    width: 14px;
+  }
+  .budget-banner {
+    height: 188px;
+    grid-template-columns: 0.9fr 1.3fr 0.7fr;
+  }
+  .budget-copy {
+    padding: 17px 10px;
+  }
+  .budget-copy h2 {
+    font-size: 29px;
+    line-height: 1.1;
+  }
+  .budget-copy > span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+  .budget-links a {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+  .budget-links > svg {
+    width: 13px;
+  }
+  .budget-links {
+    gap: 5px;
+  }
+  .speech-bubble {
+    font-size: 10px;
+    padding: 12px 9px;
+    right: 7px;
+    top: 13px;
+  }
+  .pinned-note {
+    left: 12px;
+    top: 44px;
+    padding: 15px 13px;
+    font-size: 18px;
+  }
+  .collage-mantra {
+    font-size: 12px;
+    top: 14px;
+    right: 9px;
+  }
+  .pencil-decoration {
+    height: 114px;
+    width: 8px;
+    left: 1px;
+    top: 40px;
+  }
+  .pencil-decoration:after {
+    border-inline-width: 4px;
+  }
+  .home-featured-products {
+    grid-column: span 7;
+  }
+  .home-promotional-banners {
+    grid-column: span 5;
+  }
+  .ink-home .product-grid {
+    gap: 9px;
+  }
+  .home-featured-products .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .home-featured-products .section-header h2 {
+    font-size: 17px;
+  }
+  .ink-home .product-name {
+    font-size: 8px;
+    line-height: 1.4;
+    min-height: 34px;
+  }
+  .ink-home .product-meta {
+    font-size: 7px;
+  }
+  .ink-home .product-meta > span {
+    display: none;
+  }
+  .ink-home .product-meta > .rating {
+    margin-left: auto;
+  }
+  .ink-home .wish-button {
+    width: 20px;
+    height: 20px;
+    right: 1px;
+    top: 1px;
+  }
+  .ink-home .wish-button svg {
+    width: 13px;
+  }
+  .ink-home .price {
+    font-size: 8px;
+  }
+  .ink-home .price del {
+    font-size: 7px;
+    margin-left: 2px;
+  }
+  .ink-home .quick-add {
+    font-size: 8px;
+    padding: 5px;
+    transform: translateY(100%);
+  }
+  .ink-home .product-card:hover .quick-add,
+  .ink-home .product-card:focus-within .quick-add {
+    transform: none;
+  }
+  .ink-promo-desk {
+    min-height: 194px;
+  }
+  .ink-promo-desk h2 {
+    font-size: 25px;
+    max-width: 140px;
+  }
+  .ink-promo-desk .promo-copy {
+    max-width: 190px;
+    padding: 19px 15px;
+  }
+  .ink-promo-desk .button {
+    font-size: 7px;
+    gap: 7px;
+    padding: 8px 13px;
+  }
+  .ink-promo {
+    min-height: 167px;
+  }
+  .ink-promo h2 {
+    font-size: 19px;
+  }
+  .ink-promo .button {
+    font-size: 7px;
+    padding: 8px 11px;
+    gap: 7px;
+  }
+  .ink-promo .button svg {
+    width: 12px;
+  }
+  .ink-promo p {
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+  .ink-promo-corporate h2 {
+    font-size: 17px;
+  }
+  .ink-promo-corporate p {
+    font-size: 7px;
+    max-width: 130px;
+  }
+  .promo-copy {
+    padding: 17px 12px;
+  }
+  .ink-home .trust-bar {
+    padding: 17px 0;
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ink-home .trust-bar span {
+    font-size: 8px;
+  }
+  .ink-home .trust-bar svg {
+    width: 17px;
+  }
+  .ink-home .section-header h2 {
+    font-size: 21px;
+  }
+  .ink-home .section {
+    padding: 22px 11px;
+  }
+  .ink-home .section-header .text-link {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .home-new-arrivals .product-grid,
+  .home-best-sellers .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .home-new-arrivals .product-name,
+  .home-best-sellers .product-name {
+    font-size: 11px;
+    min-height: 30px;
+  }
+  .home-new-arrivals .price,
+  .home-best-sellers .price {
+    font-size: 10px;
+  }
+  .home-new-arrivals .product-meta > span,
+  .home-best-sellers .product-meta > span {
+    display: block;
+    font-size: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .store-header.home-header {
+    height: 60px;
+    padding-inline: 17px;
+    gap: 15px;
+  }
+  .home-header .logo {
+    font-size: 28px;
+  }
+  .home-header .header-icons {
+    gap: 15px;
+  }
+  .home-header .header-icons .mobile-search {
+    display: flex;
+  }
+  .ink-home {
+    padding: 0 14px 20px;
+    gap: 15px 12px;
+  }
+  .ink-home .ink-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 0;
+    padding-top: 0;
+    margin: 0 -14px;
+    overflow: hidden;
+  }
+  .ink-home .ink-hero-art {
+    grid-row: 1;
+    height: 260px;
+    clip-path: none;
+    border: 0;
+    border-bottom: 1px solid #8887;
+  }
+  .ink-home .hero-background {
+    height: 100%;
+    object-fit: cover;
+    object-position: 43% center;
+  }
+  .ink-home .hero-copy {
+    padding: 25px 25px 28px;
+    background: #f8f6f0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px 18px;
+    align-items: start;
+    border-bottom: 1px solid #2f363645;
+  }
+  .ink-home .hero-copy h1 {
+    grid-column: 1;
+    grid-row: 1/3;
+    font-size: 42px;
+    line-height: 0.96;
+    margin: 0 0 0 6px;
+    letter-spacing: -1px;
+    transform: rotate(-5deg);
+  }
+  .ink-home .hero-copy p {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 150px;
+    margin: 21px 0 0;
+    font-size: 9px;
+    line-height: 1.8;
+    letter-spacing: 1.8px;
+  }
+  .ink-home .hero-copy .button {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    font-size: 8px;
+    min-height: 36px;
+    padding: 10px 15px;
+    gap: 9px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .ink-dot {
+    font-size: 64px;
+  }
+  .hero-margin {
+    display: none;
+  }
+  .memo-left {
+    left: 9%;
+    top: 9%;
+    font-size: 17px;
+    width: 94px;
+    padding: 12px;
+    opacity: 0.9;
+    display: none;
+  }
+  .ink-home .hero-copy .ink-brush {
+    display: none;
+  }
+  .art-edition {
+    bottom: 8px;
+    right: 12px;
+    font-size: 5px;
+  }
+  .polaroid-section {
+    padding: 0 5px 9px;
+  }
+  .polaroid-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 10px;
+    padding: 8px 0;
+  }
+  .ink-home .polaroid {
+    padding: 5px 5px 7px;
+    min-height: 106px;
+  }
+  .ink-home .polaroid .category-photo {
+    aspect-ratio: 1.1;
+  }
+  .ink-home .polaroid strong {
+    font-size: 10px;
+    line-height: 1.15;
+    min-height: 18px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ink-home .polaroid small {
+    font-size: 8px;
+    margin-top: 1px;
+  }
+  .shop-all-card {
+    grid-column: 1/-1;
+    height: 37px;
+    transform: none;
+    flex-direction: row;
+    gap: 7px;
+    font-size: 10px;
+    border: 0;
+    box-shadow: none;
+    margin: 4px 0 0;
+    padding: 7px;
+    letter-spacing: 1px;
+  }
+  .shop-all-card br {
+    display: none;
+  }
+  .shop-all-card > svg {
+    width: 15px;
+    margin-left: 8px;
+  }
+  .budget-banner {
+    grid-template-columns: 1fr 1.3fr;
+    height: 196px;
+    margin-top: 8px;
+    border: 1px solid #5f655b66;
+  }
+  .budget-collage {
+    display: none;
+  }
+  .budget-copy {
+    padding: 19px 9px;
+  }
+  .budget-copy h2 {
+    font-size: 25px;
+    line-height: 1.12;
+    margin-bottom: 16px;
+  }
+  .budget-copy > span {
+    font-size: 7px;
+    letter-spacing: 1.9px;
+  }
+  .budget-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 185px;
+  }
+  .budget-links a {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+  .budget-links > svg {
+    display: none;
+  }
+  .speech-bubble {
+    font-size: 9px;
+    right: 3px;
+    top: 10px;
+    padding: 10px 8px;
+  }
+  .budget-manga {
+    background-size: 300% auto;
+    background-position: 0% center;
+    clip-path: none;
+  }
+  .home-featured-products,
+  .home-promotional-banners,
+  .home-back-to-school,
+  .home-gifts,
+  .home-corporate-orders,
+  .home-new-arrivals,
+  .home-best-sellers {
+    grid-column: 1/-1;
+  }
+  .home-featured-products .section {
+    padding: 8px 6px 13px;
+  }
+  .home-featured-products .section-header h2 {
+    font-size: 22px;
+  }
+  .home-featured-products .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px 13px;
+  }
+  .ink-home .product-name {
+    font-size: 10px;
+    min-height: 28px;
+    line-height: 1.35;
+  }
+  .ink-home .product-meta > span {
+    display: block;
+    font-size: 7px;
+  }
+  .ink-home .rating {
+    font-size: 8px;
+  }
+  .ink-home .price {
+    font-size: 10px;
+  }
+  .ink-home .price del {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+  .ink-home .wish-button {
+    width: 24px;
+    height: 24px;
+    right: 3px;
+    top: 3px;
+  }
+  .ink-home .wish-button svg {
+    width: 15px;
+  }
+  .ink-home .quick-add {
+    transform: none;
+    font-size: 9px;
+    padding: 7px;
+  }
+  .ink-home .product-image {
+    aspect-ratio: 1.06;
+  }
+  .home-promotional-banners {
+    padding-top: 0;
+  }
+  .ink-promo {
+    min-height: 194px;
+  }
+  .ink-promo-desk {
+    min-height: 208px;
+  }
+  .ink-promo-desk h2 {
+    font-size: 32px;
+    max-width: 195px;
+  }
+  .ink-promo-desk .promo-copy {
+    max-width: 215px;
+    padding: 22px 21px;
+  }
+  .ink-promo h2 {
+    font-size: 26px;
+    max-width: 240px;
+    margin-bottom: 13px;
+  }
+  .ink-promo-desk .promo-art {
+    background-position: 46% center;
+  }
+  .ink-promo .promo-copy {
+    padding: 22px 20px;
+    max-width: 81%;
+  }
+  .ink-promo .button {
+    min-height: 35px;
+    font-size: 9px;
+    padding: 10px 18px;
+    gap: 14px;
+  }
+  .ink-promo .button svg {
+    width: 14px;
+  }
+  .ink-promo p {
+    font-size: 9px;
+    letter-spacing: 0.7px;
+    max-width: 200px;
+    margin-bottom: 17px;
+  }
+  .ink-promo-corporate h2 {
+    font-size: 25px;
+  }
+  .ink-promo-corporate p {
+    font-size: 8px;
+    line-height: 1.7;
+    letter-spacing: 0.9px;
+    max-width: 185px;
+  }
+  .ink-promo-corporate {
+    min-height: 215px;
+  }
+  .ink-trust {
+    grid-row: auto;
+  }
+  .ink-home .trust-bar {
+    gap: 17px 20px;
+    padding: 21px 8px;
+    justify-content: start;
+  }
+  .ink-home .trust-bar span {
+    font-size: 8px;
+    gap: 7px;
+    width: calc(50% - 12px);
+    white-space: normal;
+    line-height: 1.5;
+  }
+  .ink-home .trust-bar span:last-child {
+    display: flex;
+  }
+  .ink-home .trust-bar span:nth-child(3) {
+    display: none;
+  }
+  .ink-home .trust-bar svg {
+    width: 19px;
+    flex-shrink: 0;
+  }
+  .ink-home .section {
+    padding: 24px 6px;
+  }
+  .ink-home .section-header h2 {
+    font-size: 22px;
+  }
+  .ink-home .section-header .text-link {
+    font-size: 8px;
+    gap: 4px;
+  }
+  .ink-home .section-header {
+    gap: 8px;
+  }
+  .ink-home .section-header .text-link svg {
+    width: 12px;
+  }
+  .ink-home .section-header .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+  .ink-home .paper-grid {
+    gap: 22px 18px;
+  }
+  .ink-home .social-grid {
+    gap: 15px;
+  }
+  .ink-home .paper-section .section-header h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 380px) {
+  .home-header .logo {
+    font-size: 27px;
+  }
+  .home-header .header-icons {
+    gap: 12px;
+  }
+  .ink-home .hero-copy {
+    padding: 23px 19px;
+    gap: 10px;
+  }
+  .ink-home .hero-copy h1 {
+    font-size: 37px;
+  }
+  .ink-home .hero-copy p {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+  }
+  .ink-home .hero-copy .button {
+    font-size: 7px;
+    padding: 9px 12px;
+    gap: 7px;
+  }
+  .budget-copy h2 {
+    font-size: 22px;
+  }
+  .budget-links a {
+    font-size: 7px;
+    padding: 5px 8px;
+  }
+  .polaroid-rail {
+    gap: 10px 8px;
+  }
+  .ink-home .polaroid strong {
+    font-size: 9px;
+  }
+  .ink-home .polaroid {
+    min-height: 98px;
+  }
+}

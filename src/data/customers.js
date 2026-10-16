@@ -1,0 +1,32 @@
+export const customers = [
+  {
+    id: "1",
+    name: "Amaya Perera",
+    email: "amaya@example.com",
+    phone: "077 123 4567",
+    orders: 8,
+    spend: 24580,
+    joined: "2026-04-12",
+    status: "Active",
+  },
+  {
+    id: "2",
+    name: "Nimal Fernando",
+    email: "nimal@example.com",
+    phone: "071 234 5678",
+    orders: 4,
+    spend: 12390,
+    joined: "2026-05-20",
+    status: "Active",
+  },
+  {
+    id: "3",
+    name: "Kavindi Silva",
+    email: "kavindi@example.com",
+    phone: "076 345 6789",
+    orders: 6,
+    spend: 18950,
+    joined: "2026-07-02",
+    status: "Active",
+  },
+];
