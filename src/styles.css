@@ -2406,6 +2406,18 @@ td .text-link {
   content: "p";
   font-size: 32px;
 }
+.collapsed .admin-sidebar > .official-logo {
+  width: 40px;
+  height: 40px;
+}
+.collapsed .admin-sidebar > .official-logo::before {
+  content: none;
+}
+.collapsed .admin-sidebar > .official-logo img {
+  width: 200px;
+  left: -19px;
+  transform: translateY(-47%);
+}
 .collapsed .admin-sidebar .admin-workspace,
 .collapsed .admin-sidebar a > span,
 .collapsed .collapse-button > span {
@@ -3616,6 +3628,15 @@ td .text-link {
   .collapsed .admin-sidebar > .logo {
     font-size: 31px;
     margin: 0 18px 29px;
+  }
+  .collapsed .admin-sidebar > .official-logo {
+    width: 4.5em;
+    height: 1.2em;
+  }
+  .collapsed .admin-sidebar > .official-logo img {
+    width: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .collapsed .admin-sidebar > .logo:before {
     display: none;

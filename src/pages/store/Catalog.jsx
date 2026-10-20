@@ -10,6 +10,7 @@ import { useShop } from "../../hooks/useShop";
 import { categories, slugify } from "../../data/products";
 import { Breadcrumb, EmptyState, Button } from "../../components/common/UI";
 import { ProductGrid } from "../../components/product/ProductCard";
+import NotebookCatalog from "./NotebookCatalog";
 export default function Catalog() {
   const { products } = useShop(),
     { slug } = useParams(),
@@ -102,6 +103,7 @@ export default function Catalog() {
         Number(a.id.startsWith(isOffice ? "office-" : "school-")),
     );
   const pageSize = isSupplies ? 24 : 12;
+  if (slug === "notebooks") return <NotebookCatalog />;
   const filterUI = (
     <>
       <div className="section-header">

@@ -9,6 +9,7 @@ import {
   PromoBanner,
 } from "../../components/layout/HomeSections";
 import { TrustBadges } from "../../layouts/StoreLayout";
+import DeliveryPartners from "../../components/layout/DeliveryPartners";
 import { categoryArtworkStyle } from "../../data/artwork";
 
 const collections = [
@@ -253,6 +254,9 @@ export default function Home() {
         ))}
       <div className="ink-trust">
         <TrustBadges />
+      </div>
+      <div className="home-delivery-partners">
+        <DeliveryPartners />
       </div>
     </div>
   );

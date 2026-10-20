@@ -19,6 +19,7 @@ import {
   SectionHeader,
 } from "../../components/common/UI";
 import "../../contact.css";
+import DeliveryPartners from "../../components/layout/DeliveryPartners";
 
 const contactDetails = [
   {
@@ -82,8 +83,16 @@ export default function Contact() {
   return (
     <div className="contact-page">
       <section className="contact-image-banner" aria-labelledby="contact-title">
-        <h1 id="contact-title" className="contact-accessible-title">Contact us.</h1>
-        <img src="/images/contact-banner.png" alt="Contact Us — we're just a message away. Sunlit stationery desk with a sleeping cat, plants and a laptop." width="2172" height="724" fetchPriority="high" />
+        <h1 id="contact-title" className="contact-accessible-title">
+          Contact us.
+        </h1>
+        <img
+          src="/images/contact-banner.png"
+          alt="Contact Us — we're just a message away. Sunlit stationery desk with a sleeping cat, plants and a laptop."
+          width="2172"
+          height="724"
+          fetchPriority="high"
+        />
       </section>
       <div className="container contact-content">
         <Breadcrumb name="Contact Us" />
@@ -258,6 +267,7 @@ export default function Contact() {
             ))}
           </div>
         </section>
+        <DeliveryPartners />
       </div>
     </div>
   );

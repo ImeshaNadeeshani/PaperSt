@@ -186,6 +186,17 @@ export default function Cart() {
           <Button to="/checkout">
             Checkout <ArrowRight size={17} />
           </Button>
+          <Link className="summary-continue" to="/shop">
+            Continue shopping
+          </Link>
+          <div className="summary-delivery">
+            <Truck size={22} /> Free delivery over Rs. 5,000
+          </div>
+          <div
+            className="summary-art"
+            role="img"
+            aria-label="Almost there! Illustration of a girl and cat at a stationery desk"
+          />
         </OrderSummary>
       </div>
       <div className="bag-art-note">

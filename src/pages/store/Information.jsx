@@ -46,42 +46,52 @@ export default function Information() {
   if (key === "about")
     return (
       <div className="container page">
-        <Breadcrumb name="Our story" />
+        <Breadcrumb name="About Us" />
         <section className="about-hero">
           <div>
-            <span className="eyebrow">HELLO, WE’RE PAPERIST</span>
+            <span className="eyebrow">ABOUT PAPERST.</span>
             <h1>
-              Small things.
+              Good ideas
               <br />
-              <em>Endless possibility.</em>
+              <em>start here.</em>
             </h1>
-            <p>We believe good ideas deserve a place to begin.</p>
+            <p>PaperSt. — stationery for learning, working, and creating.</p>
             <p>
-              A notebook that feels just right. A pen you reach for every day. A
-              little desk space that makes you want to create. We bring together
-              thoughtful stationery for all the moments that make your story.
+              PaperSt. is a stationery space for students, professionals,
+              artists, and anyone who loves a fresh page. From school essentials
+              and office supplies to notebooks, journals, and art materials, our
+              collection brings together practical tools for everyday ideas.
+            </p>
+            <p>
+              We believe the little things can make a big difference: a pen that
+              helps you think, a notebook that keeps your plans together, or a
+              desk that inspires you to begin. Our aim is to make choosing
+              stationery simple, enjoyable, and full of possibility.
             </p>
             <Button to="/shop">
               Find your inspiration <ArrowUpRight size={17} />
             </Button>
           </div>
-          <img src={photos.journal} alt="Thoughtfully crafted journals" />
+          <img
+            src="/images/contact-storefront.png"
+            alt="Illustration of a welcoming stationery shop filled with notebooks and creative supplies"
+          />
         </section>
         <section className="section">
-          <SectionHeader title="Made for the beautifully everyday" to={null} />
+          <SectionHeader title="For every chapter of your day" to={null} />
           <div className="three-columns">
             {[
               [
-                "Thoughtfully chosen",
-                "Beautiful design, useful details, and quality you can feel.",
+                "Learn with confidence",
+                "Exercise books, pens, pencils, and school essentials to support notes, lessons, and new discoveries.",
               ],
               [
-                "A little more creative",
-                "For school notes, office plans, and the ideas that don’t fit inside the lines.",
+                "Work with purpose",
+                "Office stationery, filing supplies, and desk organisers to keep your workspace and plans together.",
               ],
               [
-                "Close to home",
-                "A Sri Lankan stationery space with a love for Japanese-inspired simplicity.",
+                "Create your own story",
+                "Journals, sketchbooks, paper, and art supplies for the ideas that deserve room to grow.",
               ],
             ].map(([title, text]) => (
               <article className="panel" key={title}>

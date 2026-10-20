@@ -1,0 +1,79 @@
+/* Shared storefront presentation. Product data and payment logic stay separate. */
+.store-shell { --border: #e3e7eb; --muted: #647180; background: #fff; color: #203247; }
+.store-shell .store-header { height: 74px; background: #fff; border-bottom: 1px solid #e7eaee; gap: 22px; }
+.store-shell .desktop-nav { gap: 18px; margin-left: 8px; }
+.store-shell .desktop-nav .nav-item > a { padding-block: 10px; font-size: 12px; font-weight: 500; position: relative; }
+.store-shell .nav-item > a.active::after { content: ''; position: absolute; height: 2px; background: #c9473d; bottom: 2px; left: 0; right: 0; border-radius: 2px; }
+.store-shell .header-search { background: #f7f8fa; border: 1px solid #e1e6ec; border-radius: 24px; padding: 10px 14px; min-width: 130px; }
+.store-shell .header-search input { min-width: 0; width: 100%; }
+.store-shell .mega-menu { border: 1px solid #e7eaee; border-radius: 0 0 10px 10px; box-shadow: 0 12px 30px #20324712; }
+.store-shell .page { padding-block: 36px 56px; }
+.store-shell .page > h1 { font-size: clamp(29px, 3vw, 40px); line-height: 1.2; letter-spacing: -1px; font-weight: 650; }
+.store-shell .breadcrumb { font-size: 11px; color: #647180; gap: 10px; margin-bottom: 24px; }
+.store-shell .button { border-radius: 7px; font-weight: 600; letter-spacing: .15px; transition: background 160ms ease, box-shadow 160ms ease; }
+.store-shell .button:hover { box-shadow: 0 3px 10px #20324712; }
+.store-shell .panel { border-color: #e3e7eb; border-radius: 10px; box-shadow: none; }
+.store-shell input:not([type='checkbox']):not([type='radio']), .store-shell select, .store-shell textarea { border-radius: 6px; border-color: #d9e0e8; }
+.store-shell input:focus-visible, .store-shell select:focus-visible, .store-shell textarea:focus-visible { outline: 2px solid #577d9b; outline-offset: 2px; }
+.store-shell a:focus-visible, .store-shell button:focus-visible { outline: 2px solid #577d9b; outline-offset: 4px; }
+.store-shell .field > span { font-weight: 500; color: #33475c; }
+.store-shell .section-header h2 { font-size: clamp(21px, 2.2vw, 28px); font-weight: 650; letter-spacing: -.5px; }
+.store-shell .shopping-catalog { margin-top: 20px; }
+.store-shell .catalog-banner { border-radius: 10px; }
+.store-shell .catalog-toolbar { gap: 12px; margin-top: 20px; }
+.store-shell .catalog-toolbar select { min-height: 36px; background: #fff; }
+.store-shell .filter-sidebar { background: #fafbfc; border: 1px solid #e7eaee; border-radius: 9px; }
+.store-shell .product-card { background: #fff; border: 1px solid #e7eaee; border-radius: 9px; padding: 12px; display: flex; flex-direction: column; min-width: 0; }
+.store-shell .product-card:hover { border-color: #c8d2dc; }
+.store-shell .product-image { border-radius: 6px; overflow: hidden; }
+.store-shell .product-name { font-size: 13px; line-height: 1.5; font-weight: 550; margin-top: 5px; }
+.store-shell .price { font-size: 14px; margin-top: 8px; font-weight: 650; }
+.store-shell .product-meta { font-size: 9px; margin-top: 10px; gap: 6px; }
+.store-shell .product-badge { background: #ffffffed; border-radius: 4px; font-size: 8px; }
+.store-shell .product-payment-options { margin-top: 12px; }
+.store-shell .product-payment-options.detailed { margin-top: 15px; }
+.store-shell .ink-home { background: #fffdf9; padding-top: 0; }
+.store-shell .ink-home .hero-copy h1 { transform: none; font-style: normal; }
+.store-shell .ink-home .hero-memo { box-shadow: 0 3px 10px #20324712; }
+.store-shell .collection-card { border-radius: 8px; border-color: #dddeda; padding: 9px; }
+.store-shell .collection-card-art { border-radius: 5px; }
+.store-shell .collection-card-art h3 { font-size: clamp(16px, 1.4vw, 21px); letter-spacing: -.35px; }
+.store-shell .collection-card-cta { letter-spacing: .3px; }
+.store-shell .ink-home h2 { text-transform: none; }
+.store-shell .ink-home .section { padding-block: 20px; }
+.store-shell .ink-home .product-image { aspect-ratio: 1; }
+.store-shell .ink-home .product-name { font-size: 12px; }
+.store-shell .about-hero { gap: 45px; align-items: center; }
+.store-shell .about-hero h1 { font-size: clamp(34px, 4vw, 54px); line-height: 1.15; letter-spacing: -1.5px; }
+.store-shell .about-hero h1 em { font-family: 'DM Sans', sans-serif; font-style: normal; }
+.store-shell .about-hero p { line-height: 1.8; color: #647180; max-width: 550px; }
+.store-shell .about-hero img { border-radius: 12px; }
+.store-shell .faq-item { border-color: #e3e7eb; }
+.store-shell .faq-item button { font-weight: 550; padding-block: 18px; }
+.store-shell .contact-content { padding-top: 25px; }
+.store-shell .contact-message-paper input, .store-shell .contact-message-paper textarea, .store-shell .contact-message-paper select { background: #fff; }
+.store-shell .newsletter { border-top: 1px solid #e7eaee; background: #faf9f5; }
+.store-shell footer { border-top: 1px solid #e7eaee; background: #f8fafb; padding-top: 40px; }
+.store-shell .footer-top h4 { font-size: 13px; }
+.store-shell .footer-top > div > a:not(.logo) { color: #647180; }
+.store-shell .footer-top h4::after { width: 20px; height: 2px; }
+.store-shell .account-sidebar { background: #fafbfc; }
+@media (max-width: 1100px) {
+  .store-shell .desktop-nav { gap: 12px; }
+  .store-shell .desktop-nav .nav-item > a { font-size: 10px; }
+  .store-shell .store-header { gap: 16px; padding-inline: 22px; }
+}
+@media (max-width: 767px) {
+  .store-shell .store-header { height: 62px; padding-inline: 16px; gap: 12px; }
+  .store-shell .store-header .logo { font-size: 27px; }
+  .store-shell .header-icons { gap: 13px; }
+  .store-shell .page { padding-block: 24px 36px; }
+  .store-shell .product-card { padding: 8px; }
+  .store-shell .product-name { font-size: 12px; }
+  .store-shell .price { font-size: 13px; }
+  .store-shell .about-hero { gap: 24px; }
+  .store-shell .catalog-toolbar { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .store-shell .button { transition: none; }
+}

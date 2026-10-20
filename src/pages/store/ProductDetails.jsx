@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { Heart, Truck, RotateCcw, ShieldCheck } from "lucide-react";
+import {
+  Heart,
+  Truck,
+  RotateCcw,
+  ShieldCheck,
+  ChevronLeft,
+  ArrowRight,
+} from "lucide-react";
 import { useShop } from "../../hooks/useShop";
 import { money } from "../../data/products";
 import {
@@ -12,6 +19,7 @@ import {
   EmptyState,
 } from "../../components/common/UI";
 import { ProductGrid } from "../../components/product/ProductCard";
+import PaymentOptions from "../../components/product/PaymentOptions";
 import useLocalStorage from "../../hooks/useLocalStorage";
 export default function ProductDetails() {
   const { slug } = useParams();
@@ -48,6 +56,28 @@ function ProductView({ slug }) {
         <div className="product-gallery">
           <div className="detail-image">
             <img src={p.images[image]} alt={p.name} />
+            <div className="gallery-toolbar">
+              <button
+                className="icon-button"
+                aria-label="Previous product image"
+                onClick={() =>
+                  setImage((image + p.images.length - 1) % p.images.length)
+                }
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                className="icon-button"
+                aria-label="Save product from gallery"
+                aria-pressed={wishlist.includes(p.id)}
+                onClick={() => toggleWishlist(p.id)}
+              >
+                <Heart
+                  size={18}
+                  fill={wishlist.includes(p.id) ? "currentColor" : "none"}
+                />
+              </button>
+            </div>
           </div>
           <div className="thumbnails">
             {p.images.map((x, i) => (
@@ -79,6 +109,7 @@ function ProductView({ slug }) {
             {p.salePrice && <del>{money(p.price)}</del>}
           </div>
           <p>{p.description}</p>
+          <PaymentOptions amount={p.salePrice ?? p.price} detailed />
           {p.samplePrice && (
             <p className="school-price-note">
               Illustrated product preview · sample price in LKR.
@@ -95,11 +126,33 @@ function ProductView({ slug }) {
               <div>
                 {values.map((value) => (
                   <button
-                    className={variant[key] === value ? "selected" : ""}
+                    className={`${variant[key] === value ? "selected" : ""} ${key === "Colour" ? "colour-swatch" : ""}`}
+                    aria-label={
+                      key === "Colour" ? `${key}: ${value}` : undefined
+                    }
+                    aria-pressed={variant[key] === value}
+                    title={key === "Colour" ? value : undefined}
+                    style={
+                      key === "Colour"
+                        ? {
+                            backgroundColor:
+                              {
+                                Natural: "#c6b092",
+                                Navy: "#28445c",
+                                Sage: "#7f9c87",
+                                Standard: "#718c94",
+                              }[value] || "#d4c4b1",
+                          }
+                        : undefined
+                    }
                     key={value}
                     onClick={() => setVariant({ ...variant, [key]: value })}
                   >
-                    {value}
+                    {key === "Colour" ? (
+                      <span className="swatch-label">{value}</span>
+                    ) : (
+                      value
+                    )}
                   </button>
                 ))}
               </div>
@@ -115,15 +168,21 @@ function ProductView({ slug }) {
               disabled={!p.stock}
               onClick={() => addToCart(p, quantity, variant)}
             >
-              Add to bag
+              Add to bag <ArrowRight size={18} />
             </Button>
             <button
-              className="icon-button"
+              className="product-wishlist"
               aria-label="Save to wishlist"
               aria-pressed={wishlist.includes(p.id)}
               onClick={() => toggleWishlist(p.id)}
             >
-              <Heart fill={wishlist.includes(p.id) ? "currentColor" : "none"} />
+              <Heart
+                size={15}
+                fill={wishlist.includes(p.id) ? "currentColor" : "none"}
+              />{" "}
+              {wishlist.includes(p.id)
+                ? "Added to wishlist"
+                : "Add to wishlist"}
             </button>
           </div>
           <Button

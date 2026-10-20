@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { supabase, supabaseConfigured } from "../lib/supabaseClient";
+import { fetchPublishedProducts } from "../services/products";
 import { ShopContext as Context } from "./context";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { products as seed } from "../data/products";
@@ -8,7 +11,7 @@ import { orders as orderSeed } from "../data/orders";
 import { defaultHomeContent, migrateHomeContent } from "../data/homeContent";
 
 export function ShopProvider({ children }) {
-  const [products, setProducts] = useLocalStorage(
+  const [localProducts, setLocalProducts] = useLocalStorage(
       "paperist-products",
       seed,
       (products) => migrateOfficeProducts(migrateSchoolProducts(products)),
@@ -35,6 +38,50 @@ export function ShopProvider({ children }) {
       migrateHomeContent,
     ),
     [toast, setToast] = useState("");
+  const { pathname } = useLocation();
+  const isAdmin = pathname.startsWith("/admin");
+  const [remoteProducts, setRemoteProducts] = useState([]);
+  const [catalogStatus, setCatalogStatus] = useState(
+    supabaseConfigured ? "loading" : "demo",
+  );
+  const [catalogError, setCatalogError] = useState("");
+  const [catalogAttempt, setCatalogAttempt] = useState(0);
+  const refreshProducts = () => {
+    setCatalogStatus("loading");
+    setCatalogAttempt((value) => value + 1);
+  };
+  useEffect(() => {
+    if (!supabaseConfigured) return;
+    const controller = new AbortController();
+    let active = true;
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    fetchPublishedProducts(supabase, controller.signal)
+      .then((data) => {
+        if (active) {
+          setRemoteProducts(data);
+          setCatalogStatus("ready");
+          setCatalogError("");
+        }
+      })
+      .catch((error) => {
+        if (active) {
+          setCatalogStatus("error");
+          setCatalogError(error.message || "The catalog could not be loaded.");
+        }
+      })
+      .finally(() => clearTimeout(timeout));
+    return () => {
+      active = false;
+      clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [catalogAttempt]);
+  const products =
+    isAdmin || !supabaseConfigured ? localProducts : remoteProducts;
+  const setProducts =
+    isAdmin || !supabaseConfigured
+      ? setLocalProducts
+      : () => notify("Live product editing requires authorised admin access.");
   useEffect(() => {
     const handle = () => {
       setToast(
@@ -90,6 +137,9 @@ export function ShopProvider({ children }) {
     <Context.Provider
       value={{
         products,
+        catalogStatus,
+        catalogError,
+        refreshProducts,
         setProducts,
         orders,
         setOrders,

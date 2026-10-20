@@ -1,0 +1,114 @@
+.delivery-partners {
+  padding: 28px 0;
+  color: #1e3045;
+}
+.delivery-partner-original-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 11px;
+}
+.delivery-partners-heading h2 {
+  font-size: clamp(23px, 2.4vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  margin: 8px 0 12px;
+}
+.delivery-partners-heading > p {
+  max-width: 660px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #65717b;
+  margin-bottom: 22px;
+}
+.delivery-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.delivery-partner {
+  padding: 26px;
+  border-radius: 14px;
+  border: 1px solid #dfdfd4;
+  background: #fffbeb;
+}
+.delivery-partner.uber {
+  background: #eef7ef;
+  border-color: #d6e4d6;
+}
+.delivery-partner-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.delivery-partner-brand strong {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+.delivery-partner-brand > svg {
+  margin-left: auto;
+}
+.delivery-partner-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: #fbd64c;
+  border-radius: 12px;
+}
+.uber .delivery-partner-icon {
+  background: #13251b;
+  color: #fff;
+}
+.delivery-partner h3 {
+  font-size: 19px;
+  margin: 22px 0 9px;
+}
+.delivery-partner p {
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 410px;
+  color: #58656e;
+}
+.delivery-partner a,
+.delivery-partner-pending {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 17px;
+  border-radius: 30px;
+  background: #17251e;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.delivery-partner a:hover {
+  background: #304438;
+}
+.delivery-partner a:focus-visible {
+  outline: 2px solid #c9473d;
+  outline-offset: 4px;
+}
+.delivery-partner-pending {
+  color: #58656e;
+  background: #ffffffb3;
+  border: 1px solid #dedfd5;
+}
+.ink-home .delivery-partners h2 {
+  text-transform: none;
+}
+.home-delivery-partners {
+  grid-column: 1 / -1;
+}
+@media (max-width: 767px) {
+  .delivery-partner-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .delivery-partner {
+    padding: 22px;
+  }
+}

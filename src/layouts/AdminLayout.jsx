@@ -60,12 +60,22 @@ export default function AdminLayout() {
   return (
     <div className={`admin-shell ${collapsed ? "collapsed" : ""}`}>
       <aside className={`admin-sidebar ${mobile ? "open" : ""}`}>
-        <Link className="logo" to="/admin">
-          paperist<span>●</span>
+        <Link
+          className="logo official-logo"
+          to="/admin"
+          aria-label="PaperSt admin dashboard"
+        >
+          <img src="/images/official-logo.jpeg" alt="PaperSt" />
         </Link>
         <div className="admin-workspace">
           STORE WORKSPACE <span>DEMO</span>
         </div>
+        <p
+          style={{ margin: "0 16px 16px", fontSize: "11px", color: "#65717b" }}
+        >
+          Local demo: product and stock edits here do not update the Supabase
+          catalog.
+        </p>
         <nav>
           {adminNav.map(([label, path, Icon]) => (
             <NavLink

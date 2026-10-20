@@ -1,5 +1,5 @@
-import { schoolProducts } from "./schoolProducts";
-import { officeProducts } from "./officeProducts";
+import { schoolProducts } from "./schoolProducts.js";
+import { officeProducts } from "./officeProducts.js";
 export const categories = [
   "Notebooks",
   "Pens",

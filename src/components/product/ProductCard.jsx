@@ -4,6 +4,7 @@ import { useShop } from "../../hooks/useShop";
 import { money } from "../../data/products";
 import { productArtworkStyle } from "../../data/artwork";
 import { RatingStars } from "../common/UI";
+import PaymentOptions from "./PaymentOptions";
 export function ProductCard({ product: p, illustrated = false }) {
   const { wishlist, toggleWishlist, addToCart } = useShop();
   return (
@@ -63,6 +64,7 @@ export function ProductCard({ product: p, illustrated = false }) {
       {p.samplePrice && (
         <small className="school-pack-size">{p.variants.Size[0]}</small>
       )}
+      <PaymentOptions amount={p.salePrice ?? p.price} />
     </article>
   );
 }

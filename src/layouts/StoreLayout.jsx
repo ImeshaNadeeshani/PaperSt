@@ -72,7 +72,7 @@ export function Newsletter() {
 export default function StoreLayout() {
   const [menu, setMenu] = useState(false),
     [search, setSearch] = useState("");
-  const { cart, wishlist, content } = useShop();
+  const { cart, wishlist, content, catalogStatus, refreshProducts } = useShop();
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
@@ -87,18 +87,21 @@ export default function StoreLayout() {
     "Gifts",
     "Brands",
     "Sale",
+    "About Us",
     "Contact Us",
   ];
   const path = (x) =>
-    x === "Contact Us"
-      ? "/contact"
-      : x === "Shop"
-      ? "/shop"
-      : ["Brands", "Sale", "Gifts"].includes(x)
-        ? "/" + x.toLowerCase()
-        : "/category/" + x.toLowerCase();
+    x === "About Us"
+      ? "/about"
+      : x === "Contact Us"
+        ? "/contact"
+        : x === "Shop"
+          ? "/shop"
+          : ["Brands", "Sale", "Gifts"].includes(x)
+            ? "/" + x.toLowerCase()
+            : "/category/" + x.toLowerCase();
   return (
-    <>
+    <div className={`store-shell ${location.pathname === "/category/notebooks" ? "notebook-shell" : ""}`}>
       <div
         className={`announcement ${location.pathname === "/" ? "home-announcement" : ""}`}
       >
@@ -109,7 +112,7 @@ export default function StoreLayout() {
         className={`store-header ${location.pathname === "/" ? "home-header" : ""}`}
       >
         <Link className="logo official-logo" to="/" aria-label="Paperist home">
-          <img src="/images/official-logo.jpeg" alt="Paperist" />
+          {location.pathname === "/category/notebooks" ? <span className="nb-logo-word">Paper<span>ı</span>st</span> : <img src="/images/official-logo.jpeg" alt="Paperist" />}
         </Link>
         <nav className="desktop-nav">
           {links.map((x) => (
@@ -117,7 +120,7 @@ export default function StoreLayout() {
               <NavLink className={x === "Sale" ? "red" : ""} to={path(x)}>
                 {x}
               </NavLink>
-              {!["Sale", "Brands", "Contact Us"].includes(x) && (
+              {!["Sale", "Brands", "Contact Us", "About Us"].includes(x) && (
                 <div className="mega-menu">
                   <b>Find your next favourite</b>
                   <Link to="/new-arrivals">Just landed</Link>
@@ -139,7 +142,7 @@ export default function StoreLayout() {
           <Search size={17} />
           <input
             aria-label="Search products"
-            placeholder="Find your next good idea…"
+            placeholder={location.pathname === "/category/notebooks" ? "Search for notebooks, pens, art supplies..." : "Find your next good idea…"}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -179,7 +182,21 @@ export default function StoreLayout() {
         )}
       </header>
       <main>
-        <Outlet />
+        {catalogStatus === "loading" ? (
+          <div className="container page" role="status">
+            Loading products…
+          </div>
+        ) : catalogStatus === "error" ? (
+          <div className="container page" role="alert">
+            <h1>We couldn't load the shop.</h1>
+            <p>Please check your connection and try again.</p>
+            <button className="button" onClick={refreshProducts}>
+              Try again
+            </button>
+          </div>
+        ) : (
+          <Outlet />
+        )}
       </main>
       {content.find((x) => x.name === "Newsletter")?.visible !== false && (
         <Newsletter />
@@ -187,7 +204,11 @@ export default function StoreLayout() {
       <footer>
         <div className="footer-top">
           <div>
-            <Link className="logo official-logo" to="/" aria-label="Paperist home">
+            <Link
+              className="logo official-logo"
+              to="/"
+              aria-label="Paperist home"
+            >
               <img src="/images/official-logo.jpeg" alt="Paperist" />
             </Link>
             <p>
@@ -242,6 +263,6 @@ export default function StoreLayout() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
