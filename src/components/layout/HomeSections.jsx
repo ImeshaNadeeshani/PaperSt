@@ -12,13 +12,8 @@ export function HeroBanner({ config = {} }) {
         <h1>
           {config.title || (
             <>
-              Good
-              <br />
-              ideas
-              <br />
-              start
-              <br />
-              here<span className="ink-dot">.</span>
+              <span className="hero-title-main">Good<br />ideas</span>
+              <span className="hero-title-script">start here<span className="ink-dot">.</span></span>
             </>
           )}
         </h1>

@@ -77,3 +77,170 @@
 @media (prefers-reduced-motion: reduce) {
   .store-shell .button { transition: none; }
 }
+/* Homepage artwork with a quiet paper area for the existing headline. */
+.store-shell .ink-home .ink-hero {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  height: clamp(330px, 33.333vw, 640px);
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+  background: #fffcf5;
+}
+.store-shell .ink-home .ink-hero-art {
+  position: absolute;
+  inset: 0 0 0 21%;
+  height: 100%;
+  border: 0;
+  clip-path: none;
+  z-index: -1;
+}
+.store-shell .ink-home .ink-hero-art .hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.store-shell .ink-home .hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 21%;
+  height: 100%;
+  padding: 20px clamp(12px, 1.8vw, 34px);
+  background: transparent;
+  border: 0;
+}
+.store-shell .ink-home .hero-copy h1 {
+  font-size: clamp(34px, 4vw, 74px);
+  margin: 0;
+  line-height: .98;
+}
+.store-shell .ink-home .hero-copy p {
+  margin: 20px 0;
+  font-size: clamp(8px, .8vw, 13px);
+  letter-spacing: 1.4px;
+}
+.store-shell .ink-home .hero-copy .button {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: clamp(8px, .75vw, 12px);
+  white-space: nowrap;
+}
+.store-shell .ink-home .hero-memo,
+.store-shell .ink-home .art-edition,
+.store-shell .ink-home .hero-margin,
+.store-shell .ink-home .hero-copy .ink-brush { display: none; }
+@media (max-width: 767px) {
+  .store-shell .ink-home .ink-hero { height: auto; display: flex; flex-direction: column; }
+  .store-shell .ink-home .ink-hero-art { position: relative; inset: auto; width: 100%; height: clamp(220px, 53vw, 360px); order: 0; z-index: 0; }
+  .store-shell .ink-home .hero-copy { order: 1; width: 100%; height: auto; padding: 24px; align-items: center; text-align: center; }
+  .store-shell .ink-home .hero-copy h1 { font-size: 38px; }
+  .store-shell .ink-home .hero-copy h1 { max-width: 300px; }
+  .store-shell .ink-home .hero-copy p { max-width: none; font-size: 10px; margin: 16px 0; }
+  .store-shell .ink-home .hero-copy .button { font-size: 11px; }
+}
+/* Hero headline enters from the left. */
+.store-shell .ink-home .hero-copy h1 {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: #111;
+  line-height: 1.03;
+  animation: hero-heading-enter 800ms cubic-bezier(.2,.7,.2,1) both;
+}
+.store-shell .ink-home .hero-copy h1 .ink-dot {
+  color: #df252e;
+  font-size: 1em;
+}
+.store-shell .ink-home .hero-copy p {
+  text-transform: uppercase;
+  line-height: 1.9;
+  letter-spacing: 2.4px;
+  color: #071e30;
+  animation: hero-heading-enter 800ms 160ms cubic-bezier(.2,.7,.2,1) both;
+}
+.store-shell .ink-home .hero-copy .button {
+  animation: hero-heading-enter 800ms 280ms cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes hero-heading-enter {
+  from { opacity: 0; transform: translateX(-65px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .store-shell .ink-home .hero-copy h1,
+  .store-shell .ink-home .hero-copy p,
+  .store-shell .ink-home .hero-copy .button { animation: none; }
+}
+/* Bold type paired with a handwritten signature. */
+.store-shell .ink-home .hero-copy h1 {
+  width: 100%;
+  font-size: clamp(32px, 3.7vw, 68px);
+  letter-spacing: -2px;
+  line-height: .94;
+  text-transform: none;
+}
+.hero-title-main { display: block; text-transform: uppercase; font-weight: 900; }
+.store-shell .ink-home .hero-title-script {
+  display: block;
+  position: relative;
+  width: fit-content;
+  margin-top: 16px;
+  padding-bottom: 12px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.05em;
+  font-weight: 700;
+  line-height: .95;
+  letter-spacing: -1.5px;
+  color: #15364a;
+  transform: rotate(-6deg);
+}
+.hero-title-script::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 9px;
+  border-top: 4px solid #df252e;
+  border-radius: 50%;
+  transform: rotate(-2deg);
+}
+@media (max-width: 767px) {
+  .store-shell .ink-home .hero-copy h1 { width: auto; font-size: 46px; }
+  .store-shell .ink-home .hero-title-script { margin: 12px auto 0; }
+}
+/* Botanical corners on the collection card frames. */
+.store-shell .collection-card {
+  position: relative;
+  isolation: isolate;
+  padding: 15px;
+  border: 1px solid #c8d0bd;
+  border-radius: 12px;
+  background: #fffdf7;
+  box-shadow: inset 0 0 0 5px #f3f4e9;
+}
+.store-shell .collection-card::before,
+.store-shell .collection-card::after {
+  content: '';
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  background: url('/images/leaf-corner.svg') center / contain no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  opacity: .9;
+}
+.store-shell .collection-card::before { top: -5px; left: -5px; }
+.store-shell .collection-card::after { right: -5px; bottom: -5px; transform: rotate(180deg); }
+.store-shell .collection-card:hover { border-color: #809573; box-shadow: inset 0 0 0 5px #edf1e4, 0 6px 20px #48603c12; }
+.store-shell .collection-card-art { border: 1px solid #e7e6d8; }
+.store-shell .collection-card-cta { position: relative; z-index: 3; }
+@media (max-width: 767px) {
+  .store-shell .collection-card { padding: 11px; }
+  .store-shell .collection-card::before,
+  .store-shell .collection-card::after { width: 56px; height: 56px; }
+}

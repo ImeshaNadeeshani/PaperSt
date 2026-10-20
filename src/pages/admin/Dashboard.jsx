@@ -22,11 +22,18 @@ export default function Dashboard() {
     [days, setDays] = useState(7),
     [metric, setMetric] = useState("Revenue");
   return (
-    <>
+    <div className="dashboard-overview">
+      <div className="dashboard-welcome">
       <AdminHeading
         title="A good day for good ideas."
         description="Welcome back, Amaya. Here’s how your store is doing."
       />
+      <div className="dashboard-quick-actions">
+        <Link to="/admin/products/new"><Package size={16} /> Add product <ArrowUpRight size={16} /></Link>
+        <Link to="/admin/orders"><ShoppingBag size={16} /> Manage orders</Link>
+      </div>
+      <span className="dashboard-welcome-note">A little inspiration. A lot of possibility.</span>
+      </div>
       <div className="dashboard-period">
         <span>
           <span className="tiny-dot green" /> Your store is looking good
@@ -36,7 +43,7 @@ export default function Dashboard() {
           value={days}
           onChange={(e) => setDays(Number(e.target.value))}
         >
-          <option value="1">Today, 6 October 2026</option>
+          <option value="1">Today</option>
           <option value="7">Last 7 days</option>
           <option value="30">Last 30 days</option>
         </select>
@@ -188,6 +195,6 @@ export default function Dashboard() {
           />
         </section>
       </div>
-    </>
+    </div>
   );
 }

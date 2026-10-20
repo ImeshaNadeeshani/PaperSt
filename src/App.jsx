@@ -6,6 +6,7 @@ import "./home.css";
 import "./shopping.css";
 import "./purchase.css";
 import "./professional.css";
+import "./admin-design.css";
 export default function App() {
   return (
     <BrowserRouter>
