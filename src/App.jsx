@@ -7,6 +7,8 @@ import "./shopping.css";
 import "./purchase.css";
 import "./professional.css";
 import "./admin-design.css";
+import "./brand-logo.css";
+import "./site-navigation.css";
 export default function App() {
   return (
     <BrowserRouter>

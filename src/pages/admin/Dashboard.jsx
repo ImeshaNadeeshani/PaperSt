@@ -24,15 +24,22 @@ export default function Dashboard() {
   return (
     <div className="dashboard-overview">
       <div className="dashboard-welcome">
-      <AdminHeading
-        title="A good day for good ideas."
-        description="Welcome back, Amaya. Here’s how your store is doing."
-      />
-      <div className="dashboard-quick-actions">
-        <Link to="/admin/products/new"><Package size={16} /> Add product <ArrowUpRight size={16} /></Link>
-        <Link to="/admin/orders"><ShoppingBag size={16} /> Manage orders</Link>
-      </div>
-      <span className="dashboard-welcome-note">A little inspiration. A lot of possibility.</span>
+        <AdminHeading
+          title="A good day for good ideas"
+          titleLines={["A good day", "for good ideas"]}
+          description="Welcome back, Amaya. Here’s how your store is doing."
+        />
+        <div className="dashboard-quick-actions">
+          <Link to="/admin/products/new">
+            <Package size={16} /> Add product <ArrowUpRight size={16} />
+          </Link>
+          <Link to="/admin/orders">
+            <ShoppingBag size={16} /> Manage orders
+          </Link>
+        </div>
+        <span className="dashboard-welcome-note">
+          A little inspiration. A lot of possibility.
+        </span>
       </div>
       <div className="dashboard-period">
         <span>

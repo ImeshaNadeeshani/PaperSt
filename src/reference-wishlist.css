@@ -1,0 +1,1045 @@
+﻿.reference-wishlist {
+  background: #fffefa;
+}
+.reference-wishlist .rs-header {
+  height: 55px;
+  padding-inline: 6%;
+  gap: 24px;
+}
+.reference-wishlist .rs-logo {
+  font-size: 34px;
+}
+.reference-wishlist .rs-nav {
+  gap: 18px;
+}
+.reference-wishlist .rs-search {
+  width: 230px;
+  height: 30px;
+}
+.reference-wishlist .rs-actions svg {
+  width: 23px;
+  height: 23px;
+}
+.wl-banner {
+  height: 326px;
+  position: relative;
+  background: url("/images/account-banner.png") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 6%;
+  overflow: hidden;
+}
+.wl-banner > div {
+  transform: rotate(-6deg);
+  padding: 12px 19px;
+}
+.wl-banner h1 {
+  font:
+    700 50px/1 Kalam,
+    cursive;
+  letter-spacing: -2px;
+  margin: 0 0 12px;
+  white-space: nowrap;
+}
+.wl-banner h1 span,
+.wl-banner p span,
+.wl-banner aside span,
+.wl-heading h1 span,
+.wl-heading-art i,
+.wl-news-copy h2 span {
+  color: #ff1029;
+}
+.wl-banner p {
+  font:
+    700 22px/1.1 Kalam,
+    cursive;
+  color: #062655;
+  position: relative;
+  margin: 0 0 0 13px;
+}
+.wl-banner p:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 75px;
+  width: 95px;
+  height: 2px;
+  background: #244d7c;
+  transform: rotate(-3deg);
+  border-radius: 50%;
+}
+.wl-banner p span {
+  display: inline-block;
+  margin-left: 7px;
+  font-size: 25px;
+}
+.wl-banner aside {
+  font:
+    700 20px/1.03 Kalam,
+    cursive;
+  background: #fff8dd;
+  padding: 17px 22px;
+  transform: rotate(-10deg);
+  margin-right: 0;
+}
+.wl-main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 18px 6% 20px;
+}
+.wl-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #4e7097;
+  font-size: 12px;
+  margin-bottom: 15px;
+  min-height: 17px;
+}
+.wl-heading {
+  position: relative;
+  padding-right: 190px;
+  min-height: 76px;
+  margin-bottom: 13px;
+}
+.wl-heading h1 {
+  font-size: 34px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 0 0 8px;
+}
+.wl-heading > p {
+  font-size: 12px;
+  color: #36577c;
+  margin: 0;
+  line-height: 1.5;
+}
+.wl-heading-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 190px;
+  height: 100px;
+  background: url("/images/about-thanks.png") 78% 100% / auto 105%;
+  mask-image: linear-gradient(90deg, transparent, #000 17%);
+  border-radius: 50% 10% 5% 5%;
+}
+.wl-heading-art span {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  background: #fffefaed;
+  font:
+    700 18px/1.02 Kalam,
+    cursive;
+  padding: 5px 9px;
+  transform: rotate(-7deg);
+}
+.wl-heading-art i {
+  font-style: normal;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.wl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px 17px;
+}
+.wl-card {
+  min-width: 0;
+  border: 1px solid #e0e7ef;
+  border-radius: 11px;
+  background: #fff;
+  padding: 9px;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.wl-card:hover {
+  box-shadow: 0 6px 22px #092e6010;
+  transform: translateY(-2px);
+}
+.wl-picture {
+  position: relative;
+  aspect-ratio: 1.08;
+  background: #fcf5e7;
+  border-radius: 8px;
+  isolation: isolate;
+  overflow: hidden;
+}
+.wl-picture > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.wl-picture .rp-art {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.wl-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 6px 10px;
+  background: #fffefaed;
+  border: 1px solid #dde6ef;
+  border-radius: 7px;
+  color: #5c7a9e;
+  font-size: 8px;
+  font-weight: 650;
+  line-height: 1.2;
+  max-width: 78%;
+  pointer-events: none;
+}
+.reference-wishlist .wl-heart,
+.reference-account .wl-heart {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e2e9ee;
+  background: #fffefa;
+  color: #ff1029;
+  padding: 5px;
+}
+.wl-card-copy {
+  padding: 6px 4px 1px;
+}
+.wl-card-copy .wl-brand {
+  font-size: 8px;
+  letter-spacing: 0.4px;
+  font-weight: 750;
+  color: #325981;
+  line-height: 1.4;
+  margin: 0 0 3px;
+  text-transform: uppercase;
+}
+.wl-product-name {
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wl-card-copy .wl-variant {
+  font-size: 11px;
+  color: #8195ad;
+  margin: 3px 0 4px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wl-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.1;
+  min-height: 16px;
+}
+.wl-rating > span {
+  display: flex;
+  gap: 0;
+  color: #ffa000;
+}
+.wl-rating small {
+  font-size: 11px;
+  color: #758eac;
+  white-space: nowrap;
+}
+.wl-price {
+  display: block;
+  font-size: 15px;
+  font-weight: 750;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.wl-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.reference-wishlist .wl-move,
+.reference-account .wl-move {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 1;
+  min-width: 0;
+  min-height: 33px;
+  padding: 6px;
+  border: 1px solid #cdd9e8;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 750;
+  background: #fff;
+}
+.reference-wishlist .wl-move:hover,
+.reference-account .wl-move:hover {
+  background: #f2f6fc;
+}
+.wl-move:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.reference-wishlist .wl-remove,
+.reference-account .wl-remove {
+  min-height: 33px;
+  width: 33px;
+  flex-shrink: 0;
+  padding: 6px;
+  border: 1px solid #e0e7ef;
+  border-radius: 7px;
+  background: white;
+}
+.wl-remove:hover {
+  color: #f0142e !important;
+}
+.wl-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 15px 5%;
+  background: linear-gradient(100deg, #fff8e7, #fffdf6);
+  border-block: 1px solid #f1eadf;
+  min-height: 96px;
+}
+.wl-news-art {
+  width: 140px;
+  height: 73px;
+  flex-shrink: 0;
+  background: url("/images/about-thanks.png") 78% 100% / auto 105%;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  border-radius: 45% 35% 0 0;
+}
+.wl-news-copy > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: 750;
+}
+.wl-news-copy h2 {
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+  margin: 5px 0 7px;
+}
+.wl-news-copy p {
+  font-size: 11px;
+  color: #2d527a;
+  margin: 0;
+  line-height: 1.4;
+}
+.wl-plane {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #25567a;
+  fill: #caeaf0;
+  transform: rotate(3deg);
+}
+.wl-newsletter form {
+  width: 280px;
+  min-width: 210px;
+  height: 42px;
+  border: 1px solid #e3e7eb;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  background: white;
+  flex-shrink: 0;
+}
+.reference-wishlist .wl-newsletter input {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: none;
+  padding: 9px 15px;
+  font-size: 11px;
+  width: 100%;
+  min-width: 0;
+}
+.reference-wishlist .wl-newsletter form button {
+  background: #ff1029;
+  color: #fff;
+  border-radius: 50%;
+  min-width: 41px;
+  padding: 0;
+}
+.reference-wishlist .rs-footer {
+  padding: 20px 5.5% 25px;
+  border-top: 0;
+}
+.reference-wishlist .rs-footer-grid {
+  grid-template-columns: 1.7fr 0.85fr 0.85fr 1fr 2.1fr;
+  gap: 25px;
+}
+.reference-wishlist .rs-footer .rs-logo {
+  font-size: 35px;
+}
+.reference-wishlist .rs-footer-brand p {
+  font-size: 13px;
+  margin-top: 11px;
+}
+.reference-wishlist .rs-footer h3 {
+  font-size: 11px;
+}
+.reference-wishlist .rs-footer-grid > div > a:not(.rs-logo) {
+  font-size: 12px;
+}
+.reference-wishlist .rs-newsletter {
+  border-left: 1px solid #e6ebf1;
+  padding-left: 20px;
+}
+.reference-wishlist .rs-newsletter p {
+  font-size: 11px;
+}
+.reference-wishlist .rs-newsletter form {
+  height: 35px;
+}
+.reference-wishlist .rs-footer-bottom {
+  font-size: 10px;
+  margin-top: 20px;
+  padding-top: 12px;
+}
+.wl-empty {
+  padding: 55px 20px 65px;
+  min-height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e8f0;
+  border-radius: 12px;
+  background: #fffefa;
+}
+.wl-empty > svg {
+  color: #ff1029;
+  margin-bottom: 13px;
+}
+.wl-empty h2 {
+  font:
+    700 31px/1.2 Kalam,
+    cursive;
+  margin: 0 0 12px;
+}
+.wl-empty p {
+  font-size: 14px;
+  color: #6b82a2;
+  margin: 0;
+}
+.reference-wishlist .wl-empty a,
+.reference-account .wl-empty a,
+.reference-wishlist .wl-empty button,
+.reference-account .wl-empty button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #062655;
+  color: white;
+  border-radius: 7px;
+  padding: 10px 18px;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.wl-unavailable {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #66809f;
+}
+.wl-unavailable p {
+  margin: 0;
+}
+.wl-unavailable button {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.wl-loading {
+  padding: 60px 20px;
+  color: #607b9b;
+}
+.wl-embedded .wl-heading {
+  padding-right: 0;
+  min-height: 75px;
+}
+.wl-embedded .wl-heading-art {
+  display: none;
+}
+.wl-embedded .wl-heading h1 {
+  font-size: 29px;
+}
+.wl-embedded .wl-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+}
+.wl-embedded .wl-badge {
+  font-size: 7px;
+  padding: 5px 7px;
+}
+.wl-embedded .wl-product-name {
+  font-size: 11px;
+}
+.wl-embedded .wl-rating svg {
+  width: 12px;
+  height: 12px;
+}
+.wl-embedded .wl-rating small {
+  font-size: 10px;
+}
+.wl-embedded .wl-move {
+  font-size: 9px;
+}
+.wl-embedded .wl-move svg {
+  width: 16px;
+}
+.wl-embedded .wl-card-actions {
+  gap: 6px;
+}
+@media (min-width: 1250px) {
+  .reference-wishlist .rs-header {
+    height: 65px;
+  }
+  .reference-wishlist .rs-logo {
+    font-size: 40px;
+  }
+  .reference-wishlist .rs-search {
+    width: 270px;
+    height: 35px;
+  }
+  .wl-banner {
+    height: 390px;
+  }
+  .wl-banner h1 {
+    font-size: 61px;
+  }
+  .wl-banner p {
+    font-size: 26px;
+  }
+  .wl-banner aside {
+    font-size: 24px;
+  }
+  .wl-main {
+    padding-top: 22px;
+  }
+  .wl-heading h1 {
+    font-size: 40px;
+  }
+  .wl-heading > p {
+    font-size: 14px;
+  }
+  .wl-breadcrumb {
+    font-size: 13px;
+  }
+  .wl-heading {
+    margin-bottom: 20px;
+    min-height: 90px;
+  }
+  .wl-card {
+    padding: 11px;
+  }
+  .wl-product-name {
+    font-size: 14px;
+  }
+  .wl-card-copy .wl-brand {
+    font-size: 10px;
+  }
+  .wl-card-copy .wl-variant {
+    font-size: 13px;
+  }
+  .wl-rating small {
+    font-size: 13px;
+  }
+  .wl-price {
+    font-size: 18px;
+  }
+  .reference-wishlist .wl-move {
+    font-size: 12px;
+    min-height: 38px;
+  }
+  .reference-wishlist .wl-remove {
+    width: 37px;
+    min-height: 38px;
+  }
+  .wl-badge {
+    font-size: 10px;
+    padding: 7px 11px;
+  }
+  .wl-news-copy h2 {
+    font-size: 25px;
+  }
+  .wl-news-copy p {
+    font-size: 13px;
+  }
+  .wl-news-copy > span {
+    font-size: 10px;
+  }
+  .wl-newsletter form {
+    width: 330px;
+  }
+  .reference-wishlist .rs-footer {
+    padding-top: 26px;
+  }
+}
+@media (max-width: 1050px) {
+  .reference-wishlist .rs-header {
+    gap: 18px;
+    padding-inline: 5%;
+  }
+  .reference-wishlist .rs-nav {
+    gap: 14px;
+  }
+  .reference-wishlist .rs-search {
+    width: 205px;
+  }
+  .wl-main {
+    padding-inline: 5%;
+  }
+  .wl-grid {
+    gap: 13px;
+  }
+  .wl-card {
+    padding: 8px;
+  }
+  .wl-card-copy {
+    padding-inline: 3px;
+  }
+  .wl-product-name {
+    font-size: 11px;
+  }
+  .wl-badge {
+    font-size: 7px;
+    padding: 5px 8px;
+  }
+  .wl-rating svg {
+    width: 13px;
+    height: 13px;
+  }
+  .wl-rating small {
+    font-size: 10px;
+  }
+  .wl-newsletter {
+    gap: 18px;
+  }
+  .wl-news-art {
+    width: 120px;
+  }
+  .wl-news-copy h2 {
+    font-size: 19px;
+  }
+  .wl-news-copy p {
+    font-size: 10px;
+  }
+  .wl-newsletter form {
+    width: 250px;
+    min-width: 200px;
+  }
+  .wl-plane {
+    width: 30px;
+  }
+  .wl-embedded .wl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .wl-embedded .wl-product-name {
+    font-size: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .reference-wishlist .rs-header {
+    height: 60px;
+    padding-inline: 20px;
+  }
+  .reference-wishlist .rs-nav {
+    top: 60px;
+  }
+  .wl-banner {
+    height: 260px;
+    padding-inline: 20px;
+    background-position: 53%;
+  }
+  .wl-banner > div {
+    padding: 12px;
+    background: #fff9e4df;
+    border-radius: 3px;
+  }
+  .wl-banner h1 {
+    font-size: 41px;
+  }
+  .wl-banner p {
+    font-size: 19px;
+    margin-left: 5px;
+  }
+  .wl-banner p:after {
+    width: 65px;
+    left: 65px;
+  }
+  .wl-banner aside {
+    font-size: 17px;
+    padding: 14px 15px;
+    margin-left: 20px;
+  }
+  .wl-main {
+    padding: 17px 23px 22px;
+  }
+  .wl-heading {
+    padding-right: 130px;
+    min-height: 74px;
+  }
+  .wl-heading h1 {
+    font-size: 28px;
+  }
+  .wl-heading-art {
+    width: 130px;
+    height: 82px;
+  }
+  .wl-heading-art span {
+    font-size: 15px;
+    padding: 4px 6px;
+  }
+  .wl-heading > p {
+    font-size: 11px;
+  }
+  .wl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+  .wl-card {
+    padding: 10px;
+  }
+  .wl-product-name {
+    font-size: 13px;
+  }
+  .wl-card-copy .wl-brand {
+    font-size: 9px;
+  }
+  .wl-card-copy .wl-variant {
+    font-size: 12px;
+  }
+  .wl-rating svg {
+    width: 14px;
+    height: 14px;
+  }
+  .wl-rating small {
+    font-size: 11px;
+  }
+  .wl-price {
+    font-size: 17px;
+  }
+  .reference-wishlist .wl-move {
+    font-size: 12px;
+    min-height: 37px;
+  }
+  .reference-wishlist .wl-remove {
+    min-height: 37px;
+    width: 36px;
+  }
+  .wl-badge {
+    font-size: 9px;
+    padding: 6px 9px;
+  }
+  .wl-newsletter {
+    flex-wrap: wrap;
+    padding: 19px 23px;
+    gap: 14px;
+  }
+  .wl-news-art {
+    width: 95px;
+    height: 65px;
+  }
+  .wl-news-copy {
+    flex: 1;
+  }
+  .wl-news-copy h2 {
+    font-size: 20px;
+  }
+  .wl-news-copy p {
+    font-size: 11px;
+  }
+  .wl-plane {
+    margin-left: 35px;
+    width: 32px;
+  }
+  .wl-newsletter form {
+    flex: 1;
+    width: auto;
+    margin-left: 20px;
+  }
+  .reference-wishlist .rs-footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reference-wishlist .rs-footer-brand {
+    grid-column: 1/-1;
+  }
+  .reference-wishlist .rs-footer {
+    padding-inline: 23px;
+  }
+  .reference-wishlist .rs-newsletter {
+    border: 0;
+    padding-left: 0;
+  }
+  .wl-embedded .wl-card {
+    padding: 7px;
+  }
+  .wl-embedded .wl-card-actions {
+    gap: 5px;
+  }
+  .wl-embedded .wl-move {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .wl-embedded .wl-remove {
+    width: 28px;
+    min-height: 33px;
+  }
+  .wl-embedded .wl-remove svg {
+    width: 15px;
+  }
+  .wl-embedded .wl-product-name {
+    font-size: 10px;
+  }
+  .wl-embedded .wl-rating {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  .wl-embedded .wl-card-copy .wl-variant {
+    font-size: 10px;
+  }
+  .wl-embedded .wl-badge {
+    font-size: 6px;
+    padding: 4px 5px;
+  }
+  .wl-embedded .wl-heart {
+    width: 26px;
+    height: 26px;
+    right: 2px;
+    top: 2px;
+  }
+  .wl-embedded .wl-heart svg {
+    width: 17px;
+  }
+}
+@media (max-width: 480px) {
+  .wl-banner {
+    height: 225px;
+    padding-inline: 16px;
+  }
+  .wl-banner h1 {
+    font-size: 34px;
+    letter-spacing: -1.5px;
+    margin-bottom: 9px;
+  }
+  .wl-banner p {
+    font-size: 16px;
+    margin-left: 2px;
+  }
+  .wl-banner p span {
+    font-size: 20px;
+    margin-left: 4px;
+  }
+  .wl-banner aside {
+    font-size: 14px;
+    padding: 12px;
+    margin-left: 12px;
+  }
+  .wl-banner > div {
+    padding: 11px;
+  }
+  .wl-main {
+    padding: 16px 17px 21px;
+  }
+  .wl-breadcrumb {
+    font-size: 10px;
+    margin-bottom: 13px;
+    gap: 8px;
+  }
+  .wl-heading {
+    padding-right: 0;
+    min-height: 74px;
+    margin-bottom: 11px;
+  }
+  .wl-heading h1 {
+    font-size: 29px;
+    letter-spacing: -0.8px;
+  }
+  .wl-heading-art {
+    display: none;
+  }
+  .wl-heading > p {
+    font-size: 11px;
+  }
+  .wl-grid {
+    gap: 13px 11px;
+  }
+  .wl-card {
+    padding: 7px;
+  }
+  .wl-picture {
+    aspect-ratio: 1.02;
+  }
+  .wl-badge {
+    font-size: 6px;
+    padding: 5px 6px;
+    top: 4px;
+    left: 4px;
+    max-width: 76%;
+  }
+  .reference-wishlist .wl-heart {
+    width: 26px;
+    height: 26px;
+    top: 3px;
+    right: 3px;
+    padding: 5px;
+  }
+  .wl-heart svg {
+    width: 17px;
+    height: 17px;
+  }
+  .wl-card-copy {
+    padding: 7px 2px 1px;
+  }
+  .wl-card-copy .wl-brand {
+    font-size: 8px;
+  }
+  .wl-product-name {
+    font-size: 11px;
+  }
+  .wl-card-copy .wl-variant {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+  .wl-rating {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .wl-rating svg {
+    width: 12px;
+    height: 12px;
+  }
+  .wl-rating small {
+    font-size: 9px;
+  }
+  .wl-price {
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 9px;
+  }
+  .wl-card-actions {
+    gap: 5px;
+  }
+  .reference-wishlist .wl-move {
+    font-size: 9px;
+    gap: 4px;
+    min-height: 32px;
+    padding: 5px 3px;
+  }
+  .wl-move svg {
+    width: 15px;
+  }
+  .reference-wishlist .wl-remove {
+    min-height: 32px;
+    width: 28px;
+    padding: 5px;
+  }
+  .wl-remove svg {
+    width: 16px;
+  }
+  .wl-newsletter {
+    padding: 17px;
+    gap: 12px;
+  }
+  .wl-news-art {
+    width: 73px;
+    height: 59px;
+  }
+  .wl-news-copy > span {
+    font-size: 7px;
+    letter-spacing: 0.7px;
+  }
+  .wl-news-copy h2 {
+    font-size: 18px;
+    margin-block: 4px 5px;
+  }
+  .wl-news-copy p {
+    font-size: 10px;
+  }
+  .wl-plane {
+    display: none;
+  }
+  .wl-newsletter form {
+    width: 100%;
+    flex-basis: 100%;
+    margin-left: 0;
+    height: 38px;
+  }
+  .reference-wishlist .wl-newsletter form button {
+    min-width: 37px;
+  }
+  .reference-wishlist .rs-footer {
+    padding: 23px 20px;
+  }
+  .reference-wishlist .rs-footer-grid {
+    gap: 17px;
+  }
+  .wl-unavailable {
+    font-size: 11px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .wl-unavailable button {
+    font-size: 11px;
+  }
+  .wl-empty {
+    padding: 45px 18px;
+    min-height: 280px;
+  }
+  .wl-empty h2 {
+    font-size: 27px;
+  }
+  .wl-empty p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .wl-embedded .wl-heading h1 {
+    font-size: 28px;
+  }
+  .wl-embedded .wl-card-copy .wl-variant {
+    font-size: 10px;
+  }
+  .wl-embedded .wl-product-name {
+    font-size: 11px;
+  }
+  .wl-embedded .wl-rating {
+    flex-wrap: wrap;
+  }
+  .wl-embedded .wl-move {
+    font-size: 9px;
+  }
+  .wl-embedded .wl-remove {
+    width: 29px;
+  }
+  .wl-embedded .wl-price {
+    font-size: 15px;
+  }
+}

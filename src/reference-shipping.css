@@ -1,0 +1,1182 @@
+﻿.reference-shipping {
+  background: #fffefa;
+}
+.reference-shipping .rs-header {
+  height: 58px;
+  gap: 25px;
+  padding-inline: 38px;
+}
+.reference-shipping .rs-logo {
+  font-size: 35px;
+}
+.reference-shipping .rs-nav {
+  gap: 20px;
+}
+.reference-shipping .rs-search {
+  height: 31px;
+  width: 225px;
+}
+.sh-banner {
+  height: 190px;
+  background: url("/images/school-hero.png") center 57% / cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  overflow: hidden;
+}
+.sh-banner > div:first-child {
+  padding: 13px 20px;
+  background: #fff8e3;
+  transform: rotate(-6deg);
+}
+.sh-banner h1 {
+  font:
+    700 56px/1 Kalam,
+    cursive;
+  letter-spacing: -2px;
+  margin: 0 0 8px;
+}
+.sh-banner h1 span,
+.sh-banner i,
+.sh-title span,
+.sh-panel h2 span,
+.sh-delivery legend span,
+.sh-summary-art span {
+  color: #ff1029;
+  font-style: normal;
+}
+.sh-banner p {
+  font:
+    700 21px/1.1 Kalam,
+    cursive;
+  margin: 0 0 0 16px;
+  color: #062655;
+}
+.sh-banner small {
+  font-size: 17px;
+}
+.sh-banner-note {
+  padding: 18px 20px;
+  background: #fff8e3;
+  transform: rotate(-8deg);
+  font:
+    400 21px/1.1 Kalam,
+    cursive;
+}
+.sh-main {
+  max-width: 1500px;
+  margin: auto;
+  padding: 21px 4% 20px;
+}
+.sh-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr);
+  gap: 20px;
+}
+.sh-title {
+  font:
+    700 54px/1.1 Kalam,
+    cursive;
+  margin: 0 0 12px 9px;
+  letter-spacing: -2px;
+}
+.sh-steps {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+  margin: 0 0 15px 11px;
+}
+.reference-shipping .sh-steps > button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0;
+  font-size: 13px;
+  position: relative;
+  white-space: nowrap;
+}
+.sh-steps > button:not(:last-child):after {
+  content: "";
+  width: 30px;
+  border-top: 1px dashed #bdcbdd;
+  margin-left: 4px;
+}
+.sh-steps b {
+  font-size: 14px;
+  font-weight: 400;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d6dfeb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+.sh-steps > button.active b {
+  background: #ff1029;
+  color: white;
+  outline: 2px solid #ff10293b;
+  outline-offset: 1px;
+  border-color: white;
+}
+.sh-steps > button.active:before {
+  content: "";
+  width: 31px;
+  height: 3px;
+  background: #ff1029;
+  position: absolute;
+  left: 2px;
+  bottom: -7px;
+  border-radius: 3px;
+}
+.sh-steps > button.done b {
+  background: #062655;
+  color: white;
+}
+.sh-panel {
+  border: 1px solid #dfe5ed;
+  border-radius: 10px;
+  padding: 13px 15px;
+  background: #ffffff90;
+}
+.sh-panel h2 {
+  font:
+    700 28px/1.1 Kalam,
+    cursive;
+  letter-spacing: -0.7px;
+  margin: 0 0 17px;
+}
+.sh-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px 12px;
+}
+.sh-field {
+  border: 1px solid #d3ddea;
+  border-radius: 7px;
+  padding: 7px 12px 6px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.sh-field.wide {
+  grid-column: 1/-1;
+}
+.sh-field > span {
+  font-size: 10px;
+  line-height: 1.2;
+}
+.sh-field i {
+  font-style: normal;
+  color: #f11932;
+  margin-left: 3px;
+}
+.reference-shipping .sh-field input,
+.reference-shipping .sh-field select {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 6px 0 0 !important;
+  min-height: 0;
+  height: 25px;
+  width: 100%;
+  font-size: 12px;
+  color: #062655;
+  outline: none;
+}
+.sh-field:focus-within {
+  outline: 2px solid #b5c9e6;
+  outline-offset: 1px;
+}
+.sh-field input::placeholder {
+  color: #8c9db6;
+}
+.reference-shipping .sh-field select {
+  font-weight: 650;
+}
+.sh-delivery {
+  border: 0;
+  padding: 0;
+  margin: 16px 0 14px;
+}
+.sh-delivery legend {
+  font:
+    700 24px/1.1 Kalam,
+    cursive;
+  letter-spacing: -0.4px;
+  margin-bottom: 10px;
+}
+.sh-delivery > label,
+.sh-payment > label {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px solid #d6dfeb;
+  border-radius: 7px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.sh-delivery > label.selected,
+.sh-payment > label.selected {
+  border-color: #ff1029;
+  background: #fff5f5;
+}
+.sh-delivery input,
+.sh-payment input {
+  accent-color: #ff1029;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0;
+}
+.sh-delivery svg {
+  flex-shrink: 0;
+  stroke-width: 1.5;
+}
+.sh-delivery strong,
+.sh-payment strong {
+  font-size: 13px;
+  font-weight: 750;
+  display: block;
+  line-height: 1.3;
+}
+.sh-delivery small,
+.sh-payment small {
+  font-size: 11px;
+  color: #405c83;
+  display: block;
+  margin-top: 3px;
+}
+.reference-shipping .sh-primary {
+  width: 100%;
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 7px;
+  background: #ff0926;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 650;
+  padding: 10px 15px;
+}
+.reference-shipping .sh-primary:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.reference-shipping .sh-primary:hover {
+  background: #e6001e;
+}
+.sh-error {
+  color: #d41631 !important;
+  font-size: 11px;
+}
+.sh-summary {
+  padding: 19px 22px 0;
+  align-self: start;
+  margin-top: 6px;
+  overflow: hidden;
+}
+.sh-summary h2 {
+  font-size: 32px;
+  margin-bottom: 19px;
+}
+.sh-summary-items > article {
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1fr) 74px 81px 17px;
+  gap: 9px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f4;
+  min-height: 88px;
+}
+.sh-summary-items > article:first-child {
+  padding-top: 0;
+}
+.sh-item-image {
+  display: block;
+  width: 66px;
+  height: 66px;
+  border-radius: 7px;
+  border: 1px solid #e3e7ed;
+  overflow: hidden;
+  background: #f8f3e9;
+}
+.sh-item-name {
+  min-width: 0;
+}
+.sh-item-name > a {
+  font:
+    700 15px/1.1 Kalam,
+    cursive;
+  display: block;
+  letter-spacing: -0.35px;
+}
+.sh-item-name p {
+  font-size: 10px;
+  line-height: 1.3;
+  color: #425f89;
+  margin: 4px 0 0;
+}
+.sh-item-quantity {
+  display: flex;
+  border: 1px solid #d3ddea;
+  border-radius: 5px;
+  height: 30px;
+  overflow: hidden;
+}
+.sh-item-quantity > button {
+  width: 24px;
+  padding: 0;
+}
+.sh-item-quantity > button:disabled {
+  opacity: 0.35;
+}
+.sh-item-quantity output {
+  min-width: 24px;
+  font-size: 12px;
+  border-inline: 1px solid #e7ebf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sh-item-price {
+  font-size: 13px;
+  font-weight: 750;
+  text-align: right;
+  white-space: nowrap;
+}
+.reference-shipping .sh-remove {
+  padding: 0;
+}
+.sh-totals {
+  margin: 18px 0 0;
+}
+.sh-totals > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 9px;
+  font-size: 13px;
+}
+.sh-totals dd {
+  margin: 0;
+  font-weight: 750;
+}
+.sh-total {
+  border-top: 1px solid #dbe3ed;
+  padding-top: 12px;
+  margin-top: 12px;
+  font-size: 26px !important;
+}
+.sh-total dt {
+  font:
+    700 28px/1.1 Kalam,
+    cursive;
+}
+.sh-coupon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.sh-coupon svg {
+  flex-shrink: 0;
+}
+.reference-shipping .sh-coupon input {
+  border: 1px solid #d8e0ec;
+  border-radius: 6px;
+  min-width: 0;
+  width: 100%;
+  background: #fff;
+  padding: 9px 11px;
+  font-size: 11px;
+  color: #062655;
+  min-height: 37px;
+}
+.reference-shipping .sh-coupon > button {
+  background: #062655;
+  color: white;
+  border-radius: 6px;
+  font:
+    700 14px Kalam,
+    cursive;
+  min-width: 90px;
+  padding: 9px 14px;
+}
+.sh-discount-remove {
+  font-size: 10px;
+  text-decoration: underline;
+  margin-top: 8px;
+}
+.sh-perks {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+}
+.sh-perks > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 10px;
+}
+.sh-perks svg {
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+.sh-summary-art {
+  height: 105px;
+  margin-top: 15px;
+  background:
+    linear-gradient(
+      90deg,
+      #fffefa 2%,
+      transparent 30%,
+      transparent 70%,
+      #fffefa 97%
+    ),
+    url("/images/paperist-hero.png") 90% 70%/155% auto;
+  position: relative;
+}
+.sh-summary-art p {
+  position: absolute;
+  right: 2px;
+  bottom: 7px;
+  background: #fff8e7;
+  padding: 7px 11px;
+  font:
+    700 20px/0.95 Kalam,
+    cursive;
+  transform: rotate(-7deg);
+  margin: 0;
+}
+.sh-payment {
+  padding: 20px;
+}
+.sh-payment > p,
+.sh-confirm > p {
+  font-size: 14px;
+  color: #536d8c;
+  margin: 0 0 18px;
+}
+.sh-payment > label {
+  margin-bottom: 10px;
+  padding: 16px 13px;
+}
+.sh-address-preview {
+  padding: 17px 0 20px;
+}
+.sh-address-preview h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+.sh-address-preview p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4e688e;
+  margin: 0 0 7px;
+}
+.sh-address-preview button {
+  padding: 0;
+  text-decoration: underline;
+  font-size: 12px;
+}
+.reference-shipping .sh-demo {
+  font-size: 11px;
+  color: #7489a5;
+  margin: 12px 0 0;
+  text-align: center;
+}
+.sh-confirm {
+  padding: 20px;
+}
+.sh-confirm dl {
+  margin: 20px 0;
+}
+.sh-confirm dl > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e7ebf0;
+  font-size: 13px;
+}
+.sh-confirm dt {
+  font-weight: 700;
+}
+.sh-confirm dd {
+  margin: 0;
+  color: #49658a;
+  line-height: 1.6;
+}
+.sh-back {
+  font-size: 12px;
+  gap: 7px;
+  padding: 0;
+  margin-top: 20px;
+}
+.sh-empty {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.sh-empty h2 {
+  font:
+    700 30px Kalam,
+    cursive;
+}
+.sh-empty a,
+.sh-empty button {
+  background: #062655 !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 11px 20px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reference-shipping .rs-footer {
+  padding: 20px 3.3% 15px;
+  border-top: 0;
+}
+.reference-shipping .rs-footer-grid {
+  border-top: 1px solid #e6ebf0;
+  padding-top: 16px;
+  grid-template-columns: 1.8fr 0.9fr 0.9fr 1.3fr 2.1fr;
+  gap: 25px;
+}
+.reference-shipping .rs-footer .rs-logo {
+  font-size: 32px;
+}
+.reference-shipping .rs-footer-brand p {
+  font-size: 13px;
+  margin-top: 9px;
+}
+.reference-shipping .rs-footer-grid > div > a:not(.rs-logo) {
+  font-size: 11px;
+}
+.reference-shipping .rs-footer h3 {
+  font-size: 11px;
+}
+.reference-shipping .rs-newsletter p {
+  font-size: 10px;
+}
+.reference-shipping .rs-newsletter form {
+  height: 33px;
+}
+.reference-shipping .rs-socials {
+  margin-top: 10px;
+  gap: 14px;
+}
+.reference-shipping .rs-socials svg {
+  width: 20px;
+  height: 20px;
+}
+.reference-shipping .rs-footer-bottom {
+  font-size: 10px;
+  margin-top: 17px;
+  padding-top: 11px;
+}
+@media (min-width: 1250px) {
+  .reference-shipping .rs-header {
+    height: 65px;
+  }
+  .reference-shipping .rs-logo {
+    font-size: 39px;
+  }
+  .sh-banner {
+    height: 220px;
+  }
+  .sh-banner h1 {
+    font-size: 67px;
+  }
+  .sh-banner p {
+    font-size: 25px;
+  }
+  .sh-banner small {
+    font-size: 21px;
+  }
+  .sh-main {
+    padding-top: 25px;
+  }
+  .sh-columns {
+    gap: 24px;
+  }
+  .sh-title {
+    font-size: 62px;
+  }
+  .sh-steps {
+    margin-bottom: 20px;
+    gap: 32px;
+  }
+  .reference-shipping .sh-steps > button {
+    font-size: 16px;
+  }
+  .sh-steps b {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+  .sh-panel {
+    padding: 15px 18px;
+  }
+  .sh-panel h2 {
+    font-size: 33px;
+  }
+  .sh-field {
+    padding: 9px 14px 7px;
+  }
+  .sh-field > span {
+    font-size: 12px;
+  }
+  .reference-shipping .sh-field input,
+  .reference-shipping .sh-field select {
+    font-size: 14px;
+    height: 29px;
+  }
+  .sh-field-grid {
+    gap: 12px 14px;
+  }
+  .sh-delivery legend {
+    font-size: 27px;
+  }
+  .sh-delivery strong {
+    font-size: 16px;
+  }
+  .sh-delivery small {
+    font-size: 13px;
+  }
+  .sh-delivery > label {
+    padding: 12px 15px;
+  }
+  .reference-shipping .sh-primary {
+    min-height: 49px;
+    font-size: 16px;
+  }
+  .sh-summary {
+    padding: 23px 26px 0;
+  }
+  .sh-summary h2 {
+    font-size: 37px;
+  }
+  .sh-summary-items > article {
+    grid-template-columns: 77px minmax(0, 1fr) 94px 89px 17px;
+    gap: 12px;
+    min-height: 106px;
+    padding: 12px 0;
+  }
+  .sh-item-image {
+    width: 77px;
+    height: 77px;
+  }
+  .sh-item-name > a {
+    font-size: 17px;
+  }
+  .sh-item-name p {
+    font-size: 12px;
+  }
+  .sh-item-price {
+    font-size: 16px;
+  }
+  .sh-item-quantity {
+    height: 35px;
+  }
+  .sh-item-quantity > button {
+    width: 30px;
+  }
+  .sh-item-quantity output {
+    min-width: 32px;
+    font-size: 14px;
+  }
+  .sh-totals > div {
+    font-size: 16px;
+  }
+  .sh-total {
+    font-size: 30px !important;
+  }
+  .sh-total dt {
+    font-size: 32px;
+  }
+  .sh-coupon {
+    padding: 15px;
+    gap: 13px;
+  }
+  .reference-shipping .sh-coupon input {
+    font-size: 13px;
+    min-height: 43px;
+  }
+  .reference-shipping .sh-coupon > button {
+    font-size: 17px;
+    min-width: 115px;
+    min-height: 43px;
+  }
+  .sh-perks {
+    margin-top: 29px;
+  }
+  .sh-perks > div {
+    font-size: 12px;
+  }
+  .sh-summary-art {
+    height: 115px;
+  }
+  .reference-shipping .rs-footer .rs-logo {
+    font-size: 38px;
+  }
+  .reference-shipping .rs-footer-brand p {
+    font-size: 15px;
+  }
+  .reference-shipping .rs-footer-grid > div > a:not(.rs-logo) {
+    font-size: 13px;
+  }
+  .reference-shipping .rs-footer h3 {
+    font-size: 13px;
+  }
+  .reference-shipping .rs-newsletter p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1050px) {
+  .sh-columns {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 18px;
+  }
+  .sh-summary {
+    padding-inline: 17px;
+  }
+  .sh-summary-items > article {
+    grid-template-columns: 60px minmax(0, 1fr) 65px 65px 15px;
+    gap: 7px;
+  }
+  .sh-item-image {
+    width: 60px;
+    height: 64px;
+  }
+  .sh-item-name > a {
+    font-size: 13px;
+  }
+  .sh-item-name p {
+    font-size: 9px;
+  }
+  .sh-item-quantity > button {
+    width: 21px;
+  }
+  .sh-item-quantity output {
+    min-width: 22px;
+  }
+  .sh-item-price {
+    font-size: 11px;
+  }
+  .sh-steps {
+    gap: 16px;
+  }
+  .reference-shipping .sh-steps > button {
+    gap: 9px;
+    font-size: 12px;
+  }
+  .sh-steps > button:not(:last-child):after {
+    width: 20px;
+  }
+  .sh-perks {
+    gap: 7px;
+  }
+  .sh-perks > div {
+    gap: 5px;
+    font-size: 9px;
+  }
+  .sh-perks svg {
+    width: 23px;
+  }
+  .sh-coupon {
+    gap: 7px;
+    padding: 10px;
+  }
+  .reference-shipping .sh-coupon > button {
+    min-width: 75px;
+  }
+  .reference-shipping .rs-header {
+    padding-inline: 25px;
+    gap: 17px;
+  }
+  .reference-shipping .rs-nav {
+    gap: 15px;
+  }
+  .reference-shipping .rs-search {
+    width: 210px;
+  }
+}
+@media (max-width: 760px) {
+  .reference-shipping .rs-header {
+    height: 60px;
+    padding-inline: 20px;
+  }
+  .reference-shipping .rs-nav {
+    top: 60px;
+  }
+  .sh-banner {
+    height: 175px;
+    padding-inline: 20px;
+    background-position: 56%;
+  }
+  .sh-banner h1 {
+    font-size: 45px;
+  }
+  .sh-banner p {
+    font-size: 18px;
+  }
+  .sh-banner small {
+    font-size: 14px;
+  }
+  .sh-banner-note {
+    font-size: 17px;
+    padding: 15px;
+  }
+  .sh-main {
+    padding: 19px 22px;
+  }
+  .sh-columns {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+  .sh-title {
+    font-size: 48px;
+  }
+  .sh-steps {
+    justify-content: space-between;
+    gap: 15px;
+    margin-right: 15px;
+    margin-bottom: 19px;
+  }
+  .reference-shipping .sh-steps > button {
+    font-size: 13px;
+    gap: 11px;
+  }
+  .sh-steps > button:not(:last-child):after {
+    width: 30px;
+    margin-left: 10px;
+  }
+  .sh-field > span {
+    font-size: 11px;
+  }
+  .reference-shipping .sh-field input,
+  .reference-shipping .sh-field select {
+    font-size: 13px;
+    height: 28px;
+  }
+  .sh-field {
+    padding-block: 9px;
+  }
+  .sh-panel {
+    padding: 17px;
+  }
+  .sh-panel h2 {
+    font-size: 29px;
+  }
+  .sh-delivery > label {
+    padding: 12px;
+  }
+  .sh-delivery strong {
+    font-size: 14px;
+  }
+  .sh-summary {
+    margin-top: 0;
+    padding: 20px 22px 0;
+  }
+  .sh-summary-items > article {
+    grid-template-columns: 65px minmax(0, 1fr) 80px 80px 17px;
+    gap: 11px;
+  }
+  .sh-item-image {
+    width: 65px;
+    height: 67px;
+  }
+  .sh-item-name > a {
+    font-size: 15px;
+  }
+  .sh-item-name p {
+    font-size: 10px;
+  }
+  .sh-item-quantity > button {
+    width: 26px;
+  }
+  .sh-item-quantity output {
+    min-width: 27px;
+  }
+  .sh-item-price {
+    font-size: 13px;
+  }
+  .sh-summary h2 {
+    font-size: 33px;
+  }
+  .sh-totals > div {
+    font-size: 15px;
+  }
+  .sh-perks > div {
+    font-size: 12px;
+    gap: 8px;
+  }
+  .sh-summary-art {
+    height: 115px;
+  }
+  .sh-summary-art p {
+    font-size: 23px;
+  }
+  .reference-shipping .rs-footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reference-shipping .rs-footer-brand {
+    grid-column: 1/-1;
+  }
+  .reference-shipping .rs-footer {
+    padding-inline: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .sh-banner {
+    height: 151px;
+    padding-inline: 16px;
+  }
+  .sh-banner > div:first-child {
+    padding: 12px;
+  }
+  .sh-banner h1 {
+    font-size: 35px;
+    letter-spacing: -1.5px;
+  }
+  .sh-banner p {
+    font-size: 15px;
+    margin-left: 4px;
+  }
+  .sh-banner small {
+    font-size: 11px;
+  }
+  .sh-banner-note {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .sh-main {
+    padding: 17px;
+  }
+  .sh-title {
+    font-size: 43px;
+    margin-left: 3px;
+  }
+  .sh-steps {
+    gap: 10px;
+    margin-left: 4px;
+    margin-right: 0;
+  }
+  .reference-shipping .sh-steps > button {
+    font-size: 11px;
+    gap: 7px;
+  }
+  .sh-steps b {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .sh-steps > button:not(:last-child):after {
+    width: 14px;
+    margin-left: 0;
+  }
+  .sh-panel {
+    padding: 14px 12px;
+  }
+  .sh-panel h2 {
+    font-size: 27px;
+    margin-bottom: 14px;
+  }
+  .sh-field-grid {
+    gap: 9px;
+  }
+  .sh-field {
+    padding: 8px 9px;
+  }
+  .sh-field > span {
+    font-size: 10px;
+  }
+  .reference-shipping .sh-field input,
+  .reference-shipping .sh-field select {
+    font-size: 12px;
+    height: 25px;
+  }
+  .sh-delivery legend {
+    font-size: 23px;
+  }
+  .sh-delivery > label {
+    gap: 12px;
+    padding: 10px;
+  }
+  .sh-delivery strong {
+    font-size: 12px;
+  }
+  .sh-delivery small {
+    font-size: 10px;
+  }
+  .sh-delivery svg {
+    width: 26px;
+  }
+  .reference-shipping .sh-primary {
+    font-size: 13px;
+  }
+  .sh-summary {
+    padding: 17px 13px 0;
+  }
+  .sh-summary h2 {
+    font-size: 29px;
+  }
+  .sh-summary-items > article {
+    grid-template-columns: 53px minmax(0, 1fr) 66px 60px 13px;
+    gap: 6px;
+    min-height: 82px;
+  }
+  .sh-item-image {
+    width: 53px;
+    height: 57px;
+  }
+  .sh-item-name > a {
+    font-size: 12px;
+  }
+  .sh-item-name p {
+    font-size: 9px;
+  }
+  .sh-item-quantity {
+    height: 27px;
+  }
+  .sh-item-quantity > button {
+    width: 21px;
+  }
+  .sh-item-quantity output {
+    min-width: 23px;
+    font-size: 11px;
+  }
+  .sh-item-price {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+  .sh-remove svg {
+    width: 13px;
+  }
+  .sh-totals > div {
+    font-size: 14px;
+  }
+  .sh-total {
+    font-size: 24px !important;
+  }
+  .sh-total dt {
+    font-size: 27px;
+  }
+  .sh-coupon {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+  .sh-coupon > svg {
+    width: 23px;
+  }
+  .reference-shipping .sh-coupon input {
+    font-size: 10px;
+    padding: 8px;
+    min-height: 36px;
+  }
+  .reference-shipping .sh-coupon > button {
+    min-width: 65px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .sh-perks {
+    gap: 8px;
+    margin-top: 22px;
+  }
+  .sh-perks > div {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .sh-perks svg {
+    width: 23px;
+  }
+  .sh-summary-art {
+    height: 103px;
+  }
+  .sh-confirm dl > div {
+    grid-template-columns: 105px 1fr;
+    font-size: 12px;
+    gap: 12px;
+  }
+  .sh-payment > label {
+    gap: 12px;
+    padding: 13px 10px;
+  }
+  .sh-payment strong {
+    font-size: 13px;
+  }
+  .sh-payment small {
+    font-size: 11px;
+  }
+  .reference-shipping .rs-footer-grid {
+    gap: 17px;
+  }
+}
+.reference-shipping .sh-delivery > label.selected,
+.reference-shipping .sh-payment > label.selected {
+  background: #fff5f5 !important;
+  color: #062655 !important;
+  border-color: #ff1029 !important;
+}
+.reference-shipping .sh-delivery > label.selected small,
+.reference-shipping .sh-payment > label.selected small {
+  color: #405c83 !important;
+}
+.reference-shipping .sh-coupon input {
+  border: 1px solid #d8e0ec !important;
+  box-shadow: none !important;
+}
+.reference-shipping .sh-delivery input,
+.reference-shipping .sh-payment input {
+  appearance: auto !important;
+  accent-color: #ff1029;
+  background: none;
+  min-height: 0;
+}
+.reference-shipping .sh-banner {
+  height: 190px;
+}
+@media (min-width: 1250px) {
+  .reference-shipping .sh-field {
+    padding: 7px 14px 5px;
+  }
+  .reference-shipping .sh-field input,
+  .reference-shipping .sh-field select {
+    height: 25px;
+  }
+  .reference-shipping .sh-summary-items > article {
+    min-height: 95px;
+  }
+  .reference-shipping .sh-summary-art {
+    height: 105px;
+  }
+}
+@media (max-width: 760px) {
+  .reference-shipping .sh-banner {
+    height: 175px;
+  }
+}
+@media (max-width: 480px) {
+  .reference-shipping .sh-banner {
+    height: 151px;
+  }
+}

@@ -1,3 +1,4 @@
+import BrandLogo from "../../components/common/BrandLogo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -93,7 +94,7 @@ export default function Content() {
           <section className="panel cms-preview">
             <span className="eyebrow">YOUR STOREFRONT</span>
             <div className="mini-logo">
-              paperist<span className="red-dot">.</span>
+              <BrandLogo />
             </div>
             <img
               src={

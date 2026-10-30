@@ -1,0 +1,89 @@
+﻿/* Display the supplied artwork, framing its wordmark without the JPEG's outer margins. */
+.rs-logo:has(> .brand-logo) {
+  display: block;
+  flex-shrink: 0;
+  width: 4em;
+  line-height: 1;
+  height: auto;
+  letter-spacing: 0;
+}
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1250/345;
+  overflow: hidden;
+}
+.store-shell .logo.official-logo:has(> .brand-logo) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  min-width: 130px;
+  width: 150px;
+  height: auto;
+  background: transparent;
+}
+.store-shell .logo.official-logo > .brand-logo {
+  position: static;
+  width: 100%;
+  height: auto;
+  transform: none;
+  max-width: 100%;
+}
+.store-shell .footer-top .logo.official-logo:has(> .brand-logo) {
+  width: 170px;
+}
+.notebook-shell .logo.official-logo:has(> .brand-logo) {
+  min-width: 145px;
+  width: 145px;
+}
+.auth-photo .logo:has(> .brand-logo) {
+  display: block;
+  width: 190px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 8px;
+}
+.admin-shell .admin-sidebar > .logo.official-logo:has(> .brand-logo) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.admin-shell .admin-sidebar > .logo.official-logo > .brand-logo {
+  display: block;
+  position: static;
+  transform: none;
+  width: 100%;
+  height: auto;
+}
+.admin-shell.collapsed .admin-sidebar > .logo.official-logo:has(> .brand-logo) {
+  padding: 3px;
+  width: 50px;
+  height: 50px;
+}
+.admin-shell.collapsed
+  .admin-sidebar
+  > .logo.official-logo:has(> .brand-logo)::before {
+  content: none;
+  display: none;
+}
+@media (max-width: 480px) {
+  .rs-logo:has(> .brand-logo) {
+    width: 3.8em;
+  }
+  .store-shell .store-header .logo.official-logo:has(> .brand-logo) {
+    min-width: 115px;
+    width: 125px;
+  }
+}
+.cms-preview .mini-logo:has(> .brand-logo) {
+  width: 160px;
+  height: auto;
+  margin-bottom: 14px;
+}
+.cms-preview .mini-logo > .brand-logo {
+  width: 100%;
+  height: auto;
+}

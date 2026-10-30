@@ -1,0 +1,926 @@
+﻿.reference-product {
+  background: #fffefa;
+}
+.reference-product .rs-header {
+  height: 53px;
+  gap: 22px;
+}
+.reference-product .rs-logo {
+  font-size: 33px;
+}
+.reference-product .rs-nav {
+  gap: 20px;
+}
+.reference-product .rs-search {
+  width: 220px;
+  height: 30px;
+}
+.reference-product .rs-actions svg {
+  width: 23px;
+  height: 23px;
+}
+.rp-banner {
+  height: 196px;
+  background: url("/images/paperist-hero.png") center 55% / cover;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 11%;
+}
+.rp-banner > div {
+  font:
+    700 25px/1 Kalam,
+    cursive;
+  background: #fff8df;
+  padding: 15px 21px;
+  transform: rotate(-7deg);
+  box-shadow: 0 2px 4px #34230c10;
+}
+.rp-banner > div:last-child {
+  transform: rotate(-8deg);
+  font-size: 22px;
+  padding: 15px 18px;
+}
+.rp-banner span {
+  color: #ff1026;
+}
+.rp-main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 35px 26px;
+}
+.rp-breadcrumb {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 55px;
+  font-size: 11px;
+  flex-wrap: wrap;
+}
+.rp-breadcrumb svg {
+  width: 12px;
+  height: 12px;
+  color: #60789c;
+}
+.rp-breadcrumb > a:nth-last-of-type(1) {
+  color: #587398;
+}
+.rp-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 43px;
+}
+.rp-gallery {
+  display: grid;
+  grid-template-columns: 77px minmax(0, 1fr);
+  gap: 18px;
+  min-width: 0;
+}
+.rp-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 3px;
+}
+.reference-product .rp-thumbnails > button {
+  width: 77px;
+  aspect-ratio: 0.96;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #f8f2e7;
+}
+.reference-product .rp-thumbnails > button.selected {
+  border: 1.5px solid #ff1129;
+  padding: 4px;
+  background: white;
+}
+.rp-art {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  display: block;
+}
+.rp-thumbnails .rp-art {
+  border-radius: 5px;
+}
+.rp-large {
+  height: 437px;
+  position: relative;
+  background: #f8f0e5;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.rp-large > .rp-art {
+  background-size: 300% 200%;
+}
+.reference-product .rp-zoom {
+  position: absolute;
+  right: 10px;
+  bottom: 11px;
+  padding: 7px;
+  border-radius: 5px;
+  background: #fff;
+}
+.rp-bottom-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 11px;
+}
+.rp-bottom-thumbnails > button {
+  aspect-ratio: 1.2;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0 !important;
+}
+.rp-info h1 {
+  font-size: 26px;
+  font-weight: 750;
+  line-height: 1.2;
+  margin: 5px 0 13px;
+  letter-spacing: -0.5px;
+}
+.rp-reviews {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin: 0 0 12px;
+}
+.rp-reviews > span {
+  color: #ff9e00;
+  display: flex;
+  gap: 2px;
+}
+.rp-reviews > button {
+  padding: 0;
+  font-size: 14px;
+}
+.rp-price {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 13px;
+}
+.rp-price del {
+  font-size: 18px;
+  font-weight: 400;
+  color: #8c99aa;
+}
+.reference-product .rp-description {
+  font-size: 16px;
+  color: #062655;
+  line-height: 1.5;
+  margin: 0 0 13px;
+}
+.rp-features {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 13px;
+}
+.rp-features li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 5px 0;
+  font-size: 15px;
+}
+.rp-features svg {
+  stroke-width: 3;
+}
+.rp-colours {
+  border: 0;
+  padding: 0;
+  margin: 0 0 14px;
+}
+.rp-colours legend {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.rp-colours legend span {
+  font-size: 12px;
+  color: #7183a0;
+  margin-left: 5px;
+}
+.rp-colours > div {
+  display: flex;
+  gap: 16px;
+  padding-left: 3px;
+}
+.reference-product .rp-colours button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid #fffefa;
+  outline: 1px solid transparent;
+}
+.reference-product .rp-colours button[aria-pressed="true"] {
+  outline-color: #6e86ab;
+}
+.rp-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  margin: 0 12px 14px 0;
+}
+.reference-product .rp-option select {
+  border: 1px solid #dbe1eb;
+  border-radius: 5px;
+  padding: 4px 7px;
+  background: white;
+  color: inherit;
+  font-size: 12px;
+}
+.rp-buy {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+  margin: 7px 0 22px;
+}
+.rp-quantity {
+  display: flex;
+  border: 1px solid #ccd7e6;
+  border-radius: 8px;
+  height: 50px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.rp-quantity > button {
+  width: 46px;
+  padding: 0;
+}
+.rp-quantity output {
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-inline: 1px solid #dce2eb;
+  font-size: 20px;
+}
+.rp-quantity > button:disabled {
+  opacity: 0.35;
+}
+.reference-product .rp-cart {
+  background: #ff0d24;
+  color: white;
+  height: 50px;
+  flex: 1;
+  gap: 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0 15px;
+}
+.reference-product .rp-cart:hover {
+  background: #e9001c;
+}
+.reference-product .rp-cart:disabled {
+  background: #9ca6b4;
+}
+.rp-perks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.rp-perks > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.rp-perks svg {
+  stroke-width: 1.5;
+}
+.reference-product .rp-delivery-note {
+  font-size: 11px;
+  color: #7183a0;
+  margin: 10px 0 0;
+}
+.rp-tabs {
+  position: relative;
+  margin-top: 39px;
+  padding-bottom: 20px;
+  min-height: 122px;
+  border-bottom: 1px solid #e6eaf0;
+}
+.rp-tab-buttons {
+  display: flex;
+  gap: 35px;
+  border-bottom: 1px solid #e4e9f0;
+  position: relative;
+  z-index: 1;
+  padding-right: 25%;
+}
+.reference-product .rp-tab-buttons button {
+  padding: 0 8px 11px;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.reference-product .rp-tab-buttons button.selected {
+  border-color: #062655;
+  font-weight: 700;
+}
+.rp-tabs [role="tabpanel"] {
+  position: relative;
+  z-index: 1;
+  max-width: 76%;
+  padding: 13px 5px 0;
+  font-size: 14px;
+  line-height: 1.65;
+  min-height: 60px;
+}
+.rp-tabs [role="tabpanel"] p {
+  margin: 0;
+  color: #062655;
+}
+.rp-tabs dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 22px;
+}
+.rp-tabs dl > div {
+  display: flex;
+  gap: 12px;
+}
+.rp-tabs dt {
+  font-weight: 650;
+}
+.rp-tabs dd {
+  margin: 0;
+}
+.rp-tab-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 27%;
+  height: 136px;
+  background: url("/images/notebooks-banner.png") 80% 80%/200% auto;
+  border-radius: 60px 0 0 0;
+  opacity: 0.95;
+  overflow: hidden;
+}
+.rp-tab-art span {
+  position: absolute;
+  right: 8px;
+  bottom: 12px;
+  background: #fff3da;
+  padding: 10px 15px;
+  font:
+    700 20px/0.95 Kalam,
+    cursive;
+  transform: rotate(-9deg);
+}
+.rp-tab-art i {
+  color: #ff1429;
+  font-style: normal;
+}
+.rp-related {
+  padding-top: 20px;
+}
+.rp-related h2 {
+  font:
+    700 34px/1.2 Kalam,
+    cursive;
+  margin: 0 0 8px;
+  letter-spacing: -1px;
+}
+.rp-related h2 > span {
+  color: #ff1029;
+}
+.rp-related > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+}
+.rp-related-card {
+  border: 1px solid #e4e9ef;
+  border-radius: 9px;
+  padding: 10px;
+  overflow: hidden;
+  min-width: 0;
+}
+.rp-related-image {
+  height: 125px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f8f3eb;
+}
+.rp-related-image > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.reference-product .rp-related-image > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3px;
+  background: #fffdf8ed;
+  border-radius: 0 0 0 7px;
+}
+.rp-related-image > button[aria-pressed="true"] {
+  color: #ff1029;
+}
+.rp-related-copy {
+  position: relative;
+  padding: 10px 5px 3px;
+}
+.rp-related-copy > a {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rp-related-copy p {
+  font-size: 12px;
+  margin: 2px 0 4px;
+  color: #294977;
+}
+.rp-related-copy strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+.rp-related-rating {
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+  align-items: center;
+}
+.rp-related-rating > span {
+  display: flex;
+}
+.rp-related-rating small {
+  font-size: 10px;
+  color: #607a9e;
+}
+.reference-product .rp-related-copy > button {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  padding: 0;
+}
+.rp-missing {
+  min-height: 400px;
+  text-align: center;
+  padding: 80px 20px;
+}
+.rp-missing h1 {
+  font-size: 28px;
+}
+.rp-missing a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.reference-product .rs-footer {
+  padding-top: 24px;
+}
+.rp-lightbox {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: #03204de8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.rp-lightbox > div {
+  width: min(80vh, 90vw);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #faf4e9;
+}
+.reference-product .rp-lightbox > button {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  color: white;
+  padding: 10px;
+}
+@media (min-width: 1250px) {
+  .reference-product .rs-header {
+    height: 65px;
+  }
+  .reference-product .rs-logo {
+    font-size: 40px;
+  }
+  .rp-banner {
+    height: 245px;
+  }
+  .rp-banner > div {
+    font-size: 30px;
+  }
+  .rp-main {
+    padding-inline: 40px;
+  }
+  .rp-breadcrumb {
+    min-height: 68px;
+    font-size: 13px;
+  }
+  .rp-detail {
+    gap: 52px;
+  }
+  .rp-gallery {
+    grid-template-columns: 92px 1fr;
+    gap: 22px;
+  }
+  .reference-product .rp-thumbnails > button {
+    width: 92px;
+  }
+  .rp-large {
+    height: 535px;
+  }
+  .rp-info h1 {
+    font-size: 32px;
+  }
+  .rp-price {
+    font-size: 36px;
+  }
+  .reference-product .rp-description {
+    font-size: 19px;
+  }
+  .rp-features li {
+    font-size: 18px;
+  }
+  .rp-colours legend {
+    font-size: 18px;
+  }
+  .rp-buy {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .rp-perks > div {
+    font-size: 14px;
+  }
+  .rp-related-image {
+    height: 155px;
+  }
+  .rp-related-copy > a {
+    font-size: 15px;
+  }
+  .rp-related-copy p {
+    font-size: 14px;
+  }
+  .rp-related-copy strong {
+    font-size: 17px;
+  }
+  .rp-tabs {
+    margin-top: 45px;
+  }
+  .rp-tabs [role="tabpanel"] {
+    font-size: 16px;
+  }
+  .rp-related {
+    padding-block: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .reference-product .rs-header {
+    gap: 15px;
+    padding-inline: 20px;
+  }
+  .reference-product .rs-nav {
+    gap: 14px;
+  }
+  .reference-product .rs-search {
+    width: 200px;
+  }
+  .rp-main {
+    padding-inline: 24px;
+  }
+  .rp-detail {
+    gap: 25px;
+  }
+  .rp-gallery {
+    grid-template-columns: 57px 1fr;
+    gap: 12px;
+  }
+  .reference-product .rp-thumbnails > button {
+    width: 57px;
+  }
+  .rp-large {
+    height: 390px;
+  }
+  .rp-info h1 {
+    font-size: 23px;
+  }
+  .rp-info .rp-description {
+    font-size: 14px;
+  }
+  .rp-features li {
+    font-size: 13px;
+  }
+  .rp-buy {
+    gap: 14px;
+  }
+  .rp-quantity > button {
+    width: 34px;
+  }
+  .rp-quantity output {
+    min-width: 37px;
+  }
+  .reference-product .rp-cart {
+    font-size: 15px;
+    gap: 9px;
+  }
+  .rp-perks {
+    gap: 6px;
+  }
+  .rp-perks > div {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .rp-perks svg {
+    width: 24px;
+  }
+  .rp-related > div {
+    gap: 12px;
+  }
+  .rp-related-card {
+    padding: 8px;
+  }
+  .rp-related-copy > a {
+    font-size: 11px;
+  }
+}
+@media (max-width: 760px) {
+  .reference-product .rs-header {
+    height: 60px;
+  }
+  .reference-product .rs-nav {
+    top: 60px;
+  }
+  .rp-banner {
+    height: 165px;
+    padding-inline: 8%;
+  }
+  .rp-banner > div {
+    font-size: 21px;
+    padding: 13px 17px;
+  }
+  .rp-banner > div:last-child {
+    font-size: 18px;
+  }
+  .rp-detail {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+  .rp-gallery {
+    grid-template-columns: 70px 1fr;
+    gap: 14px;
+    max-width: 540px;
+    width: 100%;
+    margin: auto;
+  }
+  .reference-product .rp-thumbnails > button {
+    width: 70px;
+  }
+  .rp-large {
+    height: auto;
+    aspect-ratio: 0.86;
+  }
+  .rp-info h1 {
+    font-size: 28px;
+  }
+  .rp-info .rp-description {
+    font-size: 16px;
+  }
+  .rp-features li {
+    font-size: 16px;
+  }
+  .rp-reviews > button {
+    font-size: 14px;
+  }
+  .rp-info {
+    max-width: 540px;
+    margin: auto;
+    width: 100%;
+  }
+  .rp-buy {
+    gap: 22px;
+  }
+  .rp-quantity > button {
+    width: 43px;
+  }
+  .rp-quantity output {
+    min-width: 45px;
+  }
+  .reference-product .rp-cart {
+    font-size: 17px;
+  }
+  .rp-perks > div {
+    font-size: 12px;
+  }
+  .rp-perks svg {
+    width: 28px;
+  }
+  .rp-tab-buttons {
+    gap: 12px;
+    padding-right: 0;
+  }
+  .rp-tabs [role="tabpanel"] {
+    max-width: 100%;
+    padding-bottom: 10px;
+  }
+  .rp-tab-art {
+    display: none;
+  }
+  .rp-tabs {
+    margin-top: 29px;
+  }
+  .rp-related > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+  .rp-related-image {
+    height: 155px;
+  }
+  .rp-related-copy > a {
+    font-size: 13px;
+  }
+  .rp-related-copy p {
+    font-size: 13px;
+  }
+  .rp-related-copy strong {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .reference-product .rs-header {
+    padding-inline: 19px;
+  }
+  .rp-banner {
+    height: 140px;
+    background-position: 55% 50%;
+    padding-inline: 6%;
+  }
+  .rp-banner > div {
+    font-size: 17px;
+    padding: 10px 13px;
+  }
+  .rp-banner > div:last-child {
+    font-size: 15px;
+    padding: 12px;
+  }
+  .rp-main {
+    padding: 0 17px 24px;
+  }
+  .rp-breadcrumb {
+    gap: 7px;
+    font-size: 10px;
+    padding-block: 13px;
+    min-height: 55px;
+  }
+  .rp-breadcrumb span {
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rp-gallery {
+    grid-template-columns: 51px 1fr;
+    gap: 10px;
+  }
+  .reference-product .rp-thumbnails > button {
+    width: 51px;
+    border-radius: 6px;
+  }
+  .rp-thumbnails {
+    gap: 9px;
+  }
+  .rp-large {
+    aspect-ratio: 0.83;
+  }
+  .rp-bottom-thumbnails {
+    gap: 7px;
+    margin-top: 8px;
+  }
+  .rp-info h1 {
+    font-size: 25px;
+    margin-top: 0;
+  }
+  .rp-reviews svg {
+    width: 19px;
+  }
+  .rp-reviews > button {
+    font-size: 12px;
+  }
+  .rp-price {
+    font-size: 29px;
+  }
+  .rp-info .rp-description {
+    font-size: 15px;
+  }
+  .rp-features li {
+    font-size: 14px;
+  }
+  .rp-colours > div {
+    gap: 13px;
+  }
+  .rp-buy {
+    gap: 15px;
+  }
+  .rp-quantity {
+    height: 47px;
+  }
+  .rp-quantity > button {
+    width: 32px;
+  }
+  .rp-quantity output {
+    min-width: 37px;
+    font-size: 18px;
+  }
+  .reference-product .rp-cart {
+    height: 47px;
+    font-size: 14px;
+    gap: 9px;
+    padding-inline: 11px;
+  }
+  .rp-perks > div {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .rp-perks svg {
+    width: 24px;
+  }
+  .reference-product .rp-tab-buttons button {
+    font-size: 13px;
+    padding-inline: 5px;
+  }
+  .rp-tabs [role="tabpanel"] {
+    font-size: 13px;
+  }
+  .rp-tabs dl {
+    grid-template-columns: 1fr;
+  }
+  .rp-related h2 {
+    font-size: 29px;
+  }
+  .rp-related > div {
+    gap: 12px;
+  }
+  .rp-related-image {
+    height: 120px;
+  }
+  .rp-related-copy {
+    padding-inline: 1px;
+  }
+  .rp-related-copy > a {
+    font-size: 11px;
+  }
+  .rp-related-copy p {
+    font-size: 11px;
+  }
+  .rp-related-copy strong {
+    font-size: 14px;
+  }
+  .rp-related-rating svg {
+    width: 11px;
+  }
+  .rp-related-rating small {
+    font-size: 9px;
+  }
+  .rp-related-copy > button svg {
+    width: 22px;
+  }
+  .reference-product .rs-footer {
+    padding-inline: 22px;
+  }
+}
+.reference-product .rp-thumbnails > button.selected {
+  background: #fff !important;
+  border-color: #ff1129 !important;
+  color: inherit;
+}
+.reference-product .rp-tab-buttons button.selected {
+  background: transparent !important;
+  color: #062655 !important;
+  border-radius: 0;
+  border-bottom: 2px solid #062655;
+}
+.reference-product .rp-tabs {
+  margin-top: 26px;
+}
+.reference-product .rp-bottom-thumbnails > button[aria-pressed="true"] {
+  outline: 1px solid #ff1129;
+  outline-offset: 2px;
+}

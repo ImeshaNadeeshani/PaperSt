@@ -1,3 +1,4 @@
+﻿import BrandLogo from "../../components/common/BrandLogo";
 import { useState } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { useShop } from "../../hooks/useShop";
@@ -12,12 +13,15 @@ export default function Auth() {
     forgot = pathname === "/forgot-password",
     admin = pathname === "/admin/login";
   return (
-    <div className="auth-page">
+    <div className={`auth-page ${admin ? "admin-auth" : ""}`}>
       <div className="auth-photo">
-        <img src={photos.journal} alt="A notebook ready for a new chapter" />
+        <img
+          src={admin ? "/images/office-banner.png" : photos.journal}
+          alt="A notebook ready for a new chapter"
+        />
         <div>
           <Link className="logo" to="/">
-            paperist<span>●</span>
+            <BrandLogo />
           </Link>
           <h2>
             A fresh page.
@@ -28,7 +32,7 @@ export default function Auth() {
       </div>
       <div className="auth-form">
         <Link className="eyebrow" to="/">
-          ← BACK TO PAPERIST
+          â† BACK TO PAPERIST
         </Link>
         <h1>
           {admin
@@ -45,11 +49,11 @@ export default function Auth() {
             : register
               ? "Make a little space for the things you love."
               : forgot
-                ? "We’ll show a demo recovery confirmation."
+                ? "Weâ€™ll show a demo recovery confirmation."
                 : "Good to see you. Your ideas are waiting."}
         </p>
         <div className="demo-note">
-          Phase 1 demo — use fictional information and a demo password.
+          Phase 1 demo â€” use fictional information and a demo password.
         </div>
         <form
           onSubmit={(e) => {
@@ -131,7 +135,7 @@ export default function Auth() {
               : forgot
                 ? "Request recovery"
                 : "Sign in to demo"}{" "}
-            →
+            â†’
           </Button>
         </form>
         <p>

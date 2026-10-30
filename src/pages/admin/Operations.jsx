@@ -1,3 +1,4 @@
+import { ProductArt } from "../store/ReferenceProduct";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useShop } from "../../hooks/useShop";
@@ -17,6 +18,7 @@ export function Inventory() {
   const { products, setProducts, notify } = useShop(),
     [query, setQuery] = useState(""),
     [filter, setFilter] = useState("All"),
+    [category, setCategory] = useState("All"),
     [editing, setEditing] = useState(null),
     [history, setHistory] = useLocalStorage("paperist-stock-history", []),
     [showHistory, setShowHistory] = useState(false);
@@ -38,6 +40,16 @@ export function Inventory() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
+          <select
+            aria-label="Inventory category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="All">All Categories</option>
+            {[...new Set(products.map((p) => p.category))].map((name) => (
+              <option key={name}>{name}</option>
+            ))}
+          </select>
           <select
             aria-label="Stock filter"
             value={filter}
@@ -62,11 +74,19 @@ export function Inventory() {
           rows={products.filter(
             (p) =>
               (p.name + p.SKU).toLowerCase().includes(query.toLowerCase()) &&
-              (filter === "All" || stockStatus(p) === filter),
+              (filter === "All" || stockStatus(p) === filter) &&
+              (category === "All" || p.category === category),
           )}
           render={(p) => (
             <>
-              <td>{p.name}</td>
+              <td>
+                <span className="inventory-product">
+                  <span className="inventory-product-art">
+                    <ProductArt product={p} />
+                  </span>
+                  {p.name}
+                </span>
+              </td>
               <td>{p.SKU}</td>
               <td>
                 {p.variants.Size[0]} / {p.variants.Colour[0]}

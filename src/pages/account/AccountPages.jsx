@@ -1,3 +1,4 @@
+import { ReferenceAccountOverview } from "./ReferenceAccount";
 import { useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { Link, useParams } from "react-router-dom";
@@ -69,43 +70,7 @@ export function OrderTable({ orders, admin = false }) {
   );
 }
 export function AccountOverview() {
-  const { profile, orders, wishlist, addresses } = useShop();
-  const own = orders.filter((x) => x.email === profile.email);
-  return (
-    <>
-      <h2>Hello, {profile.name.split(" ")[0]} 👋</h2>
-      <p className="muted">Here’s what’s happening in your little corner.</p>
-      <div className="stat-grid">
-        {[
-          ["Orders", own.length],
-          ["Saved favourites", wishlist.length],
-          ["Reward points", 240],
-        ].map(([name, value]) => (
-          <div className="stat panel" key={name}>
-            <span>{name}</span>
-            <strong>{value}</strong>
-          </div>
-        ))}
-      </div>
-      <div className="panel">
-        <div className="section-header">
-          <h3>Recent orders</h3>
-          <Link to="/account/orders">View all →</Link>
-        </div>
-        <OrderTable orders={own.slice(0, 3)} />
-      </div>
-      <div className="panel">
-        <h3>Your default address</h3>
-        <p>
-          {addresses.find((x) => x.default)?.address ||
-            "Add an address to get started."}
-        </p>
-        <Link className="text-link" to="/account/addresses">
-          Manage addresses ↗
-        </Link>
-      </div>
-    </>
-  );
+  return <ReferenceAccountOverview />;
 }
 export function MyOrders() {
   const { orders, profile } = useShop(),

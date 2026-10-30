@@ -1,0 +1,996 @@
+﻿.reference-school {
+  background: #fffefa;
+}
+.reference-school .rs-header {
+  height: 59px;
+  padding-inline: 29px;
+  gap: 24px;
+}
+.reference-school .rs-logo {
+  font-size: 34px;
+}
+.reference-school .rs-nav {
+  gap: 20px;
+}
+.reference-school .rs-search {
+  height: 30px;
+  width: 225px;
+}
+.reference-school .rs-actions svg {
+  width: 23px;
+  height: 23px;
+}
+.reference-school .rs-nav a.active {
+  position: relative;
+}
+.reference-school .rs-nav a.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 2px;
+  background: #ff1029;
+}
+.sc-hero {
+  height: 300px;
+  position: relative;
+  background: url("/images/school-hero.png") center/cover;
+  overflow: hidden;
+}
+.sc-hero-copy {
+  position: relative;
+  height: 100%;
+  width: 29%;
+  padding: 23px 28px;
+  background: linear-gradient(90deg, #fff7e24a, transparent);
+}
+.sc-crumb {
+  font-size: 10px;
+  color: #536b83;
+  margin-bottom: 31px;
+}
+.sc-hero h1 {
+  font:
+    700 68px/1 Kalam,
+    cursive;
+  letter-spacing: -4px;
+  margin: 0 0 6px;
+  transform: rotate(-7deg);
+  position: relative;
+  z-index: 1;
+}
+.sc-hero h1:before {
+  content: "";
+  width: 65px;
+  height: 65px;
+  background: #ffa432;
+  border-radius: 50%;
+  position: absolute;
+  right: 14px;
+  top: -14px;
+  z-index: -1;
+}
+.sc-hero h1 span {
+  color: #ff1029;
+}
+.sc-hero-copy p {
+  font:
+    700 21px/1.25 Kalam,
+    cursive;
+  transform: rotate(-6deg);
+  margin: 0 0 0 20px;
+  color: #062655;
+}
+.sc-hero-note {
+  position: absolute;
+  right: 18%;
+  top: 26px;
+  padding: 15px 19px;
+  background: #fff4d2;
+  font:
+    400 16px/1.1 Kalam,
+    cursive;
+  transform: rotate(3deg);
+  box-shadow: 0 2px 6px #3322091a;
+}
+.sc-hero-note span {
+  color: #ff1029;
+}
+.sc-shortcuts {
+  background: linear-gradient(110deg, #fff9eb, #fffdf6);
+  border-bottom: 1px solid #f0eadf;
+  padding: 15px 29px 16px;
+}
+.sc-shortcuts > p {
+  font-size: 10px;
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #294469;
+}
+.sc-shortcuts nav {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+}
+.reference-school .sc-shortcuts button {
+  border-radius: 12px;
+  background: white;
+  gap: 8px;
+  padding: 9px 12px;
+  font-size: 10px;
+  white-space: nowrap;
+  box-shadow: 0 3px 12px #07274a03;
+  border: 1px solid #f3f1ec;
+}
+.sc-shortcuts button svg {
+  stroke-width: 1.4;
+  color: #365c70;
+}
+.reference-school .sc-shortcuts button.active {
+  border-color: #8194aa;
+  background: #f3f6fa;
+}
+.sc-main {
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 169px minmax(0, 1fr);
+  gap: 21px;
+  padding: 19px 21px 35px;
+  scroll-margin-top: 15px;
+}
+.sc-filters {
+  padding: 16px 9px 5px;
+  background: linear-gradient(#f7f8fa, #fffefa 50%);
+  border-radius: 12px;
+  align-self: start;
+  margin-top: 19px;
+}
+.sc-filters section {
+  padding: 0 0 18px;
+  margin: 0 0 13px;
+  border-bottom: 1px solid #f0f1f3;
+}
+.sc-filters section:last-of-type {
+  border: 0;
+  margin-bottom: 0;
+}
+.reference-school .sc-filter-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 750;
+  margin: 0 0 14px;
+}
+.sc-filters label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  margin: 7px 0;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.sc-filters input {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #c0cbd9;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  min-height: 0;
+}
+.sc-filters input:checked {
+  background: #062655;
+  border-color: #062655;
+}
+.sc-filters input:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  margin: 1px 5px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+.sc-colours {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.reference-school .sc-colours button {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #0c234619;
+  padding: 0;
+}
+.reference-school .sc-colours button[aria-pressed="true"] {
+  outline: 2px solid #062655;
+  outline-offset: 2px;
+}
+.sc-clear {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.sc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+.sc-toolbar > span {
+  font-size: 10px;
+  font-weight: 550;
+}
+.sc-toolbar > label {
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.reference-school .sc-toolbar select {
+  border: 1px solid #ccd5e2;
+  border-radius: 9px;
+  background: #fff;
+  color: #062655;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 135px;
+  max-width: 190px;
+  height: 32px;
+}
+.sc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px 16px;
+}
+.sc-card {
+  border: 1px solid #f0efea;
+  border-radius: 12px;
+  background: #fff;
+  min-width: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 7px #071d4203;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.sc-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px #07274a0b;
+}
+.sc-picture {
+  position: relative;
+  aspect-ratio: 1.02;
+  background: #f8f4ec;
+}
+.sc-picture > a,
+.sc-picture > a > div,
+.sc-picture img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.sc-picture > a > div {
+  background-image: url("/images/school-product-grid.png");
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+}
+.reference-school .sc-picture > button {
+  position: absolute;
+  right: 4px;
+  top: 5px;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fffaf0a8;
+}
+.sc-picture > button[aria-pressed="true"] {
+  color: #f01435;
+}
+.sc-card-copy {
+  padding: 9px 10px 11px;
+  position: relative;
+  min-height: 105px;
+}
+.sc-card-copy > a {
+  font-size: 11px;
+  font-weight: 750;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+.sc-card-copy > p {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #6c819e;
+  margin: 3px 0 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sc-card-copy strong {
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+.sc-rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-top: 4px;
+}
+.sc-rating > span {
+  display: flex;
+  gap: 0;
+}
+.sc-rating small {
+  font-size: 8px;
+}
+.reference-school .sc-add {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  padding: 3px;
+  border: 1px solid #d5deea;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  background: #fff;
+}
+.sc-add svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+}
+.sc-add i {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff142b;
+}
+.sc-add:disabled {
+  opacity: 0.4;
+}
+.sc-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 27px;
+}
+.reference-school .sc-pages button {
+  border: 1px solid #d5deea;
+  border-radius: 12px;
+  width: 33px;
+  height: 33px;
+  padding: 0;
+  background: #fff;
+  font-size: 13px;
+}
+.reference-school .sc-pages button.active {
+  background: #062655;
+  color: white;
+  border-color: #062655;
+}
+.sc-pages button:disabled {
+  opacity: 0.4;
+}
+.sc-empty {
+  padding: 70px 20px;
+  text-align: center;
+}
+.sc-empty h2 {
+  font-size: 23px;
+}
+.sc-empty p {
+  font-size: 14px;
+}
+.sc-empty button {
+  border: 1px solid #c9d2df !important;
+  border-radius: 8px;
+  padding: 9px 18px !important;
+  margin-top: 12px;
+}
+.sc-news-banner {
+  height: 207px;
+  position: relative;
+  background: url("/images/school-hero.png") center 55% / cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 30px;
+}
+.sc-news-banner > div {
+  padding: 16px 25px;
+  background: #fff6dc;
+  transform: rotate(-7deg);
+  margin-left: 8%;
+  box-shadow: 0 3px 8px #33220b0b;
+}
+.sc-news-banner h2 {
+  font:
+    700 32px/1 Kalam,
+    cursive;
+  margin: 0 0 8px;
+  letter-spacing: -1px;
+}
+.sc-news-banner h2 span {
+  color: #ff1029;
+}
+.sc-news-banner p {
+  font-size: 12px;
+  margin: 0;
+  color: #2e4668;
+  line-height: 1.4;
+}
+.sc-news-banner form {
+  align-self: flex-end;
+  display: flex;
+  border: 1px solid #dae0e9;
+  background: #fff;
+  border-radius: 30px;
+  width: 300px;
+  overflow: hidden;
+  height: 42px;
+}
+.reference-school .sc-news-banner input {
+  width: 100%;
+  min-width: 0;
+  border: 0 !important;
+  background: transparent;
+  padding: 8px 15px;
+  font-size: 11px;
+  box-shadow: none;
+}
+.reference-school .sc-news-banner form button {
+  border-radius: 50%;
+  background: #ff1029;
+  color: white;
+  min-width: 42px;
+  padding: 0;
+}
+.reference-school .rs-footer {
+  padding: 27px 29px 22px;
+}
+.reference-school .rs-footer-grid {
+  grid-template-columns: 1.7fr 0.85fr 0.85fr 1.1fr 2.25fr;
+  gap: 24px;
+}
+.reference-school .rs-footer .rs-logo {
+  font-size: 34px;
+}
+.reference-school .rs-footer-brand p {
+  font-size: 12px;
+}
+.reference-school .rs-footer h3 {
+  font-size: 11px;
+}
+.reference-school .rs-footer-grid > div > a:not(.rs-logo) {
+  font-size: 11px;
+}
+.reference-school .rs-newsletter p {
+  font-size: 11px;
+}
+.reference-school .rs-newsletter form {
+  height: 34px;
+  border-radius: 22px;
+}
+.reference-school .rs-footer-bottom {
+  font-size: 10px;
+  margin-top: 25px;
+}
+.reference-school .rs-socials svg {
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1250px) {
+  .reference-school .rs-header {
+    height: 70px;
+  }
+  .reference-school .rs-logo {
+    font-size: 40px;
+  }
+  .sc-hero {
+    height: 385px;
+  }
+  .sc-hero-copy {
+    padding: 30px 38px;
+  }
+  .sc-crumb {
+    font-size: 12px;
+    margin-bottom: 44px;
+  }
+  .sc-hero h1 {
+    font-size: 87px;
+  }
+  .sc-hero-copy p {
+    font-size: 27px;
+  }
+  .sc-hero-note {
+    font-size: 22px;
+    top: 35px;
+    padding: 20px;
+  }
+  .sc-shortcuts {
+    padding: 20px 35px;
+  }
+  .sc-shortcuts > p {
+    font-size: 12px;
+  }
+  .reference-school .sc-shortcuts button {
+    font-size: 12px;
+    padding: 12px 18px;
+  }
+  .sc-main {
+    grid-template-columns: 210px 1fr;
+    padding: 25px 30px 42px;
+    gap: 27px;
+  }
+  .sc-filters {
+    padding: 20px 13px;
+  }
+  .sc-filter-heading {
+    font-size: 18px !important;
+  }
+  .sc-filters label {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .sc-filters section {
+    padding-bottom: 22px;
+    margin-bottom: 18px;
+  }
+  .sc-toolbar > span,
+  .sc-toolbar > label {
+    font-size: 12px;
+  }
+  .sc-grid {
+    gap: 22px 20px;
+  }
+  .sc-card-copy > a {
+    font-size: 13px;
+  }
+  .sc-card-copy > p {
+    font-size: 12px;
+  }
+  .sc-card-copy strong {
+    font-size: 17px;
+  }
+  .sc-card-copy {
+    padding: 12px 13px;
+    min-height: 120px;
+  }
+  .sc-rating small {
+    font-size: 10px;
+  }
+  .sc-rating svg {
+    width: 14px;
+    height: 14px;
+  }
+  .sc-news-banner {
+    height: 260px;
+  }
+  .sc-news-banner h2 {
+    font-size: 42px;
+  }
+  .sc-news-banner p {
+    font-size: 15px;
+  }
+  .sc-news-banner form {
+    width: 360px;
+  }
+  .reference-school .rs-footer {
+    padding-inline: 35px;
+  }
+}
+@media (max-width: 900px) {
+  .reference-school .rs-header {
+    gap: 15px;
+    padding-inline: 24px;
+  }
+  .reference-school .rs-nav {
+    gap: 15px;
+  }
+  .reference-school .rs-search {
+    width: 210px;
+  }
+  .sc-hero {
+    height: 295px;
+  }
+  .sc-hero-copy {
+    width: 29%;
+    padding-left: 28px;
+  }
+  .sc-hero h1 {
+    font-size: 62px;
+  }
+  .sc-hero-copy p {
+    font-size: 19px;
+    margin-left: 10px;
+  }
+  .sc-shortcuts {
+    padding-inline: 24px;
+  }
+  .sc-shortcuts nav {
+    gap: 9px;
+  }
+  .reference-school .sc-shortcuts button {
+    font-size: 8px;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .sc-shortcuts svg {
+    width: 20px;
+  }
+  .sc-main {
+    grid-template-columns: 155px 1fr;
+    padding-inline: 18px;
+    gap: 18px;
+  }
+  .sc-filters {
+    padding-inline: 8px;
+  }
+  .sc-filter-heading {
+    font-size: 14px !important;
+  }
+  .sc-filters label {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .sc-grid {
+    gap: 15px 13px;
+  }
+  .sc-card-copy {
+    padding: 8px;
+    min-height: 97px;
+  }
+  .sc-card-copy > a {
+    font-size: 10px;
+    letter-spacing: -0.2px;
+  }
+  .sc-card-copy > p {
+    font-size: 9px;
+  }
+  .sc-card-copy strong {
+    font-size: 12px;
+  }
+  .sc-rating svg {
+    width: 10px;
+    height: 10px;
+  }
+  .sc-rating small {
+    font-size: 7px;
+  }
+  .reference-school .sc-add {
+    right: 5px;
+    bottom: 6px;
+    width: 25px;
+    height: 25px;
+  }
+  .sc-news-banner {
+    height: 190px;
+  }
+}
+@media (max-width: 760px) {
+  .reference-school .rs-header {
+    height: 60px;
+    padding-inline: 20px;
+  }
+  .reference-school .rs-nav {
+    top: 60px;
+  }
+  .sc-hero {
+    height: 255px;
+    background-position: 55%;
+  }
+  .sc-hero-copy {
+    width: 34%;
+    padding-left: 20px;
+  }
+  .sc-crumb {
+    font-size: 9px;
+    margin-bottom: 30px;
+  }
+  .sc-hero h1 {
+    font-size: 55px;
+  }
+  .sc-hero-copy p {
+    font-size: 17px;
+    margin-left: 4px;
+  }
+  .sc-hero h1:before {
+    width: 45px;
+    height: 45px;
+    right: 4px;
+  }
+  .sc-hero-note {
+    right: 10%;
+    font-size: 13px;
+    padding: 11px;
+  }
+  .sc-shortcuts {
+    padding: 14px 18px;
+  }
+  .sc-shortcuts > p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+  .sc-shortcuts nav {
+    overflow: auto;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+  .reference-school .sc-shortcuts button {
+    font-size: 10px;
+    flex-shrink: 0;
+    padding: 8px 12px;
+  }
+  .sc-main {
+    grid-template-columns: 135px 1fr;
+    gap: 13px;
+    padding-inline: 15px;
+  }
+  .sc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 12px;
+  }
+  .sc-filters label {
+    font-size: 10px;
+  }
+  .sc-filters input {
+    width: 15px;
+    height: 15px;
+  }
+  .sc-filters input:checked:after {
+    margin: 0 4px;
+  }
+  .sc-filters section {
+    padding-bottom: 15px;
+  }
+  .sc-colours {
+    gap: 7px;
+  }
+  .sc-toolbar > span {
+    font-size: 9px;
+  }
+  .sc-toolbar > label {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .reference-school .sc-toolbar select {
+    font-size: 11px;
+    min-width: 100px;
+    max-width: 120px;
+    padding-inline: 5px;
+    height: 29px;
+  }
+  .sc-card-copy > a {
+    font-size: 11px;
+  }
+  .sc-card-copy > p {
+    font-size: 10px;
+  }
+  .sc-card-copy strong {
+    font-size: 14px;
+  }
+  .sc-rating svg {
+    width: 11px;
+    height: 11px;
+  }
+  .sc-rating small {
+    font-size: 8px;
+  }
+  .sc-card-copy {
+    min-height: 103px;
+  }
+  .sc-news-banner > div {
+    margin-left: 0;
+    padding: 13px 18px;
+  }
+  .sc-news-banner h2 {
+    font-size: 26px;
+  }
+  .sc-news-banner p {
+    font-size: 10px;
+  }
+  .sc-news-banner form {
+    width: 240px;
+    height: 38px;
+  }
+  .reference-school .sc-news-banner form button {
+    min-width: 38px;
+  }
+  .reference-school .rs-footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reference-school .rs-footer-brand {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 480px) {
+  .reference-school .rs-header {
+    padding-inline: 18px;
+  }
+  .sc-hero {
+    height: 225px;
+    background-position: 53%;
+  }
+  .sc-hero-copy {
+    width: 43%;
+    padding: 18px 0 0 17px;
+    background: linear-gradient(90deg, #fff7e2cc, transparent);
+  }
+  .sc-crumb {
+    margin-bottom: 28px;
+  }
+  .sc-hero h1 {
+    font-size: 49px;
+  }
+  .sc-hero-copy p {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .sc-hero-note {
+    display: none;
+  }
+  .sc-shortcuts > p {
+    font-size: 9px;
+  }
+  .sc-main {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+  }
+  .sc-filters {
+    display: flex;
+    overflow: auto;
+    gap: 18px;
+    padding: 12px;
+    margin-top: 0;
+    max-height: 230px;
+    margin-bottom: 4px;
+  }
+  .sc-filters section {
+    min-width: 134px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .sc-filters section:nth-child(2) {
+    min-width: 135px;
+  }
+  .sc-filters section:nth-child(4) {
+    min-width: 90px;
+  }
+  .sc-filters label {
+    font-size: 10px;
+    margin: 5px 0;
+  }
+  .sc-filter-heading {
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+  }
+  .sc-filters input {
+    width: 14px;
+    height: 14px;
+  }
+  .sc-clear {
+    min-width: 70px;
+    align-self: start;
+  }
+  .sc-colours {
+    max-width: 85px;
+  }
+  .sc-toolbar {
+    margin-bottom: 12px;
+  }
+  .sc-toolbar > span {
+    font-size: 10px;
+  }
+  .sc-toolbar > label {
+    font-size: 10px;
+  }
+  .reference-school .sc-toolbar select {
+    max-width: 140px;
+    font-size: 12px;
+    min-width: 110px;
+  }
+  .sc-grid {
+    gap: 15px 12px;
+  }
+  .sc-picture {
+    aspect-ratio: 1;
+  }
+  .sc-card-copy {
+    padding: 9px;
+    min-height: 105px;
+  }
+  .sc-card-copy > a {
+    font-size: 11px;
+  }
+  .sc-card-copy > p {
+    font-size: 10px;
+  }
+  .sc-card-copy strong {
+    font-size: 14px;
+  }
+  .sc-rating svg {
+    width: 11px;
+    height: 11px;
+  }
+  .sc-rating small {
+    font-size: 8px;
+  }
+  .sc-news-banner {
+    height: 225px;
+    padding: 18px;
+    align-items: flex-start;
+    background-position: 60%;
+  }
+  .sc-news-banner > div {
+    padding: 11px 15px;
+  }
+  .sc-news-banner h2 {
+    font-size: 25px;
+  }
+  .sc-news-banner form {
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+    width: 245px;
+    height: 36px;
+  }
+  .reference-school .sc-news-banner form button {
+    min-width: 36px;
+  }
+  .reference-school .rs-footer {
+    padding-inline: 20px;
+  }
+  .sc-pages {
+    margin-top: 24px;
+  }
+}
+.reference-school .sc-shortcuts nav {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.reference-school .sc-shortcuts nav::-webkit-scrollbar {
+  display: none;
+}
+.reference-school .sc-shortcuts button {
+  flex-shrink: 0;
+}
+.reference-school .sc-toolbar > label {
+  white-space: nowrap;
+}
+.reference-school .sc-toolbar select {
+  min-width: 0;
+}
+.reference-school .sc-colours {
+  gap: 3px;
+}
+.reference-school .sc-colours button {
+  width: 20px;
+  height: 20px;
+}

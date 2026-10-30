@@ -1,0 +1,810 @@
+﻿.reference-about {
+  --ab-ink: #062655;
+  --ab-blue: #375f93;
+  --ab-paper: #fffefa;
+  color: var(--ab-ink);
+  background: var(--ab-paper);
+}
+.reference-about .rs-header {
+  height: 56px;
+  padding-inline: 38px;
+  gap: 22px;
+}
+.reference-about .rs-logo {
+  font-size: 34px;
+}
+.reference-about .rs-nav {
+  gap: 20px;
+}
+.reference-about .rs-search {
+  height: 30px;
+  width: 215px;
+}
+.reference-about .rs-actions svg {
+  width: 24px;
+  height: 24px;
+}
+.reference-about main {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 13% 20%, #fcf5e142, transparent 40%), #fffefa;
+}
+.ab-story {
+  position: relative;
+  min-height: 495px;
+  max-width: 1500px;
+  margin: auto;
+  isolation: isolate;
+}
+.ab-story-art {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 64%;
+  height: 590px;
+  background: url("/images/about-story.png") right top/cover no-repeat;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, #000 17%),
+    linear-gradient(0deg, transparent 0%, #000 13%);
+  mask-composite: intersect;
+}
+.ab-story-copy {
+  padding: 34px 0 35px 4.2%;
+  width: 46%;
+  position: relative;
+}
+.ab-story h1 {
+  font:
+    700 77px/1.15 Kalam,
+    cursive;
+  letter-spacing: -3px;
+  transform: rotate(-4deg);
+  margin: 0 0 9px;
+  white-space: nowrap;
+}
+.ab-story h1 span,
+.ab-tagline span,
+.ab-mission h2 span,
+.ab-values h2 span,
+.ab-thanks span {
+  color: #ff1029;
+}
+.ab-tagline {
+  font:
+    700 38px/1.12 Kalam,
+    cursive;
+  transform: rotate(-4deg);
+  margin: 0 0 41px 12px;
+  position: relative;
+}
+.ab-tagline:after {
+  content: "";
+  position: absolute;
+  left: 88px;
+  bottom: -9px;
+  width: 84px;
+  height: 2px;
+  border-radius: 50%;
+  background: #315a82;
+  transform: rotate(-4deg);
+}
+.ab-tagline span {
+  display: inline-block;
+  font-size: 38px;
+  margin-left: 12px;
+  transform: rotate(7deg);
+}
+.ab-story-prose {
+  max-width: 410px;
+  font-size: 15px;
+  line-height: 1.65;
+  position: relative;
+}
+.reference-about .ab-story-prose p {
+  color: #062655;
+  margin: 0 0 21px;
+}
+.ab-mission,
+.ab-values {
+  max-width: 1420px;
+  margin: auto;
+  padding-inline: 4.2%;
+  position: relative;
+}
+.ab-mission {
+  padding-top: 23px;
+}
+.ab-mission h2,
+.ab-values h2 {
+  font:
+    700 48px/1.15 Kalam,
+    cursive;
+  letter-spacing: -1.8px;
+  margin: 0 0 8px;
+}
+.reference-about .ab-mission-copy {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ab-blue);
+  margin: 0;
+}
+.ab-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 30px 0 47px;
+}
+.ab-value {
+  text-align: center;
+  position: relative;
+  min-width: 0;
+}
+.ab-value:not(:last-child):after {
+  content: "";
+  width: 1px;
+  background: #dde5ee;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  bottom: 0;
+}
+.ab-icon {
+  width: 99px;
+  height: 78px;
+  margin: 0 auto 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+}
+.ab-icon:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 2px -2px -3px;
+  background:
+    radial-gradient(ellipse at 20% 40%, #fff1df 0 30%, transparent 31%),
+    radial-gradient(ellipse at 70% 50%, #fff0dc 0 44%, transparent 45%),
+    radial-gradient(ellipse at 50% 70%, #fff4e7 0 50%, transparent 51%);
+  transform: rotate(-13deg);
+  border-radius: 44% 58% 52% 36%;
+}
+.ab-icon svg {
+  color: #062655;
+  filter: drop-shadow(1px 2px 0 #b9d2e97a);
+  transform: rotate(-5deg);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ab-blue .ab-icon svg {
+  fill: #d7eefd;
+}
+.ab-yellow .ab-icon svg {
+  fill: #ffe598;
+}
+.ab-pink .ab-icon svg {
+  fill: #f5c3b5;
+  transform: rotate(4deg);
+}
+.ab-green .ab-icon svg {
+  fill: #a5ca65;
+  transform: rotate(9deg);
+}
+.ab-green .ab-icon:before {
+  background: radial-gradient(ellipse, #eaf3dc 0 50%, transparent 70%);
+}
+.ab-value h3 {
+  font:
+    700 25px/1.1 Kalam,
+    cursive;
+  letter-spacing: -0.5px;
+  margin: 0 0 6px;
+}
+.reference-about .ab-value p {
+  font-size: 15px;
+  color: var(--ab-blue);
+  line-height: 1.35;
+  margin: 0;
+}
+.ab-check {
+  position: absolute;
+  width: 11px;
+  height: 21px;
+  border: solid #ff1029;
+  border-width: 0 5px 5px 0;
+  transform: rotate(41deg);
+  top: 23px;
+  left: 44px;
+  background: #fff;
+  box-shadow: -3px 3px 0 3px #fff;
+  pointer-events: none;
+}
+.ab-values:before {
+  content: "";
+  height: 1px;
+  background: #e1e8ef;
+  position: absolute;
+  top: 0;
+  left: 4.2%;
+  right: 4.2%;
+}
+.ab-values {
+  padding-top: 0;
+  padding-bottom: 37px;
+}
+.ab-values h2 {
+  padding-top: 0;
+  margin-bottom: 9px;
+}
+.ab-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.ab-values .ab-icon {
+  height: 67px;
+  margin-bottom: 4px;
+}
+.ab-values .ab-value:not(:last-child):after {
+  top: 0;
+}
+.ab-values .ab-icon svg {
+  height: 60px;
+  width: 60px;
+}
+.ab-values .ab-value h3 {
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+.ab-values .ab-value p {
+  font-size: 14px;
+}
+.ab-thanks {
+  height: 177px;
+  background: url("/images/about-thanks.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 8px 6% 8px 7%;
+}
+.ab-thanks > p {
+  font:
+    700 31px/1.08 Kalam,
+    cursive;
+  letter-spacing: -0.7px;
+  transform: rotate(-8deg);
+  margin: 0;
+  color: #062655;
+  position: relative;
+  max-width: 290px;
+}
+.ab-thanks > p span {
+  font-size: 25px;
+}
+.ab-thanks > div {
+  font:
+    700 20px/1.1 Kalam,
+    cursive;
+  transform: rotate(-8deg);
+  align-self: flex-start;
+  margin-top: 7px;
+  background: #fff9e1a6;
+  padding: 5px 8px;
+}
+.reference-about .rs-footer {
+  padding: 28px 38px 27px;
+  border-top: 0;
+  background: white;
+}
+.reference-about .rs-footer-grid {
+  grid-template-columns: 1.8fr 0.85fr 0.78fr 0.9fr 2.1fr;
+  gap: 26px;
+}
+.reference-about .rs-footer .rs-logo {
+  font-size: 36px;
+}
+.reference-about .rs-footer-brand p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+.reference-about .rs-footer h3 {
+  font-size: 11px;
+}
+.reference-about .rs-footer-grid > div > a:not(.rs-logo) {
+  font-size: 12px;
+}
+.reference-about .rs-newsletter {
+  border-left: 1px solid #e3e9f0;
+  padding-left: 23px;
+}
+.reference-about .rs-newsletter p {
+  font-size: 11px;
+}
+.reference-about .rs-newsletter form {
+  height: 34px;
+}
+.reference-about .rs-socials {
+  gap: 16px;
+  margin-top: 12px;
+}
+.reference-about .rs-socials svg {
+  width: 22px;
+  height: 22px;
+}
+.reference-about .rs-footer-bottom {
+  font-size: 11px;
+  margin-top: 26px;
+  padding-top: 12px;
+}
+@media (min-width: 1250px) {
+  .reference-about .rs-header {
+    height: 67px;
+  }
+  .reference-about .rs-logo {
+    font-size: 40px;
+  }
+  .reference-about .rs-nav a {
+    font-size: 11px;
+  }
+  .reference-about .rs-search {
+    width: 260px;
+    height: 35px;
+  }
+  .ab-story {
+    min-height: 595px;
+  }
+  .ab-story-copy {
+    padding-top: 45px;
+  }
+  .ab-story h1 {
+    font-size: 92px;
+  }
+  .ab-tagline {
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+  .ab-story-prose {
+    font-size: 18px;
+    max-width: 490px;
+  }
+  .ab-story-art {
+    height: 715px;
+  }
+  .ab-mission {
+    padding-top: 31px;
+  }
+  .ab-mission h2,
+  .ab-values h2 {
+    font-size: 56px;
+  }
+  .reference-about .ab-mission-copy {
+    font-size: 20px;
+  }
+  .ab-mission-grid {
+    margin-top: 37px;
+    margin-bottom: 56px;
+  }
+  .ab-icon {
+    height: 91px;
+    width: 115px;
+  }
+  .ab-icon svg {
+    width: 72px;
+    height: 72px;
+  }
+  .ab-value h3 {
+    font-size: 30px;
+  }
+  .reference-about .ab-value p {
+    font-size: 18px;
+  }
+  .ab-values .ab-icon {
+    height: 80px;
+  }
+  .ab-values .ab-icon svg {
+    width: 70px;
+    height: 70px;
+  }
+  .ab-values .ab-value h3 {
+    font-size: 30px;
+  }
+  .ab-values .ab-value p {
+    font-size: 17px;
+  }
+  .ab-values {
+    padding-bottom: 45px;
+  }
+  .ab-thanks {
+    height: 215px;
+  }
+  .ab-thanks > p {
+    font-size: 37px;
+  }
+  .ab-thanks > div {
+    font-size: 24px;
+  }
+  .ab-check {
+    left: 51px;
+    top: 27px;
+  }
+  .reference-about .rs-footer {
+    padding-block: 35px;
+  }
+  .reference-about .rs-footer .rs-logo {
+    font-size: 42px;
+  }
+  .reference-about .rs-footer-brand p {
+    font-size: 17px;
+  }
+  .reference-about .rs-footer-grid > div > a:not(.rs-logo) {
+    font-size: 14px;
+  }
+  .reference-about .rs-footer h3 {
+    font-size: 13px;
+  }
+  .reference-about .rs-newsletter p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 950px) {
+  .reference-about .rs-header {
+    padding-inline: 25px;
+    gap: 17px;
+  }
+  .reference-about .rs-nav {
+    gap: 15px;
+  }
+  .reference-about .rs-search {
+    width: 210px;
+  }
+  .ab-story {
+    min-height: 465px;
+  }
+  .ab-story-copy {
+    width: 47%;
+    padding-top: 33px;
+  }
+  .ab-story h1 {
+    font-size: 65px;
+  }
+  .ab-tagline {
+    font-size: 31px;
+    margin-left: 8px;
+    margin-bottom: 36px;
+  }
+  .ab-story-prose {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .ab-story-art {
+    height: 550px;
+    width: 65%;
+  }
+  .ab-mission h2,
+  .ab-values h2 {
+    font-size: 43px;
+  }
+  .reference-about .ab-mission-copy {
+    font-size: 15px;
+  }
+  .ab-value h3,
+  .ab-values .ab-value h3 {
+    font-size: 23px;
+  }
+  .reference-about .ab-value p {
+    font-size: 13px;
+  }
+  .ab-values .ab-value p {
+    font-size: 12px;
+  }
+  .ab-mission-grid {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+  .ab-values {
+    padding-bottom: 30px;
+  }
+  .ab-thanks {
+    height: 165px;
+  }
+  .ab-thanks > p {
+    font-size: 27px;
+  }
+  .ab-thanks > div {
+    font-size: 17px;
+  }
+  .reference-about .rs-footer {
+    padding-inline: 28px;
+  }
+  .reference-about .rs-footer-grid {
+    gap: 20px;
+  }
+  .reference-about .rs-newsletter {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .reference-about .rs-header {
+    height: 60px;
+    padding-inline: 20px;
+  }
+  .reference-about .rs-nav {
+    top: 60px;
+  }
+  .ab-story {
+    min-height: 515px;
+  }
+  .ab-story-copy {
+    width: 52%;
+    padding-left: 22px;
+    padding-top: 30px;
+  }
+  .ab-story h1 {
+    font-size: 57px;
+    letter-spacing: -2.5px;
+  }
+  .ab-tagline {
+    font-size: 29px;
+    margin-left: 5px;
+    line-height: 1.2;
+    margin-bottom: 33px;
+  }
+  .ab-tagline span {
+    font-size: 30px;
+    margin-left: 7px;
+  }
+  .ab-story-prose {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .ab-story-art {
+    width: 62%;
+    height: 570px;
+    background-position: 60% top;
+    mask-image:
+      linear-gradient(90deg, transparent 0%, #000 24%),
+      linear-gradient(0deg, transparent 0%, #000 13%);
+  }
+  .ab-mission,
+  .ab-values {
+    padding-inline: 23px;
+  }
+  .ab-mission {
+    padding-top: 15px;
+  }
+  .ab-mission h2,
+  .ab-values h2 {
+    font-size: 39px;
+  }
+  .reference-about .ab-mission-copy {
+    font-size: 14px;
+  }
+  .ab-desktop-break {
+    display: none;
+  }
+  .ab-icon {
+    width: 82px;
+    height: 72px;
+    margin-bottom: 9px;
+  }
+  .ab-icon svg {
+    width: 54px;
+    height: 54px;
+  }
+  .ab-value h3 {
+    font-size: 21px;
+  }
+  .reference-about .ab-value p {
+    font-size: 12px;
+  }
+  .ab-check {
+    top: 21px;
+    left: 36px;
+    width: 10px;
+    height: 18px;
+    border-width: 0 4px 4px 0;
+  }
+  .ab-mission-grid {
+    gap: 6px;
+    margin-top: 24px;
+    margin-bottom: 33px;
+  }
+  .ab-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 0;
+  }
+  .ab-values .ab-value:nth-child(2):after {
+    display: none;
+  }
+  .ab-values .ab-value h3 {
+    font-size: 24px;
+  }
+  .ab-values .ab-value p {
+    font-size: 13px;
+  }
+  .ab-values h2 {
+    margin-bottom: 18px;
+  }
+  .ab-thanks {
+    height: 161px;
+    padding-left: 7%;
+    background-position: 54%;
+  }
+  .ab-thanks > p {
+    font-size: 24px;
+  }
+  .ab-thanks > div {
+    font-size: 15px;
+    margin-right: 0;
+    margin-top: 1px;
+  }
+  .reference-about .rs-footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reference-about .rs-footer-brand {
+    grid-column: 1/-1;
+  }
+  .reference-about .rs-newsletter {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .reference-about .rs-footer {
+    padding-inline: 23px;
+  }
+}
+@media (max-width: 480px) {
+  .ab-story {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .ab-story-copy {
+    padding: 28px 22px 0;
+    width: 100%;
+    order: 0;
+  }
+  .ab-story h1 {
+    font-size: 63px;
+    margin-bottom: 13px;
+  }
+  .ab-tagline {
+    font-size: 32px;
+    margin-bottom: 31px;
+    margin-left: 6px;
+  }
+  .ab-story-prose {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: none;
+  }
+  .reference-about .ab-story-prose p {
+    margin-bottom: 18px;
+  }
+  .ab-story-art {
+    position: relative;
+    order: 1;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.15;
+    margin-top: -4px;
+    background-position: center 55%;
+    mask-image: linear-gradient(
+      0deg,
+      transparent 0%,
+      #000 12%,
+      #000 90%,
+      transparent 100%
+    );
+    z-index: 0;
+  }
+  .ab-mission {
+    padding-top: 8px;
+  }
+  .ab-mission,
+  .ab-values {
+    padding-inline: 20px;
+  }
+  .ab-mission h2,
+  .ab-values h2 {
+    font-size: 37px;
+  }
+  .reference-about .ab-mission-copy {
+    font-size: 14px;
+  }
+  .ab-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+  .ab-mission-grid .ab-value {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    text-align: left;
+    align-items: center;
+    column-gap: 16px;
+  }
+  .ab-mission-grid .ab-icon {
+    grid-row: 1/3;
+    margin: 0 auto;
+  }
+  .ab-mission-grid .ab-value:after {
+    display: none;
+  }
+  .ab-mission-grid .ab-value h3 {
+    font-size: 25px;
+    align-self: end;
+    margin-bottom: 4px;
+  }
+  .ab-mission-grid .ab-value p {
+    font-size: 14px;
+    align-self: start;
+  }
+  .ab-mission-grid .ab-value p br {
+    display: none;
+  }
+  .ab-values h2 {
+    padding-top: 11px;
+  }
+  .ab-values-grid {
+    gap: 25px 4px;
+  }
+  .ab-values .ab-icon {
+    height: 62px;
+  }
+  .ab-values .ab-icon svg {
+    height: 54px;
+    width: 54px;
+  }
+  .ab-values .ab-value h3 {
+    font-size: 22px;
+  }
+  .ab-values .ab-value p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .ab-values .ab-value:not(:last-child):after {
+    right: -2px;
+  }
+  .ab-thanks {
+    height: 170px;
+    padding: 10px 17px;
+    background-position: 48%;
+    background-size: auto 100%;
+  }
+  .ab-thanks > p {
+    font-size: 23px;
+    max-width: 180px;
+    line-height: 1.1;
+    padding: 7px;
+    background: #fff9e7bd;
+    border-radius: 4px;
+  }
+  .ab-thanks > div {
+    font-size: 12px;
+    max-width: 120px;
+    margin-top: 0;
+  }
+  .reference-about .rs-footer {
+    padding: 25px 20px;
+  }
+  .reference-about .rs-footer .rs-logo {
+    font-size: 35px;
+  }
+  .reference-about .rs-footer-grid {
+    gap: 18px;
+  }
+  .reference-about .rs-footer-bottom {
+    font-size: 10px;
+  }
+  .reference-about .rs-footer-brand p {
+    font-size: 14px;
+  }
+  .reference-about .rs-socials {
+    gap: 20px;
+  }
+}

@@ -1,3 +1,4 @@
+import { WishlistContent } from "./ReferenceWishlist";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Trash2, ArrowRight, Truck } from "lucide-react";
@@ -52,27 +53,7 @@ export function OrderSummary({ discount = 0, delivery, children }) {
   );
 }
 export function Wishlist() {
-  const { products, wishlist } = useShop();
-  return (
-    <div className="container page shopping-wishlist">
-      <Breadcrumb name="Wishlist" />
-      <h1>
-        Your little favourites<span className="red-dot">.</span>
-      </h1>
-      <p>Keep the things that inspire you close.</p>
-      <WishlistGrid
-        products={products.filter((p) => wishlist.includes(p.id))}
-      />
-    </div>
-  );
-}
-import { ProductGrid } from "../../components/product/ProductCard";
-function WishlistGrid({ products }) {
-  return products.length ? (
-    <ProductGrid products={products} />
-  ) : (
-    <EmptyState title="A fresh page for your favourites" />
-  );
+  return <WishlistContent embedded />;
 }
 export default function Cart() {
   const { cart, setCart, products, subtotal, notify } = useShop();

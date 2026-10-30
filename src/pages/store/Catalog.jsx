@@ -11,6 +11,13 @@ import { categories, slugify } from "../../data/products";
 import { Breadcrumb, EmptyState, Button } from "../../components/common/UI";
 import { ProductGrid } from "../../components/product/ProductCard";
 import NotebookCatalog from "./NotebookCatalog";
+const categoryBanners = {
+  books: { title: "BOOKS", image: "books", note: "Find your next favourite story." },
+  art: { title: "ARTS & CRAFTS", image: "art", note: "A little colour. A world of possibilities." },
+  "art-supplies": { title: "ARTS & CRAFTS", image: "art", note: "A little colour. A world of possibilities." },
+  accessories: { title: "BITS & BOBS", image: "bits", note: "Little essentials for everyday creativity." },
+  paper: { title: "PAPERS", image: "papers", note: "Every great idea starts with a fresh sheet." },
+};
 export default function Catalog() {
   const { products } = useShop(),
     { slug } = useParams(),
@@ -33,13 +40,14 @@ export default function Catalog() {
   const category =
     categories.find((x) => slugify(x) === slug) ||
     (slug === "art" ? "Art Supplies" : slug === "office" ? "Office" : "");
+  const banner = categoryBanners[slug];
   const title =
     pathname === "/search"
       ? "Find your next good idea"
       : pathname === "/back-to-school"
         ? "Back to school."
         : slug
-          ? category || slug.replaceAll("-", " ")
+          ? banner?.title || category || slug.replaceAll("-", " ")
           : {
               "/new-arrivals": "Just landed",
               "/best-sellers": "Everyday favourites",
@@ -208,22 +216,25 @@ export default function Catalog() {
     <div
       className={`container page shopping-catalog ${isSchool ? "school-catalog" : isOffice ? "office-catalog" : ""}`}
     >
-      <Breadcrumb name={title} />
+      {!banner && <Breadcrumb name={title} />}
       {slug || pathname === "/back-to-school" || pathname === "/gifts" ? (
         <section
-          className={`catalog-banner collection-banner ${pathname === "/back-to-school" || category === "School" ? "collection-school" : category === "Office" ? "collection-office" : "collection-general"}`}
+          style={banner ? {"--category-background": `url(/images/category-${banner.image}-realistic.png)`} : undefined}
+          className={`catalog-banner collection-banner ${banner ? "calm-category-banner" : ""} ${pathname === "/back-to-school" || category === "School" ? "collection-school" : category === "Office" ? "collection-office" : "collection-general"}`}
         >
           <div>
-            <span className="eyebrow">A LITTLE EVERYDAY INSPIRATION</span>
-            <h1>{title}</h1>
+            {banner ? <nav className="category-hero-crumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span> / {title}</span></nav> : <span className="eyebrow">A LITTLE EVERYDAY INSPIRATION</span>}
+            <h1>{banner ? ({books:"Books",art:"Arts & Crafts",bits:"Bits & Bobs",papers:"Papers"}[banner.image]) : title}</h1>
             <p>
-              {pathname === "/back-to-school"
+              {banner ? banner.note : pathname === "/back-to-school"
                 ? "Everything they need for a brighter year."
                 : "Thoughtful essentials for your next chapter."}
             </p>
           </div>
+          {banner && <aside className="category-hero-note">{({books:["Read.","Imagine.","Discover."],art:["Draw.","Create.","Dream."],bits:["Collect.","Organise.","Enjoy."],papers:["Write.","Fold.","Create."]}[banner.image]).map(line=><span key={line}>{line}</span>)}<b aria-hidden="true">?</b></aside>}
           <div
             className="collection-art"
+            style={banner ? {backgroundImage: `url(/images/category-${banner.image}-simple.png)`} : undefined}
             role="img"
             aria-label={`${title} illustrated stationery collection`}
           />
@@ -237,6 +248,7 @@ export default function Catalog() {
           </h1>
         </>
       )}
+      {banner && <p className="category-hero-description">{banner.note} Explore our collection and find something for your next idea.</p>}
       {isSupplies && (
         <p className="school-price-note">
           {isOffice
