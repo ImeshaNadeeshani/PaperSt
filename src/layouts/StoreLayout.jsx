@@ -71,6 +71,7 @@ export function Newsletter() {
 export default function StoreLayout() {
   const { content, catalogStatus, refreshProducts } = useShop();
   const location = useLocation();
+  const needsCatalog = /^(\/category\/|\/search$|\/new-arrivals$|\/best-sellers$|\/sale$|\/gifts$)/.test(location.pathname);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -107,11 +108,11 @@ export default function StoreLayout() {
       </div>
       <ReferenceHeader />
       <main>
-        {catalogStatus === "loading" ? (
+        {needsCatalog && catalogStatus === "loading" ? (
           <div className="container page" role="status">
             Loading productsâ€¦
           </div>
-        ) : catalogStatus === "error" ? (
+        ) : needsCatalog && catalogStatus === "error" ? (
           <div className="container page" role="alert">
             <h1>We couldn't load the shop.</h1>
             <p>Please check your connection and try again.</p>

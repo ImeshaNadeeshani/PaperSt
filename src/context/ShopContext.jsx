@@ -5,6 +5,8 @@ import { fetchPublishedProducts } from "../services/products";
 import { ShopContext as Context } from "./context";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { products as seed } from "../data/products";
+import { pettahProducts } from "../data/pettahProducts";
+import { promateProducts } from "../data/promateProducts";
 import { migrateSchoolProducts } from "../data/schoolProducts";
 import { migrateOfficeProducts } from "../data/officeProducts";
 import { orders as orderSeed } from "../data/orders";
@@ -76,8 +78,9 @@ export function ShopProvider({ children }) {
       controller.abort();
     };
   }, [catalogAttempt]);
-  const products =
-    isAdmin || !supabaseConfigured ? localProducts : remoteProducts;
+  const baseProducts = isAdmin || !supabaseConfigured ? localProducts : remoteProducts;
+  const productIds = new Set(baseProducts.map((product) => product.id));
+  const products = [...baseProducts, ...[...pettahProducts, ...promateProducts].filter((product) => !productIds.has(product.id))];
   const setProducts =
     isAdmin || !supabaseConfigured
       ? setLocalProducts

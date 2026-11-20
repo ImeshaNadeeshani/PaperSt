@@ -26,18 +26,33 @@ const copy = {
     "Request a return within 14 days of delivery. Items should be unused, in their original packaging, with proof of purchase. Contact our team with your order number and reason for returning.",
     "Damaged or incorrect items? Let us know within 48 hours so we can help. Customised stationery is excluded unless faulty. These are sample store policies for the demo.",
   ],
-  privacy: [
-    "Your privacy matters.",
-    "Your ideas are yours. Your information, too.",
-    "This prototype stores cart, wishlist, profile, and demo management data in this browser. It does not send payments, authentication credentials, or form requests to a server.",
-    "Clear browser site data to remove local demo records. A complete privacy policy will be reviewed before the store launches.",
-  ],
-  terms: [
-    "The little details.",
-    "A clear beginning to a good experience.",
-    "Paperist Phase 1 is a demonstration storefront. Prices, stock, delivery estimates, and policies are illustrative. Placing a demo order does not create a real purchase.",
-    "Real payment, fulfilment, legal terms, and consumer protections will be configured and reviewed before launch.",
-  ],
+};
+const policies = {
+  privacy: {
+    title: "Privacy Policy",
+    intro: "How Paperist handles information in this demonstration website.",
+    sections: [
+      ["Information you enter", "You may enter contact, delivery, profile and order details while exploring the site. Cart, wishlist, profile, demo orders and other demo records are stored in your browser's local storage. Checkout form entries may also be held temporarily while you use the page."],
+      ["How the demo uses information", "The site uses these details to display your cart, simulate checkout and show your demo account and orders. Demo contact and newsletter forms do not send a message or create a subscription."],
+      ["External services and images", "When configured, the site requests product information from Supabase. Product images and other resources may load from external providers, which receive the technical information needed to serve those requests, such as your IP address."],
+      ["Payments", "The checkout is a demonstration. It does not process payments or submit real orders. Please do not enter real payment card details."],
+      ["Storage and your choices", "Local demo records remain on your device until removed. You can clear this website's data through your browser settings; doing so will remove saved demo records on that browser. Avoid entering sensitive information on shared devices."],
+      ["Questions and updates", "This policy describes the current demo and may change as the store is developed. See the Contact Us page for the current contact information; the contact details and form are placeholders in this demo."],
+    ],
+  },
+  terms: {
+    title: "Terms of Service",
+    intro: "The terms for using the Paperist demonstration website.",
+    sections: [
+      ["Using the website", "You may browse the site for personal, lawful use. Please do not interfere with the service, misuse its forms or attempt to access restricted areas without permission."],
+      ["Product information", "Product names, images, descriptions, prices and availability are provided for demonstration and may contain errors or become outdated. Some product information is a snapshot from external listings and does not update automatically."],
+      ["Orders and payment", "The cart and checkout simulate a shopping experience. A demo order is not a real purchase or an order confirmation, and no payment is processed. Displayed payment methods are examples."],
+      ["Delivery and returns", "Delivery charges, estimates and returns information shown on the site are sample terms. No delivery or return service is created by placing a demo order."],
+      ["Accounts and local data", "Demo account and order information may be stored in your browser and can be lost if you clear site data or change devices. Keep your device secure and do not use sensitive information in the demo."],
+      ["Content and third-party services", "Product images and third-party resources may belong to their respective owners. Links and external services are subject to their own terms and availability."],
+      ["Changes and contact", "These terms may be updated as Paperist develops. Visit the Contact Us page for current contact details; the details and contact form are placeholders in this demo."],
+    ],
+  },
 };
 export default function Information() {
   const { pathname } = useLocation(),
@@ -204,6 +219,25 @@ export default function Information() {
       </div>
     );
   if (key === "contact") return <Contact />;
+  if (policies[key]) {
+    const policy = policies[key];
+    return (
+      <article className="container page narrow">
+        <Breadcrumb name={policy.title} />
+        <span className="eyebrow">THE PAPERIST DETAILS</span>
+        <h1>{policy.title}</h1>
+        <p className="lead">{policy.intro}</p>
+        <p>Draft for the current demonstration website. Review and update before launch.</p>
+        {policy.sections.map(([title, text]) => (
+          <section key={title} style={{ marginTop: "2rem" }}>
+            <h2>{title}</h2>
+            <p>{text}</p>
+          </section>
+        ))}
+        <p><Link to="/contact">Contact Us</Link></p>
+      </article>
+    );
+  }
   if (copy[key]) {
     const [title, subtitle, ...paragraphs] = copy[key];
     return (

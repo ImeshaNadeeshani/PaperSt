@@ -253,11 +253,13 @@
   background: #f8f3e9;
 }
 .rs-image > a,
-.rs-image > a > div {
+.rs-image > a > div,
+.rs-image > a > img {
   display: block;
   width: 100%;
   height: 100%;
 }
+.rs-image > a > img { width: 100%; height: 100%; object-fit: contain; }
 .rs-image > a > div {
   background-image: url("/images/notebooks-products.png");
   background-size: 600% 200%;

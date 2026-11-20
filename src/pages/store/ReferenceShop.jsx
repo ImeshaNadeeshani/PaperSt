@@ -6,7 +6,6 @@ import {
   Heart,
   ShoppingCart,
   ShoppingBag,
-  ChevronLeft,
   ChevronRight,
   ChevronUp,
   ArrowRight,
@@ -68,7 +67,6 @@ export default function ReferenceShop() {
             : [];
     }),
     [sort, setSort] = useState("Featured"),
-    [page, setPage] = useState(1),
     [filtersOpen, setFiltersOpen] = useState(true);
   const preferred = ["2", "1", "3", "4", "school-8", "school-16"];
   const active = products.filter(
@@ -79,10 +77,8 @@ export default function ReferenceShop() {
       (!categoryMap[category] || categoryMap[category].includes(p.category)) &&
       (!brands.length ||
         brands.some((b) =>
-          b === "Others"
-            ? !["muji", "kokuyo", "stabilo", "faber-castell", "pilot"].includes(
-                p.brand.toLowerCase(),
-              )
+          b === "Atles"
+            ? ["atles", "atlas"].includes(p.brand.toLowerCase())
             : b.toLowerCase() === p.brand.toLowerCase(),
         )) &&
       (!prices.length ||
@@ -108,15 +104,13 @@ export default function ReferenceShop() {
           : (preferred.includes(a.id) ? preferred.indexOf(a.id) : 99) -
             (preferred.includes(b.id) ? preferred.indexOf(b.id) : 99),
   );
-  const pages = Math.ceil(list.length / 6),
-    current = Math.min(page, Math.max(1, pages));
   const toggle = (setter, values, value) => {
     setter(
       values.includes(value)
         ? values.filter((x) => x !== value)
         : [...values, value],
     );
-    setPage(1);
+
   };
   const tile = (p) =>
     /highlighter/i.test(p.name)
@@ -137,7 +131,7 @@ export default function ReferenceShop() {
       <ReferenceHeader
         onSearch={(value) => {
           setQuery(value);
-          setPage(1);
+
         }}
       />
       <section className="rs-hero">
@@ -164,7 +158,7 @@ export default function ReferenceShop() {
               value={sort}
               onChange={(e) => {
                 setSort(e.target.value);
-                setPage(1);
+
               }}
             >
               {[
@@ -200,7 +194,7 @@ export default function ReferenceShop() {
                       checked={category === c}
                       onChange={() => {
                         setCategory(category === c ? "All" : c);
-                        setPage(1);
+
                       }}
                     />
                     {c}
@@ -228,12 +222,9 @@ export default function ReferenceShop() {
             <section>
               <h2>Brand</h2>
               {[
-                "Muji",
-                "Kokuyo",
-                "Stabilo",
-                "Faber-Castell",
-                "Pilot",
-                "Others",
+                "Atles",
+                "Promate",
+                "Smmanee",
               ].map((b) => (
                 <label key={b}>
                   <input
@@ -248,17 +239,17 @@ export default function ReferenceShop() {
           </aside>
           <div className="rs-results">
             <div className="rs-grid">
-              {list.slice((current - 1) * 6, current * 6).map((p) => (
+              {list.map((p) => (
                 <article className="rs-card" key={p.id}>
                   <div className="rs-image">
                     <Link to={"/product/" + p.slug} aria-label={p.name}>
-                      <div
+                      {/^(pettah|promate)-/.test(p.id) ? <img src={p.images[0]} alt={p.name} loading="lazy" /> : <div
                         role="img"
                         aria-label={p.name}
                         style={{
                           backgroundPosition: `${(tile(p) % 6) * 20}% ${tile(p) >= 6 ? 100 : 0}%`,
                         }}
-                      />
+                      />}
                     </Link>
                     <button
                       className={wishlist.includes(p.id) ? "saved" : ""}
@@ -288,7 +279,7 @@ export default function ReferenceShop() {
                               : p.variants?.Size?.[0]}
                     </p>
                     <strong>{money(p.salePrice ?? p.price)}</strong>
-                    <div className="rs-rating">
+                    {p.reviewCount > 0 && <div className="rs-rating">
                       <span aria-label={`${p.rating} out of 5 stars`}>
                         {[0, 1, 2, 3, 4].map((i) => (
                           <Star
@@ -299,7 +290,7 @@ export default function ReferenceShop() {
                         ))}
                       </span>
                       <small>({p.reviewCount})</small>
-                    </div>
+                    </div>}
                     <button
                       className="rs-add"
                       disabled={!p.stock}
@@ -328,37 +319,6 @@ export default function ReferenceShop() {
                   Clear filters
                 </button>
               </div>
-            )}
-            {pages > 1 && (
-              <nav className="rs-pagination" aria-label="Product pages">
-                <button
-                  disabled={current === 1}
-                  aria-label="Previous page"
-                  onClick={() => setPage(current - 1)}
-                >
-                  <ChevronLeft />
-                </button>
-                {Array.from({ length: Math.min(5, pages) }, (_, i) => {
-                  const n = Math.max(1, Math.min(current - 2, pages - 4)) + i;
-                  return (
-                    <button
-                      className={current === n ? "selected" : ""}
-                      key={n}
-                      onClick={() => setPage(n)}
-                      aria-current={current === n ? "page" : undefined}
-                    >
-                      {n}
-                    </button>
-                  );
-                })}
-                <button
-                  disabled={current === pages}
-                  aria-label="Next page"
-                  onClick={() => setPage(current + 1)}
-                >
-                  <ChevronRight />
-                </button>
-              </nav>
             )}
           </div>
         </div>
@@ -465,6 +425,8 @@ export function ReferenceFooter() {
             ["Returns", "/returns"],
             ["FAQs", "/faq"],
             ["Track Order", "/track-order"],
+            ["Privacy Policy", "/privacy"],
+            ["Terms of Service", "/terms"],
           ],
           [
             "ABOUT",
@@ -508,7 +470,7 @@ export function ReferenceFooter() {
       <div className="rs-footer-bottom">
         <span>© 2026 Paperist. All rights reserved.</span>
         <span>
-          Designed for a brighter, more creative Sri Lanka. <i />
+          Web Design and Development by ACTS Global (Pvt) Ltd <i />
         </span>
       </div>
     </footer>

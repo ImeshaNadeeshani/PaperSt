@@ -46,7 +46,7 @@ const productTile = (p) =>
 export function ProductArt({ product, view = 0, className = "" }) {
   const notebook = product.id === "1";
   const tile = notebook ? ([0, 1, 2, 5, 4][view] ?? 0) : productTile(product);
-  const local = product.images?.[0]?.startsWith("/") && !notebook;
+  const local = (product.images?.[0]?.startsWith("/") || /^(pettah|promate)-/.test(product.id)) && !notebook;
   if (local)
     return (
       <img
