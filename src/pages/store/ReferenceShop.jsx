@@ -68,7 +68,6 @@ export default function ReferenceShop() {
     }),
     [sort, setSort] = useState("Featured"),
     [filtersOpen, setFiltersOpen] = useState(true);
-  const preferred = ["2", "1", "3", "4", "school-8", "school-16"];
   const active = products.filter(
     (p) => !["Archived", "Draft"].includes(p.status),
   );
@@ -101,8 +100,8 @@ export default function ReferenceShop() {
         ? (b.salePrice ?? b.price) - (a.salePrice ?? a.price)
         : sort === "Top rated"
           ? b.rating - a.rating
-          : (preferred.includes(a.id) ? preferred.indexOf(a.id) : 99) -
-            (preferred.includes(b.id) ? preferred.indexOf(b.id) : 99),
+          : Number(!String(a.id).startsWith("pettah-")) -
+            Number(!String(b.id).startsWith("pettah-")),
   );
   const toggle = (setter, values, value) => {
     setter(
